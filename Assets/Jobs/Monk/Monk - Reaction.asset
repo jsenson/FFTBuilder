@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: Monk - Reaction
   m_EditorClassIdentifier: 
   _type: 2
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 7dee3022dbf84bf4896cf99d78139a45, type: 2}
+  - {fileID: 11400000, guid: 6fa05af80db29ca4d84f431b6d2a56b5, type: 2}
+  - {fileID: 11400000, guid: 8067b22ee322b7f4c926f325f2c99006, type: 2}

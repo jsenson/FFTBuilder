@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: Thief - Reaction
   m_EditorClassIdentifier: 
   _type: 2
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 0a5e157c461b4634298c1658e11ea690, type: 2}
+  - {fileID: 11400000, guid: 1d35acc6596f92d4181181ccf8a7e14a, type: 2}
+  - {fileID: 11400000, guid: 66de48613483e0545b468820f4925496, type: 2}

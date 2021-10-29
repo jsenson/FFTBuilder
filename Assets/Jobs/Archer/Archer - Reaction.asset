@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Archer - Reaction
   m_EditorClassIdentifier: 
   _type: 2
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 2e71601afc66e9d47a9efb63e309a2c2, type: 2}
+  - {fileID: 11400000, guid: 4c522cef2817e554fa071f84430e291b, type: 2}

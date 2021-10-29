@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Oracle - Reaction
   m_EditorClassIdentifier: 
   _type: 2
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 50ad7149c432755488100b7b737fc9e5, type: 2}

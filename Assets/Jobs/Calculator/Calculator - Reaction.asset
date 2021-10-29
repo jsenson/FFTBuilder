@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Calculator - Reaction
   m_EditorClassIdentifier: 
   _type: 2
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: a5706b947107d7b4d9f35c21ae6ed571, type: 2}
+  - {fileID: 11400000, guid: b19cf336cf00e4c4b8e2aefbb08574bd, type: 2}

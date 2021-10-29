@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Summoner - Reaction
   m_EditorClassIdentifier: 
   _type: 2
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 437e6b91f3fd0e349acf33483d8ad18a, type: 2}

@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Bard - Reaction
   m_EditorClassIdentifier: 
   _type: 2
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 0242527beb2d56146bcc18b29317d805, type: 2}
+  - {fileID: 11400000, guid: bccbae0ab7326794583e6db8e5fc70b7, type: 2}

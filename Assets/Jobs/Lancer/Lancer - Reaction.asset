@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Lancer - Reaction
   m_EditorClassIdentifier: 
   _type: 2
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 7851ca267cbbdf64abb598fe16dad34e, type: 2}

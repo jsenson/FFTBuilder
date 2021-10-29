@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Dancer - Reaction
   m_EditorClassIdentifier: 
   _type: 2
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 2e2e601ca8731184184a2a7a2147d64a, type: 2}
+  - {fileID: 11400000, guid: 18584781928a14141bd6e9518ca528a8, type: 2}

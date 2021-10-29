@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Priest - Reaction
   m_EditorClassIdentifier: 
   _type: 2
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 42bf7261030ee8b4bbdec3c8aef15a17, type: 2}

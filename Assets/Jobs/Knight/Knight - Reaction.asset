@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Knight - Reaction
   m_EditorClassIdentifier: 
   _type: 2
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 4a4d20aaea888c442936eb99424e1264, type: 2}

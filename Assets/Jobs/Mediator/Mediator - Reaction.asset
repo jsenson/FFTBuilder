@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Mediator - Reaction
   m_EditorClassIdentifier: 
   _type: 2
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 48cfed2ace359344c91d6cb0a51c9d5e, type: 2}

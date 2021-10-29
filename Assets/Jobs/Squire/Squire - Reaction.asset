@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Squire - Reaction
   m_EditorClassIdentifier: 
   _type: 2
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 30ac7e863540e21468b80988b66e15ec, type: 2}

@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Ninja - Reaction
   m_EditorClassIdentifier: 
   _type: 2
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 5b322f11c3a94db439a0369376d1d793, type: 2}
+  - {fileID: 11400000, guid: fb4964863936e944aad60ad7d64c4f79, type: 2}

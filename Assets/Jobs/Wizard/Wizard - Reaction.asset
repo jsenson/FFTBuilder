@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Wizard - Reaction
   m_EditorClassIdentifier: 
   _type: 2
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: bec6bc5b9b027a84aa04e9e0886882a5, type: 2}

@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Samurai - Reaction
   m_EditorClassIdentifier: 
   _type: 2
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 4810c94c4c9c0ef49926f4cf4c656312, type: 2}
+  - {fileID: 11400000, guid: 4ac6575bec5132846994ce60aaf5f3b5, type: 2}

@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Geomancer - Reaction
   m_EditorClassIdentifier: 
   _type: 2
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: fc98aa4d66aeb0b428db1f5bfb066633, type: 2}
