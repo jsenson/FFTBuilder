@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Priest - Support
   m_EditorClassIdentifier: 
   _type: 1
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 85d78342ea9e7ab4cacf44d4a65514f8, type: 2}

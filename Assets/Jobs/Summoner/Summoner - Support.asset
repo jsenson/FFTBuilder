@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Summoner - Support
   m_EditorClassIdentifier: 
   _type: 1
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 33a254dac96b79148b9c8d314ad230aa, type: 2}

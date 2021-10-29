@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: Chemist - Support
   m_EditorClassIdentifier: 
   _type: 1
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 146bdff6d0615de4b96115fdf69dc552, type: 2}
+  - {fileID: 11400000, guid: 4b67dabde18fbc847924fc8f4bd685c5, type: 2}
+  - {fileID: 11400000, guid: c9b43bbc3bf8170468ee21a981ad786b, type: 2}

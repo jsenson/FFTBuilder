@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: Knight - Support
   m_EditorClassIdentifier: 
   _type: 1
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: adfceaeaee3e5f74793333169ffb11ad, type: 2}
+  - {fileID: 11400000, guid: 8f199bea06804284a8fd2e8838340f25, type: 2}
+  - {fileID: 11400000, guid: 1d34360f4fb95f144af9e709d10013ab, type: 2}

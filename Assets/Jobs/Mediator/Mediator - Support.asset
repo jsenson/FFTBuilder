@@ -13,4 +13,7 @@ MonoBehaviour:
   m_Name: Mediator - Support
   m_EditorClassIdentifier: 
   _type: 1
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: b6726f4afb3835e47927cf40a2fdd092, type: 2}
+  - {fileID: 11400000, guid: b009f6473ffcb2247a0c9e75b314f1f6, type: 2}
+  - {fileID: 11400000, guid: d86f46ba0759f3944afce2c8e9eea915, type: 2}

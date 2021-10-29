@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Monk - Support
   m_EditorClassIdentifier: 
   _type: 1
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: d48b16d23d229fd49a3cb76267d0c8b2, type: 2}

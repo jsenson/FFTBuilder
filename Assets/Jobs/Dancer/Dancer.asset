@@ -21,6 +21,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3b779ce6230e7aa49a9cef162eabdfd0, type: 2}
   - {fileID: 11400000, guid: 444580e8e9431e342ac90867fc3de7a3, type: 2}
   - {fileID: 11400000, guid: 54f5cc0041fcee54ca7d1f73da4184f0, type: 2}
-  - {fileID: 11400000, guid: e3747f1b43441d64da462d0582539dec, type: 2}
   _genderLock: 2
   _disableSubjob: 0

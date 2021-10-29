@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Ninja - Support
   m_EditorClassIdentifier: 
   _type: 1
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 691368f383ab0364b9c687223bce7fd0, type: 2}

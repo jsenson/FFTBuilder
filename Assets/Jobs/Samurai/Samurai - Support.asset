@@ -13,4 +13,6 @@ MonoBehaviour:
   m_Name: Samurai - Support
   m_EditorClassIdentifier: 
   _type: 1
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: d33a96006c06a1747bfd0c110e9e8f0d, type: 2}
+  - {fileID: 11400000, guid: 0ef34e492b9d6e14dbd0b507d88636bf, type: 2}

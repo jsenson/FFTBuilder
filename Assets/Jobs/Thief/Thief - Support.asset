@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Thief - Support
   m_EditorClassIdentifier: 
   _type: 1
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: f19012cce8dece24ebfae6250df8b6d7, type: 2}

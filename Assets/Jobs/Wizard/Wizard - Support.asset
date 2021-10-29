@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Wizard - Support
   m_EditorClassIdentifier: 
   _type: 1
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: b9c4fbf5e255d71459acae6a08c203fd, type: 2}

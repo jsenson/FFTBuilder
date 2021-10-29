@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Geomancer - Support
   m_EditorClassIdentifier: 
   _type: 1
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 279d0688ba0ef304f9645663a6fd6d6c, type: 2}

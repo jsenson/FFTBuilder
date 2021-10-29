@@ -13,4 +13,5 @@ MonoBehaviour:
   m_Name: Lancer - Support
   m_EditorClassIdentifier: 
   _type: 1
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: b07664ffaf4a0e84da11fe90560c40b5, type: 2}
