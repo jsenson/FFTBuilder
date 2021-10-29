@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65a42533a909eaa40aa3ebcd8158fd89, type: 3}
+  m_Name: Ninja
+  m_EditorClassIdentifier: 
+  _unlockRequirements:
+  - Job: {fileID: 11400000, guid: d43c07b2e4a893245926439292e1af71, type: 2}
+    Level: 3
+  - Job: {fileID: 11400000, guid: d8654dcd9e17e6f4d99d3edf11c8454b, type: 2}
+    Level: 4
+  - Job: {fileID: 11400000, guid: 05240071e34f1c243af822c7ab8ee924, type: 2}
+    Level: 2
+  _abilitySets:
+  - {fileID: 11400000, guid: 0edd04f885144c8429770d1b45c2cf6c, type: 2}
+  - {fileID: 11400000, guid: 4528cb396b7e3ca4998bc63b93d9ebbf, type: 2}
+  - {fileID: 11400000, guid: e3aca47e2c96dc845963916371efef55, type: 2}
+  - {fileID: 11400000, guid: f8007655a57e43b4a935b3be60d8ff73, type: 2}
+  _genderLock: 0
+  _disableSubjob: 0

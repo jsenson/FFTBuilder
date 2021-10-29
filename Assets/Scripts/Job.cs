@@ -1,0 +1,56 @@
+using System.Collections.Generic;
+using UnityEngine;
+
+[CreateAssetMenu(menuName = "FFT/Job", fileName = "Job.asset")]
+public class Job : ScriptableObject {
+	[System.Serializable]
+	public struct Requirement {
+		public Job Job;
+		public int Level;
+	}
+
+	[SerializeField] private Requirement[] _unlockRequirements;
+	[SerializeField] private AbilitySet[] _abilitySets;
+	[SerializeField] private Gender _genderLock;
+	[SerializeField] private bool _disableSubjob;
+
+	public Requirement[] GetRequirements() {
+		List<Requirement> allReqs = new List<Requirement>();
+		foreach(var req in _unlockRequirements) {
+			Requirement[] subReqs = req.Job.GetRequirements();
+			foreach(var subReq in subReqs) {
+				AddRequirement(subReq, allReqs);
+			}
+		}
+
+		foreach(var req in _unlockRequirements) {
+			AddRequirement(req, allReqs);
+		}
+
+		return allReqs.ToArray();
+	}
+
+	private void AddRequirement(Requirement toAdd, List<Requirement> list) {
+		bool added = false;
+		for(int i = 0; i < list.Count; i++) {
+			var req = list[i];
+			if (req.Job.name.Equals(toAdd.Job.name)) {
+				added = true;
+				if (toAdd.Level > req.Level) {
+					list[i] = toAdd;
+				}
+			}
+		}
+
+		if (!added) {
+			list.Add(toAdd);
+		}
+	}
+
+	[ContextMenu("Print Requirements")]
+	private void PrintRequirements() {
+		foreach(var req in GetRequirements()) {
+			Debug.Log($"lvl{req.Level} {req.Job.name}");
+		}
+	}
+}

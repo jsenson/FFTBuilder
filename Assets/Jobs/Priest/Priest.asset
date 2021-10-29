@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65a42533a909eaa40aa3ebcd8158fd89, type: 3}
+  m_Name: Priest
+  m_EditorClassIdentifier: 
+  _unlockRequirements:
+  - Job: {fileID: 11400000, guid: 40b0aba8b23eedf4aa6b64fee1d43f5d, type: 2}
+    Level: 2
+  _abilitySets:
+  - {fileID: 11400000, guid: cd355acb703813447955a6aaf87d4441, type: 2}
+  - {fileID: 11400000, guid: 0bd1e5cc75a28ec4b8573455d5db3363, type: 2}
+  - {fileID: 11400000, guid: b5f2afd504977be4ab28a60162b8d583, type: 2}
+  _genderLock: 0
+  _disableSubjob: 0

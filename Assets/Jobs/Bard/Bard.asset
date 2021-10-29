@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 65a42533a909eaa40aa3ebcd8158fd89, type: 3}
+  m_Name: Bard
+  m_EditorClassIdentifier: 
+  _unlockRequirements:
+  - Job: {fileID: 11400000, guid: 02f66805e47fb7044afe8e6991fb3b1d, type: 2}
+    Level: 4
+  - Job: {fileID: 11400000, guid: 5fddd33890fe4bc49b339ca0dff1efd9, type: 2}
+    Level: 4
+  _abilitySets:
+  - {fileID: 11400000, guid: b7ff74a9fabd900479105a31a3d0fef4, type: 2}
+  - {fileID: 11400000, guid: 10fdba15de8b45247a388b01d4f1623e, type: 2}
+  - {fileID: 11400000, guid: a7d30befee3e4754b8a498a1b206d9d5, type: 2}
+  - {fileID: 11400000, guid: 823694b7fb6c34f4db137063bbc02fdc, type: 2}
+  _genderLock: 1
+  _disableSubjob: 0

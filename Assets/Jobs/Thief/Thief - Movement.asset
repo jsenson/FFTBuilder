@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f8516b9f5559194d9497c0f8bf97948, type: 3}
+  m_Name: Thief - Movement
+  m_EditorClassIdentifier: 
+  _type: 3
+  _abilities:
+  - {fileID: 11400000, guid: 76d35eb68e9feb540a398e71f7d95490, type: 2}
+  - {fileID: 11400000, guid: 9a1a9cea0fb99274abe0c0e89be4a2ee, type: 2}
