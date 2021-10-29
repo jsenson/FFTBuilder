@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: Gained Exp Up
   m_EditorClassIdentifier: 
   _type: 1
-  _jpCost: 900
-  _description: Allows the character to hold his/her weapon with both hands, increasing
-    its attack power.
+  _jpCost: 350
+  _description: Increases the Experience Points a character earns by 1.5.
