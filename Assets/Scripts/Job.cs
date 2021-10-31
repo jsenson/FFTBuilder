@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -29,6 +30,27 @@ public class Job : ScriptableObject {
 
 		return allReqs.ToArray();
 	}
+
+#if UNITY_EDITOR
+	public void AddAbility(Ability abilityToAdd) {
+		if (!HasAbility(abilityToAdd)) {
+			var set = Array.Find(_abilitySets, set => set.AbilityType == abilityToAdd.AbilityType);
+			if (set == null) {
+				set = ScriptableObjectHelper.GetOrCreateAbilitySet(name, abilityToAdd.AbilityType);
+			}
+
+			set.AddAbility(abilityToAdd);
+		}
+	}
+
+	private bool HasAbility(Ability abilityToFind) {
+		var found = Array.Find(_abilitySets, set =>
+			set.AbilityType == abilityToFind.AbilityType &&
+			Array.Find(set.Abilities, a =>
+				a == abilityToFind) != null);
+		return found != null;
+	}
+#endif
 
 	private void AddRequirement(Requirement toAdd, List<Requirement> list) {
 		bool added = false;

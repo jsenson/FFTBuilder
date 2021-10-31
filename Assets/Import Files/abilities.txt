@@ -1,0 +1,8 @@
+Archer	Class	Charge +1	Attack that increases the damage a weapon does through charging.	100
+Archer	Class	Charge +2	Attack that increases the damage a weapon does through charging.	150
+Archer	Class	Charge +3	Attack that increases the damage a weapon does through charging.	200
+Archer	Class	Charge +4	Attack that increases the damage a weapon does through charging.	250
+Archer	Class	Charge +5	Attack that increases the damage a weapon does through charging.	300
+Archer	Class	Charge +7	Attack that increases the damage a weapon does through charging.	400
+Archer	Class	Charge +10	Attack that increases the damage a weapon does through charging.	600
+Archer	Class	Charge +20	Attack that increases the damage a weapon does through charging.	1000
