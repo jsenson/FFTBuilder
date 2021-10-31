@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Kiyomori
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 500
+  _description: 'Spirit in the Katana protects allied units, reducing physical and
+    magic damage. Adds: Protect, Shell'

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Nameless Dance
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 100
+  _description: 'Dance causes various abnormal statuses to all enemy units no the
+    battlefield. Adds: Darkness, Confusion, Silence, Frog, Poison, Slow, Stop, Sleep'

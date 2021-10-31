@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Muramasa
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 580
+  _description: 'Ghosts from the Katana make the enemy act unpredictably and in some
+    cases sentences them to death. Adds: Confusion, Death Sentence'

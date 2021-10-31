@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Quicksand
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 150
+  _description: 'Water Elemental attack effective on Swamp, Marsh, Poisoned Marsh.
+    Adds: Darkness'

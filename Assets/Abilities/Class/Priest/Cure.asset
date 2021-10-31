@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Cure
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 50
+  _description: Restores a small amount of HP

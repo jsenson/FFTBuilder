@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Dispel Magic
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 700
+  _description: 'Prevents positive status effects. Cancels: Float, Reraise, Transparent,
+    Regen, Protect, Shell, Haste, Faith, Reflect'

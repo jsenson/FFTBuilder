@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: "Heaven\u2019s Cloud"
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 420
+  _description: 'Magic Katana attack causing damage to enemy units. Adds: Slow'

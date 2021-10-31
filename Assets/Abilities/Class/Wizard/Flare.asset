@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Flare
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 900
+  _description: Large fireball falls from the sky causing a large amount of damage
+    to the target.

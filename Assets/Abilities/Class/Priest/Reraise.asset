@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Reraise
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 800
+  _description: 'Automatically raises units from the dead. Adds: Reraise'

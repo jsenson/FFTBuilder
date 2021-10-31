@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Weapon Break
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 400
+  _description: "Destroys target\u2019s equipped weapon, reducing his/her attack
+    power greatly."

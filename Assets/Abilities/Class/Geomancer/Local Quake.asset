@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Local Quake
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 150
+  _description: 'Earth Elemental attack effective on Rocky Cliff, Lava Rocks. Adds:
+    Confusion'

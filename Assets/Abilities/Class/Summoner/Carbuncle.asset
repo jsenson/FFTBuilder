@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Carbuncle
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 350
+  _description: 'Summoned monster helps allies to reflect magic spells. Adds: Reflect'

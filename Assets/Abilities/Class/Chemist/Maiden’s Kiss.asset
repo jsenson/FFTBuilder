@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: "Maiden\u2019s Kiss"
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 200
+  _description: 'Changes the character back to his/her original shape. Cancels: Frog'

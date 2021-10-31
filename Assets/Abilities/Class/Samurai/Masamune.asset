@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Masamune
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 740
+  _description: "Katana spirit gradually restores ally\u2019s HP and increases speed.
+    Sword for attack must be stolen from Elmdor. Adds: Regen, Haste"

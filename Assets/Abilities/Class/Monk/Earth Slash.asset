@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Earth Slash
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 600
+  _description: A line of energy flowing through the ground causes damage to enemies
+    standing in its path.

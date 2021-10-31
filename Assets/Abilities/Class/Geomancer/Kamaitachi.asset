@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Kamaitachi
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 150
+  _description: "Wind Elemental attack effective on Book, Tree, Brick, Bridge, Furniture,
+    Iron Plate, Moss, Coffin. Adds: Don\u2019t Act"

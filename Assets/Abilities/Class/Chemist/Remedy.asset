@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Remedy
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 700
+  _description: 'This all-purpose medicine cures most status anomalies. Cancels:
+    Petrify, Darkness, Confusion, Silence, Oil, Frog, Poison, Sleep'

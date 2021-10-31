@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Phoenix Down
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 90
+  _description: 'This tailfeather revives dead units. Cancels: Dead'

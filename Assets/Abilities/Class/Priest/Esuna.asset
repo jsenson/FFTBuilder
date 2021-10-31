@@ -13,5 +13,7 @@ MonoBehaviour:
   m_Name: Esuna
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 280
+  _description: "Cures the majority of abnormal statuses. Cancels: Petrify, Darkness,
+    Confusion, Silence, Berserk, Frog, Poison, Sleep, Don\u2019t Move, Don\u2019t
+    Act"

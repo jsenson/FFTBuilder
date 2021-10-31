@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Echo Grass
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 120
+  _description: 'Restores speech, allowing the character to cast spells again. Cancels:
+    Silence'

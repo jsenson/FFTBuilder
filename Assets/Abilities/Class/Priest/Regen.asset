@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Regen
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 300
+  _description: 'Restores HP incrementally over a period of time. Adds: Regen'

@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Water Ball
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 150
+  _description: 'Water Elemental attack effective on Waterway, River, Lake, Sea,
+    Waterfall. Adds: Frog'

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Doubt Faith
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 400
+  _description: 'Lowers Faith level to 0. Adds: Innocent'

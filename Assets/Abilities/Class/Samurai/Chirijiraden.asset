@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Chirijiraden
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 820
+  _description: Powerful Katana attack that causes a blue flame to attack enemy units.
+    Sword for attack must be found in the Deep Dungeon.

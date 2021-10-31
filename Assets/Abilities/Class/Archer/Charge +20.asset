@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Charge +20
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 1000
+  _description: Attack that increases the damage a weapon does through charging.

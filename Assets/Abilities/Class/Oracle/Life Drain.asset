@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Life Drain
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 350
+  _description: "Absorbs target\u2019s HP and restores the character\u2019s own HP."

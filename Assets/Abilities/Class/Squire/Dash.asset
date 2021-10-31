@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Dash
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 80
+  _description: Attacks the enemy with a body blow.

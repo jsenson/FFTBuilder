@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Protect 2
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 500
+  _description: 'Decreases amount of physical attack damage sustained. Has a higher
+    success ratio than Protect. Adds: Protect'

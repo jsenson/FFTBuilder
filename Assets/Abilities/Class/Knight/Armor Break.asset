@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Armor Break
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 400
+  _description: "Destroys target\u2019s equipped armor, clothes, or robe, decreasing
+    his/her protection and HP."

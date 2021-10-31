@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Mind Break
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 250
+  _description: "Reduces target\u2019s magic attack power, two points at a time."

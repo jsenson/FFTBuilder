@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Blind
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 100
+  _description: 'Blinding the enemy lowers its success rate at landing physical attacks.
+    Adds: Darkness'

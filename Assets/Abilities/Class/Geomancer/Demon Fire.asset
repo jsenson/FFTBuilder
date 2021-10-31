@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Demon Fire
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 150
+  _description: 'Fire Elemental attack effective on Wooden Floor, Rug, Box, Stairs,
+    Deck. Adds: Sleep'

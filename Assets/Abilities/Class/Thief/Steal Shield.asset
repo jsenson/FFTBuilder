@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Steal Shield
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 350
+  _description: "Steal enemy\u2019s equipped shield."

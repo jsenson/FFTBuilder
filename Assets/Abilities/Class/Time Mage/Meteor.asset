@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Meteor
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 1500
+  _description: Causes a huge meteor to fall from the sky on top of the target.

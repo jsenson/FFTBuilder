@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Wave Fist
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 300
+  _description: Character can attack an enemy from afar with a surge of energy.

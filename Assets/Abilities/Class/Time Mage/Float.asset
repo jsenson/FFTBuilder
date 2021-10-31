@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6007a7e1e56ed1e4895d2c43a0602c2e, type: 3}
-  m_Name: Invitation
+  m_Name: Float
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 100
-  _description: 'Turns an enemy into an ally. Adds: Invitation'
+  _jpCost: 200
+  _description: 'Allows target to float 1 panel above ground. Adds: Float'

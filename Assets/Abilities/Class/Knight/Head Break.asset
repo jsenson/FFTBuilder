@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Head Break
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 300
+  _description: "Destroys target\u2019s equipped hat or helmet, decreasing protection
+    and HP."

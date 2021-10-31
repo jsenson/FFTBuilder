@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: X-Potion
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 300
+  _description: The strongest potion, recovering 150 HP. Causes damage to the undead.

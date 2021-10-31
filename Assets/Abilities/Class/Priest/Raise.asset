@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Raise
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 180
+  _description: 'Revives dead units and restores half of their HP. Cancels: Dead'

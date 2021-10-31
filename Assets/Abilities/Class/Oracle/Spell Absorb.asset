@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Spell Absorb
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 200
+  _description: "Absorbs the target\u2019s MP and restores the character\u2019s own
+    MP."

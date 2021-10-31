@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Mimic Daravon
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 300
+  _description: 'Droning on like Professor Daravon puts the target to sleep. Adds:
+    Sleep'

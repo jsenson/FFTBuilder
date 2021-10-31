@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 0
   _jpCost: 0
-  _description: 
+  _description: Summoned monster attacks enemies with a strong beam of star light.
+    Must be learned from the Zodiac monster, Elidibs, on the 10th level of the Deep
+    Dungeon.

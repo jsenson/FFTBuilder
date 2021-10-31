@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Salamander
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 820
+  _description: Summoned Fire Elemental burns battlefield with flaming breath.

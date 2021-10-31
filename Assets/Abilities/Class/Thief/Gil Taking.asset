@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Gil Taking
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 10
+  _description: Character can steal gil from the enemy target.

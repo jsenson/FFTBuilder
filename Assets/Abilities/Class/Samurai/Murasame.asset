@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Murasame
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 340
+  _description: "The tears of the Katana\u2019s spirit restores HP of allied units."

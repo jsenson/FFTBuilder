@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Disillusion
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 100
+  _description: "Lowers enemy\u2019s magic attack power."

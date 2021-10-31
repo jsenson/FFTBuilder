@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Elixir
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 900
+  _description: Restores all HP and MP. Elixirs cannot be found in stores and must
+    be found on the battlefield.

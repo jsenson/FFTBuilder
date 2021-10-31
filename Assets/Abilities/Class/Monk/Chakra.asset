@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Chakra
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 350
+  _description: A concentration of Ki restores both HP and MP to the caster and those
+    surrounding him/her.

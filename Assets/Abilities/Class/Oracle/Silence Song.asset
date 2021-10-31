@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Silence Song
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 170
+  _description: 'Silences target, making it unable to cast spells. Adds: Silence'

@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Vertical Jump 6
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 500
+  _description: Allows the character to jump six panels vertically.

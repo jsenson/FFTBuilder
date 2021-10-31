@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Shell
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 70
+  _description: 'Decreases amount of magic attack damage sustained. Adds: Shell'

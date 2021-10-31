@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Carve Model
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 150
+  _description: 'Effective on Gravel, Stone Floor, Stone Wall, Mud Wall, Tombstone.
+    Adds: Petrify'
