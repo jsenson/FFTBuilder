@@ -13,5 +13,4 @@ MonoBehaviour:
   m_Name: Mimic
   m_EditorClassIdentifier: 
   _type: 0
-  _abilities:
-  - {fileID: 0}
+  _abilities: []
