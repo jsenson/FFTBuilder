@@ -14,9 +14,13 @@ public class AbilityImportFile {
 		Read();
 	}
 
-	public void WriteScriptableObjects() {
+	public void WriteScriptableObjects(Action<string, float> onBeginParseRecord = null) {
+		float inv = 1f / _records.Count;
+		int i = 0;
 		foreach (var record in _records) {
+			onBeginParseRecord?.Invoke($"{record.job.name} - {record.abilityName}", i * inv);
 			record.SaveScriptableObject();
+			i++;
 		}
 
 		AssetDatabase.SaveAssets();
