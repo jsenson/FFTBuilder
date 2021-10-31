@@ -13,4 +13,16 @@ MonoBehaviour:
   m_Name: Jump
   m_EditorClassIdentifier: 
   _type: 0
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: a031a5309df1c9144a7d85aa276ff4ea, type: 2}
+  - {fileID: 11400000, guid: 80aaf175416636e4db7ce0dd8cd16cfe, type: 2}
+  - {fileID: 11400000, guid: 1c42372e59c1af04c81b62ff635f055a, type: 2}
+  - {fileID: 11400000, guid: 9fa5c75046345ca4e82899108e9d1634, type: 2}
+  - {fileID: 11400000, guid: 5943049b7f4097d4d912ffb48ea0eeba, type: 2}
+  - {fileID: 11400000, guid: b1daf2ceb0305b7408bd58dc32ef9610, type: 2}
+  - {fileID: 11400000, guid: 75721bcdd8ef05747a509ca1b34648dc, type: 2}
+  - {fileID: 11400000, guid: 2b8897f128491a141823412dea1e88cf, type: 2}
+  - {fileID: 11400000, guid: 9101417da2b7e5b41bb78dd30d7590a0, type: 2}
+  - {fileID: 11400000, guid: c55f8decc1636df479c60b536c3bf750, type: 2}
+  - {fileID: 11400000, guid: b5474084f1a9cbb4db3f3eb2cb9b535a, type: 2}
+  - {fileID: 11400000, guid: 40ead4f1e3772d5468eba59c88026930, type: 2}

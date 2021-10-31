@@ -13,4 +13,8 @@ MonoBehaviour:
   m_Name: Basic Skills
   m_EditorClassIdentifier: 
   _type: 0
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: c00eaf803d48c984c805b8ac448a7ac9, type: 2}
+  - {fileID: 11400000, guid: 02e296095bfb01a489da6e0c2a28107f, type: 2}
+  - {fileID: 11400000, guid: 6837d8227c6993f4d997dd62c15d973b, type: 2}
+  - {fileID: 11400000, guid: 88934c5e895ffb44fbe819971309a145, type: 2}

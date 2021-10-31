@@ -13,4 +13,11 @@ MonoBehaviour:
   m_Name: Sing
   m_EditorClassIdentifier: 
   _type: 0
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 3372207fede4c4f4cba44ea57cd399b2, type: 2}
+  - {fileID: 11400000, guid: 9a431219a0c800148b17c9150f21e90b, type: 2}
+  - {fileID: 11400000, guid: 80e1768f2ce0150459c6ee3b72759e81, type: 2}
+  - {fileID: 11400000, guid: 4237d66bd66fb094c949f5a7bcf2829c, type: 2}
+  - {fileID: 11400000, guid: af4d3c6d995487c49be5b5df8c1f6221, type: 2}
+  - {fileID: 11400000, guid: 5a9c5cf24e2b4cd4291b49a700c83402, type: 2}
+  - {fileID: 11400000, guid: d2989ebad566b3b4c9352bff52892461, type: 2}

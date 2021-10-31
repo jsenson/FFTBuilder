@@ -13,4 +13,20 @@ MonoBehaviour:
   m_Name: Summon Magic
   m_EditorClassIdentifier: 
   _type: 0
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: f2339579f7ec16a44af83c0c7c7ddb22, type: 2}
+  - {fileID: 11400000, guid: 58345177b26a62944b767391f436f5cb, type: 2}
+  - {fileID: 11400000, guid: 65cf565bafd82e84a86acd60e879b2af, type: 2}
+  - {fileID: 11400000, guid: e203fc37fefa7dc4eb6ada7532075a99, type: 2}
+  - {fileID: 11400000, guid: 7d4a8a6a2b4de9e4f85dd0ac5ce2bc37, type: 2}
+  - {fileID: 11400000, guid: 4e24b557c5dbc27448f754329a382c91, type: 2}
+  - {fileID: 11400000, guid: 7549a77351b769240bb585eb633ee4e9, type: 2}
+  - {fileID: 11400000, guid: 64d381e1ce99d764b9a173450cebac16, type: 2}
+  - {fileID: 11400000, guid: c954a0d6db62604438bc4f58bb4f5f44, type: 2}
+  - {fileID: 11400000, guid: 85ea149a6e9516044938756707c0d72d, type: 2}
+  - {fileID: 11400000, guid: 583f3412e4724d4459f3f54262917013, type: 2}
+  - {fileID: 11400000, guid: e59258a861f392c4999348a3722b3601, type: 2}
+  - {fileID: 11400000, guid: dc77a65277d9df749b6e2731aa741de6, type: 2}
+  - {fileID: 11400000, guid: 9c7033c9f6387544696bc9dfc9632370, type: 2}
+  - {fileID: 11400000, guid: 641715fd474f0a44aa62e452a9af0f11, type: 2}
+  - {fileID: 11400000, guid: e453e7ac814ea6343bbec1f9e456299b, type: 2}

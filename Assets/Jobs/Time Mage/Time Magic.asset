@@ -13,4 +13,16 @@ MonoBehaviour:
   m_Name: Time Magic
   m_EditorClassIdentifier: 
   _type: 0
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 7762ae06e9044814394f65d64351636d, type: 2}
+  - {fileID: 11400000, guid: fe9a059070a36a641bdca5b950b164c1, type: 2}
+  - {fileID: 11400000, guid: 7efaabb393bf3d145b2cf1ec385c090b, type: 2}
+  - {fileID: 11400000, guid: bffcd2eecd8e88e4b8a0b294ae853e8c, type: 2}
+  - {fileID: 11400000, guid: 00195e8c7d9b02348a34a3e248062798, type: 2}
+  - {fileID: 11400000, guid: c5920de17796fa143aab4bdbfc12032b, type: 2}
+  - {fileID: 11400000, guid: a65729696a98bba4db428f60a9b9e812, type: 2}
+  - {fileID: 11400000, guid: e8590f8319652b94087a5cc4ddd961bd, type: 2}
+  - {fileID: 11400000, guid: 880f239ca04e4f0478afc239d8fabb37, type: 2}
+  - {fileID: 11400000, guid: 7d05044684671a946ad9e899039ba029, type: 2}
+  - {fileID: 11400000, guid: 60a7200020d06b64dbc7725400d5f625, type: 2}
+  - {fileID: 11400000, guid: a64eb7774ce628f48a45009694da189d, type: 2}

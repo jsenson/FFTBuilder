@@ -13,4 +13,12 @@ MonoBehaviour:
   m_Name: Punch Art
   m_EditorClassIdentifier: 
   _type: 0
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 2cdebe50dce4e8c4d8cbe109a9d0e05a, type: 2}
+  - {fileID: 11400000, guid: bac979880cb00784a8f3e3c42212d800, type: 2}
+  - {fileID: 11400000, guid: 8c0e3d685410be84b97e998cbfa0b469, type: 2}
+  - {fileID: 11400000, guid: 87a0c71c45fd04a48a5ba40ba30b2ee6, type: 2}
+  - {fileID: 11400000, guid: 52111a6c459c6f34b85802fc58103681, type: 2}
+  - {fileID: 11400000, guid: 08a69ec0ecbe742439819797014e902c, type: 2}
+  - {fileID: 11400000, guid: 236c3fd5fbaefa7469eab935b5363450, type: 2}
+  - {fileID: 11400000, guid: 197961f459b5f024a8f4e0fb229937ce, type: 2}

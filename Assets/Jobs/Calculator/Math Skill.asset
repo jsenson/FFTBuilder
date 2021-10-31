@@ -13,4 +13,12 @@ MonoBehaviour:
   m_Name: Math Skill
   m_EditorClassIdentifier: 
   _type: 0
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 08638776452fa6241a0b2f880021368b, type: 2}
+  - {fileID: 11400000, guid: 3b908ddb169134d44974cead2c7d8914, type: 2}
+  - {fileID: 11400000, guid: c3185fa651f5c8b478e3950c2a33b53e, type: 2}
+  - {fileID: 11400000, guid: 46da5d4db96444c4cb70703a7a854d80, type: 2}
+  - {fileID: 11400000, guid: f20007a5a0bf79c41a5a6924219443ec, type: 2}
+  - {fileID: 11400000, guid: 81c0dd1beba3e1b4f9e375ba5cbe09c2, type: 2}
+  - {fileID: 11400000, guid: 60380818b60d10f4c9b47c1af2e6c6af, type: 2}
+  - {fileID: 11400000, guid: 10df9c466e0bd8544b39a0972c4d43a9, type: 2}

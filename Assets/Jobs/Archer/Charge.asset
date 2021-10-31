@@ -13,4 +13,12 @@ MonoBehaviour:
   m_Name: Charge
   m_EditorClassIdentifier: 
   _type: 0
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 203213017c63ea54fadb7fb31db4344e, type: 2}
+  - {fileID: 11400000, guid: d43b4c7e713507b4999bc976522b777b, type: 2}
+  - {fileID: 11400000, guid: 03e9068160daf2442bf4c4cee352571c, type: 2}
+  - {fileID: 11400000, guid: 3c911d788546225459e82c50ece9f6df, type: 2}
+  - {fileID: 11400000, guid: 98f0a5dc3e7aa0c4d8c0a7ad0d0caae8, type: 2}
+  - {fileID: 11400000, guid: c2a75e9554b00c44a9cb37cf54acebfa, type: 2}
+  - {fileID: 11400000, guid: 969f779979b264241bd7c70b465255cb, type: 2}
+  - {fileID: 11400000, guid: deb6504155aadd1459ffe9d6256e29b6, type: 2}

@@ -13,4 +13,16 @@ MonoBehaviour:
   m_Name: Throw
   m_EditorClassIdentifier: 
   _type: 0
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 31db1a122449ecf4596f1a508b47829a, type: 2}
+  - {fileID: 11400000, guid: 8fde439446da5534d8b25a88d13d28d4, type: 2}
+  - {fileID: 11400000, guid: 6da56f7c540b1a741b05311c22b5438e, type: 2}
+  - {fileID: 11400000, guid: 81b3cc0d12573cb43ae39ff0961e8a2a, type: 2}
+  - {fileID: 11400000, guid: 2467aa8066893e448a2db745ccd25f10, type: 2}
+  - {fileID: 11400000, guid: b49681f3e9854884e8d9ab91cf36952f, type: 2}
+  - {fileID: 11400000, guid: 27d000586abf4af4f853199997723e58, type: 2}
+  - {fileID: 11400000, guid: 43e5aa14f1b4ca14abf4381d1ae6f2a6, type: 2}
+  - {fileID: 11400000, guid: 6ea85dd0279c51541b393af255ad8ffc, type: 2}
+  - {fileID: 11400000, guid: 7d8927842c949df42b56e5294ef1e482, type: 2}
+  - {fileID: 11400000, guid: 71325323acd0a4842b6e1abd1923324c, type: 2}
+  - {fileID: 11400000, guid: 7f9acabc1fa718647bbc3905e73a59ff, type: 2}

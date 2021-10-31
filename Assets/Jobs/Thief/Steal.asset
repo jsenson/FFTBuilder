@@ -13,4 +13,12 @@ MonoBehaviour:
   m_Name: Steal
   m_EditorClassIdentifier: 
   _type: 0
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: c750939dc9cb96740b13b80bdb77cc4c, type: 2}
+  - {fileID: 11400000, guid: e503bb61987238f499e1739e8ad7db6a, type: 2}
+  - {fileID: 11400000, guid: 6144455896d568046a61c61194ad99d8, type: 2}
+  - {fileID: 11400000, guid: 6bf52333b9f6a8c41bdc0085145ec09a, type: 2}
+  - {fileID: 11400000, guid: 4c80b4b53c796ea47895200bdd9e569e, type: 2}
+  - {fileID: 11400000, guid: 55d1c8f69c5f42744b4600e335e201de, type: 2}
+  - {fileID: 11400000, guid: 666c0947c94d71846b0d53865f447f17, type: 2}
+  - {fileID: 11400000, guid: 567197db90af4054eb5c147ce27fce34, type: 2}

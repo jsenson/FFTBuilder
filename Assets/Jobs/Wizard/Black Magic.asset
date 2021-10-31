@@ -13,4 +13,20 @@ MonoBehaviour:
   m_Name: Black Magic
   m_EditorClassIdentifier: 
   _type: 0
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 0127bd29a0f16d94db31cb7892cfef1f, type: 2}
+  - {fileID: 11400000, guid: 6a3240b7c7cd6364c92da20fab20053f, type: 2}
+  - {fileID: 11400000, guid: 1a3883c48fece8e44a469dc4e2b2aca8, type: 2}
+  - {fileID: 11400000, guid: c3d4bab84312e5a41ad6c33a293a6ee7, type: 2}
+  - {fileID: 11400000, guid: 533ea9d06df58424da7c68246560cf57, type: 2}
+  - {fileID: 11400000, guid: 4f00be7bed7a83c45a69191b5f9c3963, type: 2}
+  - {fileID: 11400000, guid: 4d3529fcc5ae8bb41a237809e8cc74af, type: 2}
+  - {fileID: 11400000, guid: 5a5f12b217624b74f9420a9a580aa128, type: 2}
+  - {fileID: 11400000, guid: 21a763f173cd7db4eb4434461c7df30c, type: 2}
+  - {fileID: 11400000, guid: 27b22c534ce98e549b9a4df770c923ea, type: 2}
+  - {fileID: 11400000, guid: 455c53a12e72b35498ef55abd47152e1, type: 2}
+  - {fileID: 11400000, guid: a29bf5cc3df2f85428b7d66ff0406a3c, type: 2}
+  - {fileID: 11400000, guid: bb60c84000b49374193f4fcf43402d21, type: 2}
+  - {fileID: 11400000, guid: 4e901b0258e701a44a3220586429fc9e, type: 2}
+  - {fileID: 11400000, guid: 67336040f8cba9b4e8e1459d58001690, type: 2}
+  - {fileID: 11400000, guid: df12308bc41fd8d459cd90dde6c6c235, type: 2}

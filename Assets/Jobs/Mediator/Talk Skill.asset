@@ -13,4 +13,14 @@ MonoBehaviour:
   m_Name: Talk Skill
   m_EditorClassIdentifier: 
   _type: 0
-  _abilities: []
+  _abilities:
+  - {fileID: 11400000, guid: 130505f2044bd164da498ca5f38cc664, type: 2}
+  - {fileID: 11400000, guid: aa7381005b5598d42bcd9c726ac8ca23, type: 2}
+  - {fileID: 11400000, guid: bd5764f7d37d4864c9dfd3d130166ba3, type: 2}
+  - {fileID: 11400000, guid: ced0945c1dd90984dab9ee28a46c5a66, type: 2}
+  - {fileID: 11400000, guid: 96ddb08348c38054baf633a22226b2de, type: 2}
+  - {fileID: 11400000, guid: e30298f5ece2f914e97424d3c3c157d5, type: 2}
+  - {fileID: 11400000, guid: 2d0ed020cb70e0f4486f84280671563c, type: 2}
+  - {fileID: 11400000, guid: 0db080997340336419ae311afb70b2c0, type: 2}
+  - {fileID: 11400000, guid: cada26564369ce04fa6c9db565ea3ee0, type: 2}
+  - {fileID: 11400000, guid: 4e3560a65975beb429d99e0ead0fcd11, type: 2}
