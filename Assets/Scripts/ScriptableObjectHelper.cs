@@ -1,4 +1,7 @@
+using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using UnityEngine;
 using UnityEditor;
 
@@ -8,7 +11,7 @@ public static class ScriptableObjectHelper {
 	private const string JOBS = "Jobs";
 
 	public static Ability GetOrCreateAbility(string name, Ability.Type type, string jobName) {
-		Ability ability = GetByName<Ability>(name);
+		Ability ability = GetByName<Ability>(name, a => a.AbilityType == type);
 		if (ability == null) {
 			if (type == Ability.Type.Class) {
 				ability = CreateInstanceAtPath<Ability>(Path.Combine(ABILITIES, type.ToString()), jobName, name);
@@ -39,16 +42,27 @@ public static class ScriptableObjectHelper {
 		return set;
 	}
 
-	public static T GetByName<T>(string name) where T : ScriptableObject {
+	public static T GetByName<T>(string name, System.Func<T, bool> validate = null) where T : ScriptableObject {
 		T item = null;
 		string typeName = typeof(T).Name;
 		string[] guids = AssetDatabase.FindAssets($"t:{typeName} {name}");
 		if (guids.Length > 0) {
 			// Ye gods this is stupid.  There's no way to force an exact match so we have to look through multiple partial matches and pick it out manually...
-			string guid = GetExactMatchGuid(guids, typeName, name);
-			if (!string.IsNullOrEmpty(guid)) {
-				item = AssetDatabase.LoadAssetAtPath<T>(AssetDatabase.GUIDToAssetPath(guid));
+			// guids = GetExactMatchGuids(guids, name);
+			guids = guids.Where(guid => AssetWithGuidHasName(guid, name)).ToArray();
+			var assets = new List<T>();
+			foreach (string guid in guids) {
+				T asset = AssetDatabase.LoadAssetAtPath<T>(AssetDatabase.GUIDToAssetPath(guid));
+				if (validate == null || validate(asset)) {
+					assets.Add(asset);
+				}
 			}
+
+			if (assets.Count > 1) {
+				Debug.LogWarning($"Multiple {typeName} ScriptableObjects found with the name {name}.  Only one will be used.");
+			}
+
+			item = assets.FirstOrDefault();
 		}
 
 		return item;
@@ -66,25 +80,9 @@ public static class ScriptableObjectHelper {
 		return newObject;
 	}
 
-	private static string GetExactMatchGuid(string[] guids, string typeName, string assetName) {
-		int matchIndex = -1;
-		for (int i = 0; i < guids.Length; i++) {
-			string path = AssetDatabase.GUIDToAssetPath(guids[i]);
-			string fileName = Path.GetFileNameWithoutExtension(path);
-			if (fileName.Equals(assetName)) {
-				if (matchIndex == -1) {
-					matchIndex = i;
-				} else {
-					Debug.LogWarning($"Multiple {typeName} ScriptableObjects found with the name {assetName}.  Only one will be used.");
-					break;
-				}
-			}
-		}
-
-		if (matchIndex > -1) {
-			return guids[matchIndex];
-		} else {
-			return null;
-		}
+	private static bool AssetWithGuidHasName(string guid, string assetName) {
+		string path = AssetDatabase.GUIDToAssetPath(guid);
+		string fileName = Path.GetFileNameWithoutExtension(path);
+		return fileName.Equals(assetName);
 	}
 }

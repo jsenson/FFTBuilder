@@ -15,16 +15,31 @@ public class Ability : ScriptableObject {
 
 	public Type AbilityType {
 		get => _type;
-		set => _type = value;
+		set {
+			_type = value;
+#if UNITY_EDITOR
+			UnityEditor.EditorUtility.SetDirty(this);
+#endif
+		}
 	}
 
 	public string Description {
 		get => _description;
-		set => _description = value;
+		set {
+			_description = value;
+#if UNITY_EDITOR
+			UnityEditor.EditorUtility.SetDirty(this);
+#endif
+		}
 	}
 
 	public int JpCost {
 		get => _jpCost;
-		set => _jpCost = value;
+		set {
+			_jpCost = value;
+#if UNITY_EDITOR
+			UnityEditor.EditorUtility.SetDirty(this);
+#endif
+		}
 	}
 }
