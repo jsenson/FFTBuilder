@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 0
   _jpCost: 350
-  _description: "Absorbs target\u2019s HP and restores the character\u2019s own HP."
+  _description: Absorbs target's HP and restores the character's own HP.

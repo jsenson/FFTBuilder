@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 0
   _jpCost: 600
-  _description: "Summoned Darkness Elemental drains off 50% of the enemy\u2019s HP."
+  _description: Summoned Darkness Elemental drains off 50% of the enemy's HP.

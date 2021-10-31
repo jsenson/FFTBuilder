@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 0
   _jpCost: 100
-  _description: "Raises ally\u2019s CT count to 100."
+  _description: Raises ally's CT count to 100.

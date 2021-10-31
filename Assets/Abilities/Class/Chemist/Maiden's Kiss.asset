@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6007a7e1e56ed1e4895d2c43a0602c2e, type: 3}
-  m_Name: Steal Weapon
+  m_Name: Maiden's Kiss
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 600
-  _description: Steal enemy's equipped weapon.
+  _jpCost: 200
+  _description: 'Changes the character back to his/her original shape. Cancels: Frog'

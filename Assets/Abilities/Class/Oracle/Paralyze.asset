@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 0
   _jpCost: 100
-  _description: "Prevents target from taking action. Adds: Don\u2019t Act"
+  _description: 'Prevents target from taking action. Adds: Don''t Act'

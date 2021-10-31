@@ -12,7 +12,7 @@ Bard	Class	Cheer Song	Raises the Speed level of all allied units.	100
 Bard	Class	Battle Song	Raises the physical attack power of all allied units.	100
 Bard	Class	Magic Song	Raises the magic attack power of all allied units.	100
 Bard	Class	Nameless Song	Song causes various positive status effects. Adds: Reraise, Regen, Protect, Shell, Haste	100
-Bard	Class	Last Song	Raises ally’s CT count to 100.	100
+Bard	Class	Last Song	Raises ally's CT count to 100.	100
 Calculator	Class	CT	Calculate CT.	250
 Calculator	Class	Level	Calculate level.	350
 Calculator	Class	Exp	Calculate Exp.	200
@@ -30,38 +30,38 @@ Chemist	Class	Elixir	Restores all HP and MP. Elixirs cannot be found in stores a
 Chemist	Class	Antidote	Neutralizes all poisons. Cancels: Poison	70
 Chemist	Class	Eye Drop	Restores sight. Cancels: Darkness	80
 Chemist	Class	Echo Grass	Restores speech, allowing the character to cast spells again. Cancels: Silence	120
-Chemist	Class	Maiden’s Kiss	Changes the character back to his/her original shape. Cancels: Frog	200
+Chemist	Class	Maiden's Kiss	Changes the character back to his/her original shape. Cancels: Frog	200
 Chemist	Class	Soft	A golden needle which cures petrificaction. Cancels: Petrify	250
 Chemist	Class	Holy Water	Restores life to the undead. Cancels: Undead, Blood Suck	400
 Chemist	Class	Remedy	This all-purpose medicine cures most status anomalies. Cancels: Petrify, Darkness, Confusion, Silence, Oil, Frog, Poison, Sleep	700
 Chemist	Class	Phoenix Down	This tailfeather revives dead units. Cancels: Dead	90
 Dancer	Class	Witch Hunt	Causes MP damage to all enemy units on the battlefield.	100
 Dancer	Class	Wiznaibus	Causes HP damage to all enemy units on the battlefield.	100
-Dancer	Class	Slow Dance	Lowers enemy’s Speed level.	100
-Dancer	Class	Polka Polka	Lowers enemy’s physical attack power.	100
-Dancer	Class	Disillusion	Lowers enemy’s magic attack power.	100
+Dancer	Class	Slow Dance	Lowers enemy's Speed level.	100
+Dancer	Class	Polka Polka	Lowers enemy's physical attack power.	100
+Dancer	Class	Disillusion	Lowers enemy's magic attack power.	100
 Dancer	Class	Nameless Dance	Dance causes various abnormal statuses to all enemy units no the battlefield. Adds: Darkness, Confusion, Silence, Frog, Poison, Slow, Stop, Sleep	100
-Dancer	Class	Last Dance	Lowers enemy’s CT count to zero.	100
-Geomancer	Class	Pitfall	Effective on Natural Surface, Wasteland, Road. Adds: Don’t Move	150
+Dancer	Class	Last Dance	Lowers enemy's CT count to zero.	100
+Geomancer	Class	Pitfall	Effective on Natural Surface, Wasteland, Road. Adds: Don't Move	150
 Geomancer	Class	Water Ball	Water Elemental attack effective on Waterway, River, Lake, Sea, Waterfall. Adds: Frog	150
 Geomancer	Class	Hell Ivy	Effective on Grassland, Thicket, Water Plant, Ivy. Adds: Stop	150
 Geomancer	Class	Carve Model	Effective on Gravel, Stone Floor, Stone Wall, Mud Wall, Tombstone. Adds: Petrify	150
 Geomancer	Class	Local Quake	Earth Elemental attack effective on Rocky Cliff, Lava Rocks. Adds: Confusion	150
-Geomancer	Class	Kamaitachi	Wind Elemental attack effective on Book, Tree, Brick, Bridge, Furniture, Iron Plate, Moss, Coffin. Adds: Don’t Act	150
+Geomancer	Class	Kamaitachi	Wind Elemental attack effective on Book, Tree, Brick, Bridge, Furniture, Iron Plate, Moss, Coffin. Adds: Don't Act	150
 Geomancer	Class	Demon Fire	Fire Elemental attack effective on Wooden Floor, Rug, Box, Stairs, Deck. Adds: Sleep	150
 Geomancer	Class	Quicksand	Water Elemental attack effective on Swamp, Marsh, Poisoned Marsh. Adds: Darkness	150
 Geomancer	Class	Sand Storm	Wind Elemental attack effective on Sand Area, Stalactite, Salt. Adds: Darkness	150
 Geomancer	Class	Blizzard	Ice Elemental attack effective on Snow, Ice. Adds: Silence	150
 Geomancer	Class	Gusty Wind	Wind Elemental attack effective on Roof, Sky, Chimney. Adds: Slow	150
 Geomancer	Class	Lava Ball	Fire Elemental attack effective on Lava, Machinery. Adds: Dead	150
-Knight	Class	Head Break	Destroys target’s equipped hat or helmet, decreasing protection and HP.	300
-Knight	Class	Armor Break	Destroys target’s equipped armor, clothes, or robe, decreasing his/her protection and HP.	400
-Knight	Class	Shield Break	Destroys target’s equipped shield.	300
-Knight	Class	Weapon Break	Destroys target’s equipped weapon, reducing his/her attack power greatly.	400
-Knight	Class	Magic Break	Reduces target’s MP by half.	250
-Knight	Class	Speed Break	Diminishes target’s Speed level, two points at a time.	250
-Knight	Class	Power Break	Reduces target’s physical attack power, two points at a time.	250
-Knight	Class	Mind Break	Reduces target’s magic attack power, two points at a time.	250
+Knight	Class	Head Break	Destroys target's equipped hat or helmet, decreasing protection and HP.	300
+Knight	Class	Armor Break	Destroys target's equipped armor, clothes, or robe, decreasing his/her protection and HP.	400
+Knight	Class	Shield Break	Destroys target's equipped shield.	300
+Knight	Class	Weapon Break	Destroys target's equipped weapon, reducing his/her attack power greatly.	400
+Knight	Class	Magic Break	Reduces target's MP by half.	250
+Knight	Class	Speed Break	Diminishes target's Speed level, two points at a time.	250
+Knight	Class	Power Break	Reduces target's physical attack power, two points at a time.	250
+Knight	Class	Mind Break	Reduces target's magic attack power, two points at a time.	250
 Lancer	Class	Horizontal Jump 2	Allows the character to jump two panels horizontally.	150
 Lancer	Class	Horizontal Jump 3	Allows the character to jump three panels horizontally.	300
 Lancer	Class	Horizontal Jump 4	Allows the character to jump four panels horizontally.	450
@@ -75,11 +75,11 @@ Lancer	Class	Vertical Jump 6	Allows the character to jump six panels vertically.
 Lancer	Class	Vertical Jump 7	Allows the character to jump seven panels vertically.	600
 Lancer	Class	Vertical Jump 8	Allows the character to jump eight panels vertically.	900
 Mediator	Class	Invitation	Turns an enemy into an ally. Adds: Invitation	100
-Mediator	Class	Persuade	Resets an enemy’s CT count.	100
-Mediator	Class	Praise	Raises target’s Brave level by 4 points.	200
-Mediator	Class	Threaten	Lowers target’s Brave level by 20 points.	200
-Mediator	Class	Preach	Raises target’s Faith level by 4 points.	200
-Mediator	Class	Solution	Lowers target’s Faith level by 20 points.	200
+Mediator	Class	Persuade	Resets an enemy's CT count.	100
+Mediator	Class	Praise	Raises target's Brave level by 4 points.	200
+Mediator	Class	Threaten	Lowers target's Brave level by 20 points.	200
+Mediator	Class	Preach	Raises target's Faith level by 4 points.	200
+Mediator	Class	Solution	Lowers target's Faith level by 20 points.	200
 Mediator	Class	Death Sentence	Sentences target to death. Adds: Death Sentence	500
 Mediator	Class	Negotiate	Receive Gil from enemy as tribute.	100
 Mediator	Class	Insult	Character emerges enemy target, causing it to attack wildly, lowering its success rate. Adds: Berserk	300
@@ -89,13 +89,13 @@ Monk	Class	Repeating Fist	Character punches the target repeatedly with his/her f
 Monk	Class	Wave Fist	Character can attack an enemy from afar with a surge of energy.	300
 Monk	Class	Earth Slash	A line of energy flowing through the ground causes damage to enemies standing in its path.	600
 Monk	Class	Secret Fist	Casts a Death Sentence on the enemy after attack. Do not use against undead enemies. Adds: Death Sentence	300
-Monk	Class	Stigma Magic	Use the spirit of Yang to nullify status anomalies. Cancels: Petrify, Darkness, Confusion, Silence, Berserk, Frog, Poison, Sleep, Don’t Move, Don’t Act	200
+Monk	Class	Stigma Magic	Use the spirit of Yang to nullify status anomalies. Cancels: Petrify, Darkness, Confusion, Silence, Berserk, Frog, Poison, Sleep, Don't Move, Don't Act	200
 Monk	Class	Chakra	A concentration of Ki restores both HP and MP to the caster and those surrounding him/her.	350
 Monk	Class	Revive	Resurrects a dead character, restoring his/her HP slightly. Cancels: Dead	500
 Oracle	Class	Blind	Blinding the enemy lowers its success rate at landing physical attacks. Adds: Darkness	100
-Oracle	Class	Spell Absorb	Absorbs the target’s MP and restores the character’s own MP.	200
-Oracle	Class	Life Drain	Absorbs target’s HP and restores the character’s own HP.	350
-Oracle	Class	Pray Faith	Temporarily raises the target’s Faith level to 100. Adds: Faith	400
+Oracle	Class	Spell Absorb	Absorbs the target's MP and restores the character's own MP.	200
+Oracle	Class	Life Drain	Absorbs target's HP and restores the character's own HP.	350
+Oracle	Class	Pray Faith	Temporarily raises the target's Faith level to 100. Adds: Faith	400
 Oracle	Class	Doubt Faith	Lowers Faith level to 0. Adds: Innocent	400
 Oracle	Class	Zombie	Makes target undead and therefore unable to restore HP. Adds: Undead	300
 Oracle	Class	Silence Song	Silences target, making it unable to cast spells. Adds: Silence	170
@@ -103,7 +103,7 @@ Oracle	Class	Blind Rage	Enrages target causing it to attack wildly and lowering 
 Oracle	Class	Foxbird	Lowers Brave level by 10 points.	200
 Oracle	Class	Confusion Song	Makes target act unpredictably. Adds: Confusion	400
 Oracle	Class	Dispel Magic	Prevents positive status effects. Cancels: Float, Reraise, Transparent, Regen, Protect, Shell, Haste, Faith, Reflect	700
-Oracle	Class	Paralyze	Prevents target from taking action. Adds: Don’t Act	100
+Oracle	Class	Paralyze	Prevents target from taking action. Adds: Don't Act	100
 Oracle	Class	Sleep	Puts target to sleep. Adds: Sleep	350
 Oracle	Class	Petrify	Turns enemy into stone. Adds: Petrify	600
 Priest	Class	Cure	Restores a small amount of HP	50
@@ -119,19 +119,19 @@ Priest	Class	Protect 2	Decreases amount of physical attack damage sustained. Has
 Priest	Class	Shell	Decreases amount of magic attack damage sustained. Adds: Shell	70
 Priest	Class	Shell 2	Decreases amount of magic attack damage sustained. Has a higher success ratio than Shell. Adds: Shell	500
 Priest	Class	Wall	Protects units from both physical and magic attacks. Adds: Protect, Shell	380
-Priest	Class	Esuna	Cures the majority of abnormal statuses. Cancels: Petrify, Darkness, Confusion, Silence, Berserk, Frog, Poison, Sleep, Don’t Move, Don’t Act	280
+Priest	Class	Esuna	Cures the majority of abnormal statuses. Cancels: Petrify, Darkness, Confusion, Silence, Berserk, Frog, Poison, Sleep, Don't Move, Don't Act	280
 Priest	Class	Holy	Powerful Holy Elemental attack.	600
 Samurai	Class	Asura	The slashing of an invisible blade causes damage to enemy units.	100
 Samurai	Class	Koutesu	The wailing of a ghost causes damage to the enemy.	180
-Samurai	Class	Bizen Boat	The whisper of the Katana’s spirit causes MP damage to the enemy.	260
-Samurai	Class	Murasame	The tears of the Katana’s spirit restores HP of allied units.	340
-Samurai	Class	Heaven’s Cloud	Magic Katana attack causing damage to enemy units. Adds: Slow	420
+Samurai	Class	Bizen Boat	The whisper of the Katana's spirit causes MP damage to the enemy.	260
+Samurai	Class	Murasame	The tears of the Katana's spirit restores HP of allied units.	340
+Samurai	Class	Heaven's Cloud	Magic Katana attack causing damage to enemy units. Adds: Slow	420
 Samurai	Class	Kiyomori	Spirit in the Katana protects allied units, reducing physical and magic damage. Adds: Protect, Shell	500
 Samurai	Class	Muramasa	Ghosts from the Katana make the enemy act unpredictably and in some cases sentences them to death. Adds: Confusion, Death Sentence	580
 Samurai	Class	Kikuichimoji	Vengeful spirit makes a beeline toward the enemy.	660
-Samurai	Class	Masamune	Katana spirit gradually restores ally’s HP and increases speed. Sword for attack must be stolen from Elmdor. Adds: Regen, Haste	740
+Samurai	Class	Masamune	Katana spirit gradually restores ally's HP and increases speed. Sword for attack must be stolen from Elmdor. Adds: Regen, Haste	740
 Samurai	Class	Chirijiraden	Powerful Katana attack that causes a blue flame to attack enemy units. Sword for attack must be found in the Deep Dungeon.	820
-Squire	Class	Accumulate	Raises the character’s physical attack power.	300
+Squire	Class	Accumulate	Raises the character's physical attack power.	300
 Squire	Class	Dash	Attacks the enemy with a body blow.	80
 Squire	Class	Throw Stone	Throws a stone at an enemy unit. This is one of the first long-range attacks your characters can learn.	90
 Squire	Class	Heal	Cures abnormal status effects such as Darkness, Silence, and Poison.	150
@@ -140,7 +140,7 @@ Summoner	Class	Shiva	Summons Ice Elemental to attack enemies.	200
 Summoner	Class	Ramuh	Summons Lightning Elemental to attack enemies.	200
 Summoner	Class	Ifrit	Summons Fire Elemental to attack enemies.	200
 Summoner	Class	Titan	Summons Earth Elemental to attack enemies.	220
-Summoner	Class	Golem	Golem shares ally’s damage, allowing them to evade physical weapon damage.	500
+Summoner	Class	Golem	Golem shares ally's damage, allowing them to evade physical weapon damage.	500
 Summoner	Class	Carbuncle	Summoned monster helps allies to reflect magic spells. Adds: Reflect	350
 Summoner	Class	Bahamut	Summoned monsters enemy with a blast of hot breath.	1200
 Summoner	Class	Odin	Summoned monster causes damage to enemies while riding its dragon-horse across the battlefield.	900
@@ -148,28 +148,28 @@ Summoner	Class	Leviathan	Water Elemental attacks enemies with tsunami.	850
 Summoner	Class	Salamander	Summoned Fire Elemental burns battlefield with flaming breath.	820
 Summoner	Class	Silf	Summoned monster silences enemies. Adds: Silence	400
 Summoner	Class	Fairy	Summoned fairy restores HP to allies. Effect is more powerful than Moogle.	400
-Summoner	Class	Lich	Summoned Darkness Elemental drains off 50% of the enemy’s HP.	600
+Summoner	Class	Lich	Summoned Darkness Elemental drains off 50% of the enemy's HP.	600
 Summoner	Class	Cyclops	Summoned Holy Elemental causes damage to enemies by shaking up the battlefield.	1000
 Summoner	Class	Zodiac	Summoned monster attacks enemies with a strong beam of star light. Must be learned from the Zodiac monster, Elidibs, on the 10th level of the Deep Dungeon.	0
 Thief	Class	Gil Taking	Character can steal gil from the enemy target.	10
 Thief	Class	Steal Heart	Charms enemy unit. Is revoked when unit takes damage. Adds: Charm	150
-Thief	Class	Steal Helmet	Steal enemy’s equipped helmet.	350
-Thief	Class	Steal Armor	Steal enemy’s equipped armor.	450
-Thief	Class	Steal Shield	Steal enemy’s equipped shield.	350
-Thief	Class	Steal Weapon	Steal enemy’s equipped weapon.	600
-Thief	Class	Steal Accessory	Steal enemy’s equipped accessory.	500
-Thief	Class	Steal Experience	Steal enemy’s experience.	250
-Time Mage	Class	Haste	Increases target’s speed. Adds: Haste	100
-Time Mage	Class	Haste 2	Increases target’s speed. Adds: Haste	550
-Time Mage	Class	Slow	Decreases target’s speed. Adds: Slow	100
-Time Mage	Class	Slow 2	Decreases target’s speed. Adds: Slow	520
+Thief	Class	Steal Helmet	Steal enemy's equipped helmet.	350
+Thief	Class	Steal Armor	Steal enemy's equipped armor.	450
+Thief	Class	Steal Shield	Steal enemy's equipped shield.	350
+Thief	Class	Steal Weapon	Steal enemy's equipped weapon.	600
+Thief	Class	Steal Accessory	Steal enemy's equipped accessory.	500
+Thief	Class	Steal Experience	Steal enemy's experience.	250
+Time Mage	Class	Haste	Increases target's speed. Adds: Haste	100
+Time Mage	Class	Haste 2	Increases target's speed. Adds: Haste	550
+Time Mage	Class	Slow	Decreases target's speed. Adds: Slow	100
+Time Mage	Class	Slow 2	Decreases target's speed. Adds: Slow	520
 Time Mage	Class	Stop	Prevents target from moving or attacking. Adds: Stop	330
-Time Mage	Class	Don’t Move	Prevents target from moving. Adds: Don’t Move	100
+Time Mage	Class	Don't Move	Prevents target from moving. Adds: Don't Move	100
 Time Mage	Class	Float	Allows target to float 1 panel above ground. Adds: Float	200
 Time Mage	Class	Reflect	Allows target to reflect magic spells. Adds: Reflect	300
 Time Mage	Class	Quick	Increases speed of AT.	800
-Time Mage	Class	Demi	Decreases target’s max HP by 25%.	250
-Time Mage	Class	Demi 2	Decreases target’s max HP by 50%.	550
+Time Mage	Class	Demi	Decreases target's max HP by 25%.	250
+Time Mage	Class	Demi 2	Decreases target's max HP by 50%.	550
 Time Mage	Class	Meteor	Causes a huge meteor to fall from the sky on top of the target.	1500
 Ninja	Class	Shuriken	Allows the character to throw Shuriken.	50
 Ninja	Class	Ball	Allows the character to throw an Elemental Ball.	70
@@ -195,7 +195,7 @@ Wizard	Class	Ice	Basic Ice Elemental attack.	50
 Wizard	Class	Ice 2	Medium-level Ice Elemental attack.	200
 Wizard	Class	Ice 3	High-level Ice Elemental attack.	480
 Wizard	Class	Ice 4	Massive Ice Elemental attack.	850
-Wizard	Class	Poison	Gradually lowers target’s HP through poisoning. Adds: Poison	150
+Wizard	Class	Poison	Gradually lowers target's HP through poisoning. Adds: Poison	150
 Wizard	Class	Frog	Turns target into a frog and vice versa. Adds: Frog	500
 Wizard	Class	Death	Has a small chance to kill the target instantly. Adds: Dead	600
 Wizard	Class	Flare	Large fireball falls from the sky causing a large amount of damage to the target.	900

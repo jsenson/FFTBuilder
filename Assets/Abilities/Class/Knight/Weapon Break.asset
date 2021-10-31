@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 0
   _jpCost: 400
-  _description: "Destroys target\u2019s equipped weapon, reducing his/her attack
-    power greatly."
+  _description: Destroys target's equipped weapon, reducing his/her attack power
+    greatly.

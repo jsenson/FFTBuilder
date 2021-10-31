@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 0
   _jpCost: 100
-  _description: "Lowers enemy\u2019s CT count to zero."
+  _description: Lowers enemy's CT count to zero.

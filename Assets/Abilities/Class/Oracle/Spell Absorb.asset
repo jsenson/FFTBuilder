@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 0
   _jpCost: 200
-  _description: "Absorbs the target\u2019s MP and restores the character\u2019s own
-    MP."
+  _description: Absorbs the target's MP and restores the character's own MP.

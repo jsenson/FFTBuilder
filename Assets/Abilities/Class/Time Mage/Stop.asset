@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Stop
   m_EditorClassIdentifier: 
   _type: 0
-  _jpCost: 0
-  _description: 
+  _jpCost: 330
+  _description: 'Prevents target from moving or attacking. Adds: Stop'

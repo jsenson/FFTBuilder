@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 0
   _jpCost: 150
-  _description: "Gradually lowers target\u2019s HP through poisoning. Adds: Poison"
+  _description: 'Gradually lowers target''s HP through poisoning. Adds: Poison'

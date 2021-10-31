@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 0
   _jpCost: 350
-  _description: "Steal enemy\u2019s equipped helmet."
+  _description: Steal enemy's equipped helmet.

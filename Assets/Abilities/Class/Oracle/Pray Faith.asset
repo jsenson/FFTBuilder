@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 0
   _jpCost: 400
-  _description: "Temporarily raises the target\u2019s Faith level to 100. Adds: Faith"
+  _description: 'Temporarily raises the target''s Faith level to 100. Adds: Faith'

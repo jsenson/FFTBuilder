@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 0
   _jpCost: 500
-  _description: "Golem shares ally\u2019s damage, allowing them to evade physical
-    weapon damage."
+  _description: Golem shares ally's damage, allowing them to evade physical weapon
+    damage.

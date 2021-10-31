@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 0
   _jpCost: 250
-  _description: "Reduces target\u2019s MP by half."
+  _description: Reduces target's MP by half.
