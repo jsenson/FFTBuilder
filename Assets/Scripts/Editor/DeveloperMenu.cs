@@ -9,8 +9,10 @@ public static class DeveloperMenu {
 
 		string path = EditorUtility.OpenFilePanel("Import Abilities", "Assets/Import Files", "txt");
 		if (!string.IsNullOrEmpty(path)) {
-			var importer = new AbilityImportFile(path);
-			importer.WriteScriptableObjects(onProgress);
+			try {
+				var importer = new AbilityImportFile(path);
+				importer.WriteScriptableObjects(onProgress);
+			} catch (System.Exception) {}
 		}
 
 		EditorUtility.ClearProgressBar();

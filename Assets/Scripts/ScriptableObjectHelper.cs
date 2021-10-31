@@ -44,12 +44,11 @@ public static class ScriptableObjectHelper {
 		string typeName = typeof(T).Name;
 		string[] guids = AssetDatabase.FindAssets($"t:{typeName} {name}");
 		if (guids.Length > 0) {
-			if (guids.Length > 1) {
-				// Ye gods this is stupid.  There's no way to force an exact match so we have to look through multiple partial matches and pick it out manually...
-				guids[0] = GetExactMatchGuid(guids, typeName, name);
+			// Ye gods this is stupid.  There's no way to force an exact match so we have to look through multiple partial matches and pick it out manually...
+			string guid = GetExactMatchGuid(guids, typeName, name);
+			if (!string.IsNullOrEmpty(guid)) {
+				item = AssetDatabase.LoadAssetAtPath<T>(AssetDatabase.GUIDToAssetPath(guid));
 			}
-
-			item = AssetDatabase.LoadAssetAtPath<T>(AssetDatabase.GUIDToAssetPath(guids[0]));
 		}
 
 		return item;
@@ -85,7 +84,6 @@ public static class ScriptableObjectHelper {
 		if (matchIndex > -1) {
 			return guids[matchIndex];
 		} else {
-			Debug.LogError($"Could not find matching GUID for an asset with the name {assetName}");
 			return null;
 		}
 	}

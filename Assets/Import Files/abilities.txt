@@ -103,7 +103,7 @@ Oracle	Class	Blind Rage	Enrages target causing it to attack wildly and lowering 
 Oracle	Class	Foxbird	Lowers Brave level by 10 points.	200
 Oracle	Class	Confusion Song	Makes target act unpredictably. Adds: Confusion	400
 Oracle	Class	Dispel Magic	Prevents positive status effects. Cancels: Float, Reraise, Transparent, Regen, Protect, Shell, Haste, Faith, Reflect	700
-Oracle	Class	Paralyze	Prevents target from taking action. Adds: Don’t Act	4	2	0	10	20	100
+Oracle	Class	Paralyze	Prevents target from taking action. Adds: Don’t Act	100
 Oracle	Class	Sleep	Puts target to sleep. Adds: Sleep	350
 Oracle	Class	Petrify	Turns enemy into stone. Adds: Petrify	600
 Priest	Class	Cure	Restores a small amount of HP	50
