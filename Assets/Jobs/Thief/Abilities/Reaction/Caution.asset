@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 2
   _jpCost: 200
-  _description: "Receiving an enemy\u2019s attack causes the character to take up
-    a defensive position that halves all damage."
+  _description: Receiving an enemy's attack causes the character to take up a defensive
+    position that halves all damage.

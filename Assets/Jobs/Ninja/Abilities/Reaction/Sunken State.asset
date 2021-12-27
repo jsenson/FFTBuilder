@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 2
   _jpCost: 900
-  _description: Character hides and becomes Invisible once he or she receives HP
-    damage.
+  _description: 'Character hides and becomes Invisible once he or she receives HP
+    damage. Adds: Invisible.'

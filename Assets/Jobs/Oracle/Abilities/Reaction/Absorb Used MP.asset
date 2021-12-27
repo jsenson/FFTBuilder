@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 2
   _jpCost: 250
-  _description: "Restores character\u2019s MP by the same amount the enemy used to
-    cast its spell."
+  _description: Restores character's MP by the same amount the enemy used to cast
+    its spell.

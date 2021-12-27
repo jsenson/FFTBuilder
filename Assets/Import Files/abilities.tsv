@@ -232,7 +232,7 @@ Holy Swordsman	Class	Dark Sword	Darkness Elemental Sword spell that absorbs targ
 Holy Swordsman	Class	Night Sword	Darkness Elemental Sword spell that absorbs target's HP.	100
 Soldier	Class	Braver	Samurai-style sword attack.	150
 Soldier	Class	Cross-slash	Cuts enemies within effect radius four times.	200
-Soldier	Class	Blade Beam	Similar to Shock!–the greater your damage, the more damage you can inflict.	250
+Soldier	Class	Blade Beam	Similar to Shock!-the greater your damage, the more damage you can inflict.	250
 Soldier	Class	Climhazzard	The greater the target's damage, the more damage you can inflict.	450
 Soldier	Class	Meteorain	Attack causes a meteor to fall on targets.	560
 Soldier	Class	Finishing Touch	Causes different status anomalies. Adds: Dead, Petrify, Stop	670
@@ -270,3 +270,82 @@ Dragoner	Class	Dragon Care	Restores ally Dragon's HP and Status by offering own 
 Dragoner	Class	Dragon PowerUp	Raises ally Dragon's Brave, Speed, physical and magic attack power.	400
 Dragoner	Class	Dragon LevelUp	Raises ally Dragon's CT, allowing its attack to occur sooner.	400
 Dragoner	Class	Holy Bracelet	Holy breath randomly attacks targets within effect range.	900
+Squire	Movement	Move +1	Increases the character's movement range by one panel.	200
+Chemist	Movement	Move-Find Item	Allows the character to find any hidden items on the destination panel.	100
+Archer	Movement	Jump +1	Increases a character's jump elevation by one panel.	200
+Monk	Movement	Move-HP Up	Allows the character to recover a small amount of HP as he or she moves around the battlefield.	300
+Time Mage	Movement	Teleport	Allows the character to move to any space on the battlefield instantly. However, the farther the destination panel, the greater the chance of failure.	600
+Time Mage	Movement	Float	Allows the character to float 1 panel above the ground.	540
+Thief	Movement	Move +2	Increases the character's movement range by two panels.	520
+Thief	Movement	Jump +2	Increases a character's jump elevation by two panels.	480
+Oracle	Movement	Any Weather	Allows the character to walk over swamps, marshes, poison marshes, regardless of climate.	200
+Oracle	Movement	Move-MP Up	The character recovers MP as he or she moves.	350
+Geomancer	Movement	Any Ground	Character can walk easily over watery terrain such as rivers.	220
+Geomancer	Movement	Move on Lava	Allows the character to move and walk over volcanic terrain.	150
+Lancer	Movement	Ignore Height	Allows the character to jump to any height, regardless of jumping ability.	150
+Samurai	Movement	Walk on Water	Allows the character to walk or stop on the surface of water.	300
+Ninja	Movement	Move in Water	Character can move or stop on water.	420
+Calculator	Movement	Move-Get Experience	Character gains Experience Points as he or she moves around.	400
+Calculator	Movement	Move-Get JP	Character gains a small amount of JP as he or she moves around.	400
+Dancer	Movement	Jump +3	Increases character's jump elevation by three panels.	1000
+Dancer	Movement	Fly	Character can leap over enemies and obstacles while moving.	1200
+Bard	Movement	Fly	Character can leap over enemies and obstacles while moving.	1200
+Bard	Movement	Move +3	Increases character's movement range by three panels.	1000
+Squire	Reaction	Counter Tackle	Counters a physical attack with a Dash attack's body blow.	180
+Chemist	Reaction	Auto Potion	When a character receives any form of HP damage, he or she uses the lowest-level potion available.	400
+Knight	Reaction	Weapon Guard	Allows character to evade an attack with an equipped weapon (not always successful).	200
+Archer	Reaction	Speed Save	When a character takes HP damage, it raises his or her Speed by 1.	800
+Archer	Reaction	Arrow Guard	Increases the character's chances of evading a Bow/Crossbow attack.	450
+Monk	Reaction	HP Restore	Restores HP to the character when an attack brings him or her down to critical levels.	500
+Monk	Reaction	Counter	Character counters an enemy's physical attack with one of his or her own.	300
+Monk	Reaction	Hamedo	Gives the character a chance to attack before being attacked.	1200
+Priest	Reaction	Regenerator	Apply Regen to the character when struck.	400
+Wizard	Reaction	Counter Magic	The character counters with the same magic attack he or she receives.	800
+Time Mage	Reaction	Critical Quick	The character's AT is elevated to next position when his or her HP totals fall within critical levels.	700
+Time Mage	Reaction	MP Switch	Character loses MP instead of HP when attacked.	400
+Summoner	Reaction	MP Restore	Restores MP to the character when an attack brings them down to critical levels.	400
+Thief	Reaction	Caution	Receiving an enemy's attack causes the character to take up a defensive position that halves all damage.	200
+Thief	Reaction	Gilgame Heart	Character receives from the enemy the same amount of Gil as HP damage incurred.	200
+Thief	Reaction	Catch	Character can catch and keep items thrown across the battlefield.	200
+Mediator	Reaction	Finger Guard	Character plugs his or her ears to dodge Talk Skill (word based) attacks.	300
+Oracle	Reaction	Absorb Used MP	Restores character's MP by the same amount the enemy used to cast its spell.	250
+Geomancer	Reaction	Counter Flood	Character counters a physical attack by invoking the appropriate geomancy effect.	300
+Lancer	Reaction	Dragon Spirit	When a character receives HP damage, that character casts the Reraise status.	560
+Samurai	Reaction	Meatbone Slash	When critical, allows the character to damage the target in the amount of his or her max HP.	200
+Samurai	Reaction	Blade Grasp	Allows the character to evade physical attacks other than Bow/Crossbow attacks.	700
+Ninja	Reaction	Sunken State	Character hides and becomes Invisible once he or she receives HP damage. Adds: Invisible.	900
+Ninja	Reaction	Abandon	Raises the character's evade percentage, allowing him or her to dodge attacks more easily.	400
+Calculator	Reaction	Distribute	When the character's HP are maxed, he or she shares any excess HP with his or her allies.	200
+Calculator	Reaction	Damage Split	Character heals themselves for half of all damage recieved and returns the other half to the attacker as damage.	300
+Dancer	Reaction	A Save	Rasies the character's physical attack power when attacked by the enemy.	550
+Dancer	Reaction	Brave Up	This raises the character's Brave level when attacked by the enemy.	500
+Bard	Reaction	MA Save	Raises a character's magic attack power when he or she takes HP damage.	450
+Bard	Reaction	Faith Up	Raises a character's Faith level when he/she's hit with a magical spell.	500
+Squire	Support	Equip Axe	Allows the character to equip an Axe, regardless of Job Classes.	170
+Squire	Support	Monster Skill	The character can target friendly monsters within a range of three panels, helping them acquire new abilities.	200
+Squire	Support	Defend	Character defends and prepares for an attack. Activated by choosing the command Defend on the Action menu.	50
+Squire	Support	Gained JP Up	Increases the amount of JP earned in battle. A must-have for the beginning and middle stages of a character's development!	250
+Chemist	Support	Throw Item	Makes a character able to throw items over an extended range, even if he or she's not a Chemist.	350
+Chemist	Support	Maintenance	Makes equipped items immune to break techniques.	250
+Chemist	Support	Equip Change	Allows the character to change equipment in battle. Activated by selecting the action command Equip Change.	0
+Knight	Support	Equip Armor	Allows the character to equip heavy armor, regardless of Job Class.	500
+Knight	Support	Equip Shield	Allows the character to equip a shield, regardless of Job Class.	250
+Knight	Support	Equip Sword	Allows the character to equip a sword, regardless of Job Class.	400
+Archer	Support	Equip Crossbow	Allows the character to equip a Crossbow, regardless of job.	350
+Archer	Support	Concentrate	Makes the enemy unable to evade the character's attacks. If the enemy is within a targeted panel, the attack is sure to succeed.	400
+Monk	Support	Martial Arts	Character gains the bare-handed fighting strength of a Monk, regardless of Job Class.	200
+Priest	Support	Magic Defend Up	Lessens damage caused by enemy magic attacks.	400
+Wizard	Support	Magic Attack Up	Increases the damage a character's magic attacks will inflict.	400
+Time Mage	Support	Short Charge	Increases a character's CT speed, halving the time it takes him or her to cast spells.	800
+Summoner	Support	Half MP	Halves the MP used when casting a spell.	900
+Thief	Support	Secret Hunt	This ability allows you obtain the pelts of monsters you've killed which can be traded for items.	200
+Mediator	Support	Equip Gun	Allows the character to equip a gun regardless of Job Class.	750
+Mediator	Support	Train	When an enemy reaches terminal status, the character can persuade it to become an ally.	450
+Mediator	Support	Monster Talk	Allows a character to speak with monsters, even if he or she's not a Mediator.	100
+Oracle	Support	Defense Up	Lessens damage incurred from physical attacks by half.	400
+Geomancer	Support	Attack Up	Increases damage a character's physical attacks cause.	400
+Lancer	Support	Equip Spear	Allows the character to equip a spear regardless of job.	400
+Samurai	Support	Equip Knife	Allows the character to equip a knife, regardless of job.	400
+Samurai	Support	Two Hands	Allows the character to hold his/her weapon with both hands, increasing its attack power.	900
+Ninja	Support	Two Swords	The character can use a weapon in each hand, even if he/she's not a Ninja.	900
+Calculator	Support	Gained Exp Up	Increases the Experience Points a character earns by 1.5.	350

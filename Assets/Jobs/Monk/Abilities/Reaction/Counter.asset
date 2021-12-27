@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 2
   _jpCost: 300
-  _description: "Character counters an enemy\u2019s physical attack with one of his
-    or her own."
+  _description: Character counters an enemy's physical attack with one of his or
+    her own.

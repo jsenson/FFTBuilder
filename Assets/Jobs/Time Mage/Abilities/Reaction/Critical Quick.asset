@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 2
   _jpCost: 700
-  _description: "The character\u2019s AT is elevated to next position when his or
-    her HP totals fall within critical levels."
+  _description: The character's AT is elevated to next position when his or her HP
+    totals fall within critical levels.

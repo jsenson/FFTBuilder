@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 1
   _jpCost: 100
-  _description: "Allows a character to speak with monsters, even if he or she\u2019s
-    not a Mediator."
+  _description: Allows a character to speak with monsters, even if he or she's not
+    a Mediator.

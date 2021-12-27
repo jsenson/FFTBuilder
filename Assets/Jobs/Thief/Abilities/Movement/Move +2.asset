@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 3
   _jpCost: 520
-  _description: "Increases the character\u2019s movement range by two panels."
+  _description: Increases the character's movement range by two panels.

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 3
   _jpCost: 420
-  _description: Character can move or stop in water.
+  _description: Character can move or stop on water.

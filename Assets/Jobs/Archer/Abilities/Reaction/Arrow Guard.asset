@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 2
   _jpCost: 450
-  _description: "Increases the character\u2019s chances of evading a Bow/Crossbow
-    attack."
+  _description: Increases the character's chances of evading a Bow/Crossbow attack.

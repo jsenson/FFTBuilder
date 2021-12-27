@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 2
   _jpCost: 550
-  _description: "Rasies the character\u2019s physical attack power when attacked
-    by the enemy."
+  _description: Rasies the character's physical attack power when attacked by the
+    enemy.

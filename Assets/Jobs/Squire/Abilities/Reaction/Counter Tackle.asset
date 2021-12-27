@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 2
   _jpCost: 180
-  _description: "Counters a physical attack with a Dash attack\u2019s body blow."
+  _description: Counters a physical attack with a Dash attack's body blow.

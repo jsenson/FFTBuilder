@@ -7,7 +7,7 @@ public static class DeveloperMenu {
 			EditorUtility.DisplayProgressBar("Importing Abilities", abilityInfo, progress);
 		}
 
-		string path = EditorUtility.OpenFilePanel("Import Abilities", "Assets/Import Files", "txt");
+		string path = EditorUtility.OpenFilePanel("Import Abilities", "Assets/Import Files", "tsv");
 		if (!string.IsNullOrEmpty(path)) {
 			try {
 				var importer = new AbilityImportFile(path);

@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 1
   _jpCost: 400
-  _description: "Increases the damage a character\u2019s magic attacks will inflict."
+  _description: Increases the damage a character's magic attacks will inflict.

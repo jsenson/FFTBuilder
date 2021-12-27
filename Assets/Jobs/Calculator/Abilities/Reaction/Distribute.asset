@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 2
   _jpCost: 200
-  _description: "When the character\u2019s HP are maxed, he or she shares any excess
-    HP with his or her allies."
+  _description: When the character's HP are maxed, he or she shares any excess HP
+    with his or her allies.

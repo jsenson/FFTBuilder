@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 2
   _jpCost: 500
-  _description: "Raises a character\u2019s Faith level when he/she\u2019s hit with
-    a magical spell."
+  _description: Raises a character's Faith level when he/she's hit with a magical
+    spell.

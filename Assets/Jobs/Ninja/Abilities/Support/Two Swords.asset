@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 1
   _jpCost: 900
-  _description: "The character can use a weapon in each hand, even if he/she\u2019s
-    not a Ninja."
+  _description: The character can use a weapon in each hand, even if he/she's not
+    a Ninja.

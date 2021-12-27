@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 2
   _jpCost: 500
-  _description: "Raises the character\u2019s Brave level when attacked by the enemy."
+  _description: This raises the character's Brave level when attacked by the enemy.

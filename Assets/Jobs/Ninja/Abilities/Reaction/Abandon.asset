@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 2
   _jpCost: 400
-  _description: "Raises the character\u2019s evade percentage, allowing him or her
-    to dodge attacks more easily."
+  _description: Raises the character's evade percentage, allowing him or her to dodge
+    attacks more easily.

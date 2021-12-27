@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 2
   _jpCost: 400
-  _description: Restores MP to the character when an attack brings him or her down
-    to critical levels.
+  _description: Restores MP to the character when an attack brings them down to critical
+    levels.

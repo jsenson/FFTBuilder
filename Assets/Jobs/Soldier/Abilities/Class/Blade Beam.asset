@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 0
   _jpCost: 250
-  _description: "Similar to Shock!\u2013the greater your damage, the more damage
-    you can inflict."
+  _description: Similar to Shock!-the greater your damage, the more damage you can
+    inflict.

@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 1
   _jpCost: 800
-  _description: "Increases a character\u2019s CT speed, halving the time it takes
-    him or her to cast spells, and so on."
+  _description: Increases a character's CT speed, halving the time it takes him or
+    her to cast spells.

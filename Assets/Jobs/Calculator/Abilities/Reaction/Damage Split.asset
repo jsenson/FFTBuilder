@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 2
   _jpCost: 300
-  _description: Character heals themself for half of all damage recieved and returns
+  _description: Character heals themselves for half of all damage recieved and returns
     the other half to the attacker as damage.

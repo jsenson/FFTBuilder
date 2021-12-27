@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 2
   _jpCost: 450
-  _description: "Raises a character\u2019s magic attack power when he or she takes
-    HP damage."
+  _description: Raises a character's magic attack power when he or she takes HP damage.

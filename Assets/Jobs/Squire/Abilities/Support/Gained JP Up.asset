@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 1
   _jpCost: 250
-  _description: "Increases the amount of JP earned in battle. A must-have for the
-    beginning and middle stages of a character\u2019s development!"
+  _description: Increases the amount of JP earned in battle. A must-have for the
+    beginning and middle stages of a character's development!

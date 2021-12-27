@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 1
   _jpCost: 350
-  _description: "Makes a character able to throw items over an extended range, even
-    if he or she\u2019s not a Chemist."
+  _description: Makes a character able to throw items over an extended range, even
+    if he or she's not a Chemist.

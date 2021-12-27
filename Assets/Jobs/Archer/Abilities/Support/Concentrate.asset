@@ -14,5 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 1
   _jpCost: 400
-  _description: "Makes the enemy unable to evade the character\u2019s attacks. If
-    the enemy is within a targeted panel, the attack is sure to succeed."
+  _description: Makes the enemy unable to evade the character's attacks. If the enemy
+    is within a targeted panel, the attack is sure to succeed.

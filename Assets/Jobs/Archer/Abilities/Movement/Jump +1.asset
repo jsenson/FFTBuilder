@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _type: 3
   _jpCost: 200
-  _description: "Increases a character\u2019s jump elevation by one panel."
+  _description: Increases a character's jump elevation by one panel.
