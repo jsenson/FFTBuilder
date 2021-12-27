@@ -5,6 +5,8 @@ using UnityEngine;
 using UnityEditor;
 
 public class AbilityImportFile {
+	private const int COLUMNS = 5;
+
 	private string _path;
 	private List<Record> _records;
 
@@ -60,8 +62,8 @@ public class AbilityImportFile {
 
 		public Record(string record) {
 			string[] entries = record.Split('\t');
-			if (entries.Length == 5) {
-				job = ScriptableObjectHelper.GetByName<Job>(entries[0]);
+			if (entries.Length == COLUMNS) {
+				job = ScriptableObjectHelper.GetOrCreateJob(entries[0]);
 				if (job != null) {
 					Enum.TryParse(entries[1], out abilityType);
 					abilityName = entries[2];
@@ -69,10 +71,10 @@ public class AbilityImportFile {
 					Int32.TryParse(entries[4], out jpCost);
 					return;
 				} else {
-					Debug.LogError($"Record contained invalid Job name: {entries[0]}.  Record will not be saved.");
+					Debug.LogError($"Failed to create new Jon names: {entries[0]}.  Record will not be saved.");
 				}
 			} else {
-				Debug.LogError($"Record contained {entries.Length} entries but expected 5");
+				Debug.LogError($"Record contained {entries.Length} entries but expected {COLUMNS}");
 			}
 
 			job = null;

@@ -12,9 +12,12 @@ public static class DeveloperMenu {
 			try {
 				var importer = new AbilityImportFile(path);
 				importer.WriteScriptableObjects(onProgress);
-			} catch (System.Exception) {}
+			} catch (System.Exception ex) {
+				UnityEngine.Debug.LogException(ex);
+			}
 		}
 
 		EditorUtility.ClearProgressBar();
+		AssetDatabase.SaveAssets();
 	}
 }

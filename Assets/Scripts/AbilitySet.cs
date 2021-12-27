@@ -4,9 +4,17 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "FFT/Ability Set", fileName = "AbilitySet.asset")]
 public class AbilitySet : ScriptableObject {
 	[SerializeField] private Ability.Type _type;
-	[SerializeField] private Ability[] _abilities;
+	[SerializeField] private Ability[] _abilities = new Ability[0];
 
-	public Ability.Type AbilityType => _type;
+	public Ability.Type AbilityType {
+		get => _type;
+		set {
+			_type = value;
+#if UNITY_EDITOR
+			UnityEditor.EditorUtility.SetDirty(this);
+#endif
+		}
+	}
 
 	public Ability[] Abilities => _abilities;
 
