@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f8516b9f5559194d9497c0f8bf97948, type: 3}
+  m_Name: Holy Swordsman - Class
+  m_EditorClassIdentifier: 
+  _type: 0
+  _abilities:
+  - {fileID: 11400000, guid: 496ac3195fcf70c42bf0d837c848c6fb, type: 2}
+  - {fileID: 11400000, guid: c8832403874b7ef4faabc6bed2f0f8d4, type: 2}
+  - {fileID: 11400000, guid: bb2e280748348be43b04762c1e52f608, type: 2}
+  - {fileID: 11400000, guid: 606d5ae2c113cbd4db3b54d3b5c0f29e, type: 2}
+  - {fileID: 11400000, guid: 8498d4bdd494b694fa3001fef56d6e68, type: 2}
+  - {fileID: 11400000, guid: a55910e7b72d3d743bbd2f5852fde4ce, type: 2}
+  - {fileID: 11400000, guid: 64ecb015a20cc074a98dadd0b67c502e, type: 2}
+  - {fileID: 11400000, guid: 654b82c189342004aa61bc012bfb31bd, type: 2}
+  - {fileID: 11400000, guid: 652f882e840541b4b8910af37be1a115, type: 2}
+  - {fileID: 11400000, guid: e1b7129cb82b6cd4c88ef64bb77e2e43, type: 2}
+  - {fileID: 11400000, guid: 9cac90713b7252945b68e96e1cfecd44, type: 2}

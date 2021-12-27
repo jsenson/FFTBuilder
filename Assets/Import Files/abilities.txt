@@ -199,3 +199,74 @@ Wizard	Class	Poison	Gradually lowers target's HP through poisoning. Adds: Poison
 Wizard	Class	Frog	Turns target into a frog and vice versa. Adds: Frog	500
 Wizard	Class	Death	Has a small chance to kill the target instantly. Adds: Dead	600
 Wizard	Class	Flare	Large fireball falls from the sky causing a large amount of damage to the target.	900
+Holy Knight	Class	Stasis Sword	Basic Holy Elemental Sword attack. Adds: Stop	100
+Holy Knight	Class	Split Punch	Holy Elemental Sword attack. Adds: Death Sentence	400
+Holy Knight	Class	Crush Punch	Holy Elemental Sword attack. Adds: Dead	500
+Holy Knight	Class	Lightning Stab	Powerful Lightning Elemental Sword attack. Adds: Silence	700
+Holy Knight	Class	Holy Explosion	Powerful Holy Elemental Sword attack with a long effect radius. Adds: Confusion	800
+Temple Knight	Class	Blind	Lowers target's success rate with physical attacks. Adds: Darkness	50
+Temple Knight	Class	Aspel	Absorbs target's MP and restores own.	100
+Temple Knight	Class	Drain	Absorbs target's HP and restores own.	180
+Temple Knight	Class	Faith	Temporarily raises Faith level to 100. Adds: Faith	200
+Temple Knight	Class	Innocent	Lowers Faith level to 0. Adds: Innocent	200
+Temple Knight	Class	Zombie	Prevents target from restoring HP. Adds: Undead	150
+Temple Knight	Class	Silence	Prevents target from casting magic. Adds: Silence	90
+Temple Knight	Class	Berserk	Causes target to attack wildly, lowering its success rate. Adds: Berserk	200
+Temple Knight	Class	Chicken	Lowers Brave level by 50 points.	500
+Temple Knight	Class	Confuse	Causes target to act unpredictably. Adds: Confusion	200
+Temple Knight	Class	Despair	Cancels target's positive status effects. Cancels: Float, Reraise, Transparent, Regen, Protect, Shell, Haste, Faith, Reflect	300
+Temple Knight	Class	Don't Act	Prevents target from attacking. Adds: Don't Act	50
+Temple Knight	Class	Sleep	Causes target to be inactive. This is great for characters who are immune to Don't Act. Adds: Sleep	170
+Temple Knight	Class	Break	Turns target into stone. Adds: Petrify	300
+Temple Knight	Class	Shock!	The more damage you receive, the more damage you can inflict on the target.	600
+Holy Swordsman	Class	Stasis Sword	Basic Holy Elemental attack. Adds: Stop	100
+Holy Swordsman	Class	Split Punch	Holy Elemental Sword attack. Adds: Death Sentence	400
+Holy Swordsman	Class	Crush Punch	Holy Elemental Sword attack. Adds: Dead	500
+Holy Swordsman	Class	Lightning Stab	Powerful Lightning Elemental Sword attack. Adds: Silence	700
+Holy Swordsman	Class	Holy Explosion	Powerful Holy Elemental Sword attack with a long effect radius. Adds: Conclusion	800
+Holy Swordsman	Class	Shellbust Stab	Does HP damage and destroys target's armor.	200
+Holy Swordsman	Class	Blaster Punch	Does HP damage and destroys target's helmet.	400
+Holy Swordsman	Class	Hellcry Punch	Does HP damage and destroys target's weapon.	500
+Holy Swordsman	Class	Icewolf Bite	Does HP damage and destroys target's accessory.	800
+Holy Swordsman	Class	Dark Sword	Darkness Elemental Sword spell that absorbs target's MP.	500
+Holy Swordsman	Class	Night Sword	Darkness Elemental Sword spell that absorbs target's HP.	100
+Soldier	Class	Braver	Samurai-style sword attack.	150
+Soldier	Class	Cross-slash	Cuts enemies within effect radius four times.	200
+Soldier	Class	Blade Beam	Similar to Shock!–the greater your damage, the more damage you can inflict.	250
+Soldier	Class	Climhazzard	The greater the target's damage, the more damage you can inflict.	450
+Soldier	Class	Meteorain	Attack causes a meteor to fall on targets.	560
+Soldier	Class	Finishing Touch	Causes different status anomalies. Adds: Dead, Petrify, Stop	670
+Soldier	Class	Omnislash	The ultimate limit skill.	900
+Soldier	Class	Cherry Blossom	The most powerful limit skill.	1200
+Heaven Knight Malak	Class	Heaven Bolt Back	Lightning magic randomly attacks targets within effect range.	0
+Heaven Knight Malak	Class	Asura Back	Fire magic randomly attacks targets within effect range.	200
+Heaven Knight Malak	Class	Diamond Sword Back	Wind Magic randomly attacks targets within effect range.	300
+Heaven Knight Malak	Class	Dragon Pit Back	Water magic randomly attacks targets within effect range.	400
+Heaven Knight Malak	Class	Space Storage Back	Magic randomly attacks targets within effect range causing various abnormal statuses. Adds: Darkness, Confusion, Silence, Frog, Poison, Slow, Sleep	500
+Heaven Knight Malak	Class	Sky Demon Back	Earth magic randomly attacks targets within effect range.	600
+Heaven Knight Rafa	Class	Heaven Bolt	Lightning magic randomly attacks targets within effect range.	0
+Heaven Knight Rafa	Class	Asura	Fire magic randomly attacks targets within effect range.	200
+Heaven Knight Rafa	Class	Diamond Sword	Wind Magic randomly attacks targets within effect range.	300
+Heaven Knight Rafa	Class	Dragon Pit	Water magic randomly attacks targets within effect range.	400
+Heaven Knight Rafa	Class	Space Storage	Magic randomly attacks targets within effect range causing various abnormal statuses. Adds: Darkness, Confusion, Silence, Frog, Poison, Slow, Sleep	500
+Heaven Knight Rafa	Class	Sky Demon	Earth magic randomly attacks targets within effect range.	600
+Divine Knight	Class	Shellbust Stab	Does HP damage and destroys target's armor.	200
+Divine Knight	Class	Blaster Punch	Does HP damage and destroys target's helmet.	400
+Divine Knight	Class	Hellcry Punch	Does HP damage and destroys target's weapon.	500
+Divine Knight	Class	Icewolf Bite	Does HP damage and destroys target's accessory.	800
+Engineer	Class	Leg Aim	Prevents target from moving. Adds: Don't Move	200
+Engineer	Class	Arm Aim	Prevents target from attacking. Adds: Don't Act	300
+Engineer	Class	Seal Evil	Turns undead targets into stone. Adds: Petrify	200
+Squire Ramza	Class	Yell	Raises speed by 1 point.	200
+Squire Ramza	Class	Wish	Character offers his own HP to the target, doubling the target's HP.	0
+Squire Ramza	Class	Cheer Up	Raises Brave level by 5 points. Available in Chapter Two.	200
+Squire Ramza	Class	Scream	Raises character's own Brave level, Speed level, Physical and Magic attack powers. Available in Chapter Four.	500
+Squire Ramza	Class	Ultima	Powerful magic attack that must be learned from either the assassins, Celia and Lede, or an Ultima Demon when cast on the character. This is possible only during Chapter Four.	0
+Dragoner	Class	Ice Bracelet	Attack with arctic breath.	0
+Dragoner	Class	Fire Bracelet	Attack with fire breath.	0
+Dragoner	Class	Thunder Bracelet	Attack with lightning breath.	0
+Dragoner	Class	Dragon Tame	Charms enemy Dragon into joining party. Adds: Invitation	300
+Dragoner	Class	Dragon Care	Restores ally Dragon's HP and Status by offering own HP. Cancels: Darkness, Confusion, Silence, Oil, Berserk, Frog, Stop, Sleep, Don't Move, Don't Act	300
+Dragoner	Class	Dragon PowerUp	Raises ally Dragon's Brave, Speed, physical and magic attack power.	400
+Dragoner	Class	Dragon LevelUp	Raises ally Dragon's CT, allowing its attack to occur sooner.	400
+Dragoner	Class	Holy Bracelet	Holy breath randomly attacks targets within effect range.	900

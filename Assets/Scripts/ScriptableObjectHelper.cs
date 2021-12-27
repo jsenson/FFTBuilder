@@ -66,10 +66,7 @@ public static class ScriptableObjectHelper {
 	}
 
 	private static T CreateInstanceAtPath<T>(string parentFolder, string folderName, string name) where T : ScriptableObject {
-		string fullPath = Path.Combine(Application.dataPath, parentFolder, folderName);
-		if (!Directory.Exists(fullPath)) {
-			AssetDatabase.CreateFolder(Path.Combine(ASSETS, parentFolder), folderName);
-		}
+		Directory.CreateDirectory(Path.Combine(Application.dataPath, parentFolder, folderName));
 
 		T newObject = ScriptableObject.CreateInstance<T>();
 		newObject.name = name;

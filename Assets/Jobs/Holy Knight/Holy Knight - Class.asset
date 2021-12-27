@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f8516b9f5559194d9497c0f8bf97948, type: 3}
+  m_Name: Holy Knight - Class
+  m_EditorClassIdentifier: 
+  _type: 0
+  _abilities:
+  - {fileID: 11400000, guid: 5f5c0d7a05cc5844eafa7350e1bd3d79, type: 2}
+  - {fileID: 11400000, guid: e3a03bde20050414cad20af29d9685b5, type: 2}
+  - {fileID: 11400000, guid: 2dfed07e5e55ef140a03855711372897, type: 2}
+  - {fileID: 11400000, guid: 622456ef92d8f2841a182046fbd49abb, type: 2}
+  - {fileID: 11400000, guid: 6fb36a4580716fa4bb3244984ffd2380, type: 2}
