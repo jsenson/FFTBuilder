@@ -77,6 +77,7 @@ public static class ScriptableObjectHelper {
 		T newObject = ScriptableObject.CreateInstance<T>();
 		newObject.name = name;
 		AssetDatabase.CreateAsset(newObject, Path.Combine(ASSETS, parentFolder, folderName, $"{name}.asset"));
+		AssetDatabase.SaveAssets();
 		return newObject;
 	}
 

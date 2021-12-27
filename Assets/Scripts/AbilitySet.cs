@@ -23,6 +23,7 @@ public class AbilitySet : ScriptableObject {
 		Array.Resize(ref _abilities, _abilities.Length + 1);
 		_abilities[_abilities.Length - 1] = abilityToAdd;
 		UnityEditor.EditorUtility.SetDirty(this);
+		UnityEditor.AssetDatabase.SaveAssets();
 	}
 #endif
 }

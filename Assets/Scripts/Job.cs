@@ -42,6 +42,7 @@ public class Job : ScriptableObject {
 				Array.Resize(ref _abilitySets, _abilitySets.Length + 1);
 				_abilitySets[_abilitySets.Length - 1] = set;
 				UnityEditor.EditorUtility.SetDirty(this);
+				UnityEditor.AssetDatabase.SaveAssets();
 			}
 
 			set.AddAbility(abilityToAdd);

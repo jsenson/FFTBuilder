@@ -90,6 +90,7 @@ public class AbilityImportFile {
 				ability.AbilityType = abilityType;
 				ability.Description = description;
 				ability.JpCost = jpCost;
+				AssetDatabase.SaveAssets();
 				job.AddAbility(ability);
 			}
 		}
