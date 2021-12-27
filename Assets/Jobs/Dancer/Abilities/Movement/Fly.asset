@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f8516b9f5559194d9497c0f8bf97948, type: 3}
-  m_Name: Dancer - Movement
+  m_Script: {fileID: 11500000, guid: 6007a7e1e56ed1e4895d2c43a0602c2e, type: 3}
+  m_Name: Fly
   m_EditorClassIdentifier: 
   _type: 3
-  _abilities:
-  - {fileID: 11400000, guid: 2dc6581dc53345d4993df6c9dc7e0d22, type: 2}
-  - {fileID: 11400000, guid: ffc647f2e51a8f04b9263c617c2ae79d, type: 2}
+  _jpCost: 1200
+  _description: Character can leap over enemies and obstacles while moving.

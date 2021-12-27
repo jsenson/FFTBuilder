@@ -11,20 +11,17 @@ public static class ScriptableObjectHelper {
 	private const string JOBS = "Jobs";
 
 	public static Ability GetOrCreateAbility(string name, Ability.Type type, string jobName) {
-		Ability ability = GetByName<Ability>(name, a => a.AbilityType == type);
+		string jobPath = Path.Combine(JOBS, jobName);
+		Ability ability = GetByName<Ability>(name, jobPath, a => a.AbilityType == type);
 		if (ability == null) {
-			if (type == Ability.Type.Class) {
-				ability = CreateInstanceAtPath<Ability>(Path.Combine(ABILITIES, type.ToString()), jobName, name);
-			} else {
-				ability = CreateInstanceAtPath<Ability>(ABILITIES, type.ToString(), name);
-			}
+			ability = CreateInstanceAtPath<Ability>(Path.Combine(jobPath, ABILITIES), type.ToString(), name);
 		}
 
 		return ability;
 	}
 
 	public static Job GetOrCreateJob(string name) {
-		Job job = GetByName<Job>(name);
+		Job job = GetByName<Job>(name, JOBS);
 		if (job == null) {
 			job = CreateInstanceAtPath<Job>(JOBS, name, name);
 		}
@@ -34,7 +31,7 @@ public static class ScriptableObjectHelper {
 
 	public static AbilitySet GetOrCreateAbilitySet(string jobName, Ability.Type type) {
 		string name = $"{jobName} - {type}";
-		AbilitySet set = GetByName<AbilitySet>(name);
+		AbilitySet set = GetByName<AbilitySet>(name, Path.Combine(JOBS, jobName));
 		if (set == null) {
 			set = CreateInstanceAtPath<AbilitySet>(JOBS, jobName, name);
 		}
@@ -42,10 +39,10 @@ public static class ScriptableObjectHelper {
 		return set;
 	}
 
-	public static T GetByName<T>(string name, System.Func<T, bool> validate = null) where T : ScriptableObject {
+	private static T GetByName<T>(string name, string rootFolder, System.Func<T, bool> validate = null) where T : ScriptableObject {
 		T item = null;
 		string typeName = typeof(T).Name;
-		string[] guids = AssetDatabase.FindAssets($"t:{typeName} {name}");
+		string[] guids = AssetDatabase.FindAssets($"t:{typeName} {name}", new string[] { Path.Combine(ASSETS, rootFolder) });
 		if (guids.Length > 0) {
 			// Ye gods this is stupid.  There's no way to force an exact match so we have to look through multiple partial matches and pick it out manually...
 			// guids = GetExactMatchGuids(guids, name);
