@@ -1,0 +1,32 @@
+Squire	Basic Skills		None	Both	1	
+Chemist	Item		None	Both	1	
+Knight	Battle Skill	2-Squire	None	Both	1	
+Archer	Charge	2-Squire	None	Both	1	
+Priest	White Magic	2-Chemist	None	Both	1	
+Wizard	Black Magic	2-Chemist	None	Both	1	
+Monk	Punch Art	2-Knight	None	Both	1	
+Thief	Steal	2-Archer	None	Both	1	
+Time Mage	Time Magic	2-Wizard	None	Both	1	
+Oracle	Yin Yang Magic	2-Priest	None	Both	1	
+Geomancer	Elemental	3-Monk	None	Both	1	
+Lancer	Jump	2-Thief	None	Both	1	
+Mediator	Talk Skill	2-Oracle	None	Both	1	
+Summoner	Summon Magic	2-Time Mage	None	Both	1	
+Samurai	Draw Out	3-Knight|4-Monk|2-Lancer	None	Both	1	
+Ninja	Throw	3-Archer|4-Thief|2-Geomancer	None	Both	1	
+Calculator	Math Skill	4-Priest|4-Wizard|3-Time Mage|3-Oracle	None	Both	1	
+Dancer	Dance	4-Geomancer|4-Lancer	Female	Both	1	
+Bard	Sing	4-Summoner|4-Mediator	Male	Both	1	
+Mime	Mime	8-Squire|8-Chemist|4-Geomancer|4-Lancer|4-Mediator|4-Summoner	None	Main	1	
+Temple Knight	Magic Sword		Male	Both	1	Agrias
+Holy Swordsman	All Swordskill		Male	Both	1	Beowulf
+Soldier	Limit		Male	Both	1	Cloud
+Heaven Knight Malak	Untruth		Male	Both	1	Malak
+Heaven Knight Rafa	Truth		Female	Both	1	Rafa
+Divine Knight	Mighty Sword		Female	Both	1	Meliadoul
+Engineer	Snipe		Male	Both	1	Mustadio
+Squire Ramza	Guts		Male	Both	1	Ramza
+Dragoner	Dragon		Male	Both	1	Reis
+Holy Dragon	Breath		Monster	Main	0	Reis
+Apanda	Byblos		Male	Main	0	Byblos
+Steel Giant	Work		Male	Main	0	Worker 8
