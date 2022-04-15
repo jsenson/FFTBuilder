@@ -4,6 +4,11 @@ using System.IO;
 using UnityEngine;
 
 public class AbilityImporter {
+	private const int JOB = 0;
+	private const int TYPE = 1;
+	private const int NAME = 2;
+	private const int DESCRIPTION = 3;
+	private const int COST = 4;
 	private const int COLUMNS = 5;
 
 	private List<Record> _records;
@@ -58,17 +63,17 @@ public class AbilityImporter {
 
 			string[] entries = record.Split('\t');
 			if (entries.Length == COLUMNS) {
-				Job = jobList.Find(job => job.Name == entries[0]);
+				Job = jobList.Find(job => job.Name == entries[JOB]);
 				if (Job != null) {
 					Ability = new Ability();
-					Ability.Name = entries[2];
-					Ability.Description = entries[3];
-					if (Enum.TryParse(entries[1], out Ability.AbilityType type)) Ability.Type = type;
-					if (Int32.TryParse(entries[4], out int cost)) Ability.Cost = cost;
+					Ability.Name = entries[NAME];
+					Ability.Description = entries[DESCRIPTION];
+					if (Enum.TryParse(entries[TYPE], out Ability.AbilityType type)) Ability.Type = type;
+					if (Int32.TryParse(entries[COST], out int cost)) Ability.Cost = cost;
 					Job.AddAbility(Ability);
 					return;
 				} else {
-					Debug.LogError($"Failed to find loaded Job with name: {entries[0]}.  Record will not be saved.");
+					Debug.LogError($"Failed to find loaded Job with name: {entries[JOB]}.  Record will not be saved.");
 				}
 			} else {
 				Debug.LogError($"Record contained {entries.Length} entries but expected {COLUMNS}");

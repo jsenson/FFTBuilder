@@ -3,6 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class JobImporter {
+	private const int NAME = 0;
+	private const int ABILIY_NAME = 1;
+	private const int REQUIREMENTS = 2;
+	private const int UNIT_TYPE = 3;
+	private const int SLOT = 4;
+	private const int SUBJOB_COUNT = 5;
+	private const int UNIQUE_UNIT = 6;
 	private const int COLUMNS = 7;
 
 	private List<Job> _records;
@@ -28,8 +35,8 @@ public class JobImporter {
 		}
 
 		foreach (string[] line in data) {
-			Job job = jobsByName[line[0]];
-			string entry = line[1];
+			Job job = jobsByName[line[NAME]];
+			string entry = line[REQUIREMENTS];
 			ParseRequirementsEntry(job, jobsByName, entry);
 		}
 	}
@@ -53,9 +60,10 @@ public class JobImporter {
 		string[] lines = source.Split('\n');
 		string[][] data = new string[lines.Length][];
 		for (int i = 0; i < lines.Length; i++) {
-			string[] values = lines[i].Trim().Split('t');
+			string[] values = lines[i].Split('\t');
+			values[values.Length - 1] = values[values.Length - 1].Trim();
 			if (values.Length != COLUMNS) {
-				throw new ArgumentException($"Job Record {i} contains {values.Length} columns but expected {COLUMNS}");
+				throw new ArgumentException($"Job Record {i + 1} contains {values.Length} columns but expected {COLUMNS}");
 			}
 
 			data[i] = values;
@@ -65,10 +73,10 @@ public class JobImporter {
 	}
 
 	private Job ParseJob(string[] entries) {
-		var type = (UnitType)Enum.Parse(typeof(UnitType), entries[2]);
-		var slot = (Job.SlotRestriction)Enum.Parse(typeof(Job.SlotRestriction), entries[3]);
-		int subJobCount = int.Parse(entries[5]);
-		return new Job(entries[0], entries[1], type, slot, subJobCount, entries[6]);
+		var type = (UnitType)Enum.Parse(typeof(UnitType), entries[UNIT_TYPE]);
+		var slot = (Job.SlotRestriction)Enum.Parse(typeof(Job.SlotRestriction), entries[SLOT]);
+		int subJobCount = int.Parse(entries[SUBJOB_COUNT]);
+		return new Job(entries[NAME], entries[ABILIY_NAME], type, slot, subJobCount, entries[UNIQUE_UNIT]);
 	}
 
 	private void ParseRequirementsEntry(Job job, Dictionary<string, Job> jobsByName, string entry) {
