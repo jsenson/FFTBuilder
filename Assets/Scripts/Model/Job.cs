@@ -5,6 +5,10 @@ public class Job {
 	public struct Requirement {
 		public Job Job;
 		public int Level;
+
+		public override string ToString() {
+			return $"{Level} {Job}";
+		}
 	}
 
 	public enum SlotRestriction {
