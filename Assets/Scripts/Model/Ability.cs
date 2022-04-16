@@ -9,6 +9,7 @@ public class Ability : IEquatable<Ability> {
 		Passive
 	}
 
+	public string Reference { get; set; }
 	public string Name { get; set; }
 	public AbilityType Type { get; set; }
 	public int Cost { get; set; }
@@ -27,7 +28,7 @@ public class Ability : IEquatable<Ability> {
 	}
 
 	public bool Equals(Ability other) {
-		return !Object.ReferenceEquals(other, null) && Name == other.Name && Type == other.Type && Cost == other.Cost && Description == other.Description;
+		return !Object.ReferenceEquals(other, null) && Reference == other.Reference;
 	}
 
 	public override bool Equals(object obj) {
@@ -39,6 +40,6 @@ public class Ability : IEquatable<Ability> {
 	}
 
 	public override int GetHashCode() {
-		return base.GetHashCode() ^ Name.GetHashCode() ^ Type.GetHashCode() ^ Cost.GetHashCode() ^ Description.GetHashCode();
+		return base.GetHashCode() ^ Reference.GetHashCode();
 	}
 }

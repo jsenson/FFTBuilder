@@ -1,33 +1,33 @@
-Squire	Basic Skills		Human	Both	1	
-Chemist	Item		Human	Both	1	
-Knight	Battle Skill	2-Squire	Human	Both	1	
-Archer	Charge	2-Squire	Human	Both	1	
-Priest	White Magic	2-Chemist	Human	Both	1	
-Wizard	Black Magic	2-Chemist	Human	Both	1	
-Monk	Punch Art	2-Knight	Human	Both	1	
-Thief	Steal	2-Archer	Human	Both	1	
-Time Mage	Time Magic	2-Wizard	Human	Both	1	
-Oracle	Yin Yang Magic	2-Priest	Human	Both	1	
-Geomancer	Elemental	3-Monk	Human	Both	1	
-Lancer	Jump	2-Thief	Human	Both	1	
-Mediator	Talk Skill	2-Oracle	Human	Both	1	
-Summoner	Summon Magic	2-Time Mage	Human	Both	1	
-Samurai	Draw Out	3-Knight|4-Monk|2-Lancer	Human	Both	1	
-Ninja	Throw	3-Archer|4-Thief|2-Geomancer	Human	Both	1	
-Calculator	Math Skill	4-Priest|4-Wizard|3-Time Mage|3-Oracle	Human	Both	1	
-Dancer	Dance	4-Geomancer|4-Lancer	Female	Both	1	
-Bard	Sing	4-Summoner|4-Mediator	Male	Both	1	
-Mime	Mime	8-Squire|8-Chemist|4-Geomancer|4-Lancer|4-Mediator|4-Summoner	Human	Main	0	
-Holy Knight	Holy Sword		Female	Both	1	Agrias
-Temple Knight	Magic Sword		Male	Both	1	Beowulf
-Holy Swordsman	All Swordskill		Male	Both	1	Orlandu
-Soldier	Limit		Male	Both	1	Cloud
-Heaven Knight Malak	Untruth		Male	Both	1	Malak
-Heaven Knight Rafa	Truth		Female	Both	1	Rafa
-Divine Knight	Mighty Sword		Female	Both	1	Meliadoul
-Engineer	Snipe		Male	Both	1	Mustadio
-Squire Ramza	Guts		Male	Both	1	Ramza
-Dragoner	Dragon		Female	Both	1	Reis
-Holy Dragon	Breath		Monster	Main	0	Reis
-Apanda	Byblos		Monster	Main	0	Byblos
-Steel Giant	Work		Monster	Main	0	Worker 8
+Squire	Squire	Basic Skills		Human	Both	1	
+Chemist	Chemist	Item		Human	Both	1	
+Knight	Knight	Battle Skill	2-Squire	Human	Both	1	
+Archer	Archer	Charge	2-Squire	Human	Both	1	
+Priest	Priest	White Magic	2-Chemist	Human	Both	1	
+Wizard	Wizard	Black Magic	2-Chemist	Human	Both	1	
+Monk	Monk	Punch Art	2-Knight	Human	Both	1	
+Thief	Thief	Steal	2-Archer	Human	Both	1	
+Time Mage	Time Mage	Time Magic	2-Wizard	Human	Both	1	
+Oracle	Oracle	Yin Yang Magic	2-Priest	Human	Both	1	
+Geomancer	Geomancer	Elemental	3-Monk	Human	Both	1	
+Lancer	Lancer	Jump	2-Thief	Human	Both	1	
+Mediator	Mediator	Talk Skill	2-Oracle	Human	Both	1	
+Summoner	Summoner	Summon Magic	2-Time Mage	Human	Both	1	
+Samurai	Samurai	Draw Out	3-Knight|4-Monk|2-Lancer	Human	Both	1	
+Ninja	Ninja	Throw	3-Archer|4-Thief|2-Geomancer	Human	Both	1	
+Calculator	Calculator	Math Skill	4-Priest|4-Wizard|3-Time Mage|3-Oracle	Human	Both	1	
+Dancer	Dancer	Dance	4-Geomancer|4-Lancer	Female	Both	1	
+Bard	Bard	Sing	4-Summoner|4-Mediator	Male	Both	1	
+Mime	Mime	Mime	8-Squire|8-Chemist|4-Geomancer|4-Lancer|4-Mediator|4-Summoner	Human	Main	0	
+Agrias	Holy Knight	Holy Sword		Female	Both	1	Agrias
+Beowulf	Temple Knight	Magic Sword		Male	Both	1	Beowulf
+Orlandu	Holy Swordsman	All Swordskill		Male	Both	1	Orlandu
+Cloud	Soldier	Limit		Male	Both	1	Cloud
+Malak	Heaven Knight	Untruth		Male	Both	1	Malak
+Rafa	Heaven Knight	Truth		Female	Both	1	Rafa
+Meliadoul	Divine Knight	Mighty Sword		Female	Both	1	Meliadoul
+Mustadio	Engineer	Snipe		Male	Both	1	Mustadio
+Ramza	Squire	Guts		Male	Both	1	Ramza
+Reis	Dragoner	Dragon		Female	Both	1	Reis
+Reis Dragon	Holy Dragon	Breath		Monster	Main	0	Reis
+Byblos	Apanda	Byblos		Monster	Main	0	Byblos
+Worker 8	Steel Giant	Work		Monster	Main	0	Worker 8

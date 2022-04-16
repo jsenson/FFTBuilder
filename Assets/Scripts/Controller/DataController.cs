@@ -22,7 +22,7 @@ public class DataController : MonoBehaviour {
 	public void Load(SourceFiles source) {
 		Unload();
 		_jobImporter.Load(source.JobFile);
-		_abilityImporter.Load(source.AbilityFile, _jobImporter.GetAll());
+		_abilityImporter.Load(source.AbilityFile, _jobImporter.GetAllByReference());
 		_loadedSource = source.Name;
 	}
 

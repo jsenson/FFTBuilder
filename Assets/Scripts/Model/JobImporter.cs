@@ -3,41 +3,44 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class JobImporter {
-	private const int NAME = 0;
-	private const int ABILIY_NAME = 1;
-	private const int REQUIREMENTS = 2;
-	private const int UNIT_TYPE = 3;
-	private const int SLOT = 4;
-	private const int SUBJOB_COUNT = 5;
-	private const int UNIQUE_UNIT = 6;
-	private const int COLUMNS = 7;
+	private const int REFERENCE = 0;
+	private const int NAME = 1;
+	private const int ABILITY_NAME = 2;
+	private const int REQUIREMENTS = 3;
+	private const int UNIT_TYPE = 4;
+	private const int SLOT = 5;
+	private const int SUBJOB_COUNT = 6;
+	private const int UNIQUE_UNIT = 7;
+	private const int COLUMNS = 8;
 
-	private List<Job> _records;
+	private Dictionary<string, Job> _records;
 
 	public JobImporter() {
-		_records = new List<Job>();
+		_records = new Dictionary<string, Job>();
 	}
 
 	public void PrintRecords() {
 		foreach (var record in _records) {
-			Debug.Log(record.ToString());
+			Debug.Log($"{record.Key}: {record.Value}");
 		}
 	}
 
 	public void Load(TextAsset source) {
 		Unload();
-		var jobsByName = new Dictionary<string, Job>();
 		string[][] data = GetRawRecords(source.text);
 		foreach (string[] line in data) {
 			var job = ParseJob(line);
-			jobsByName[job.Name] = job;
-			_records.Add(job);
+			if (_records.ContainsKey(job.Reference)) {
+				Debug.Log($"Duplicate Job Reference {job.Reference} found.");
+			} else {
+				_records[job.Reference] = job;
+			}
 		}
 
 		foreach (string[] line in data) {
-			Job job = jobsByName[line[NAME]];
+			Job job = Get(line[REFERENCE]);
 			string entry = line[REQUIREMENTS];
-			ParseRequirementsEntry(job, jobsByName, entry);
+			ParseRequirementsEntry(job, entry);
 		}
 	}
 
@@ -45,11 +48,20 @@ public class JobImporter {
 		_records.Clear();
 	}
 
+	public Job Get(string reference) {
+		_records.TryGetValue(reference, out Job record);
+		return record;
+	}
+
+	public Dictionary<string, Job> GetAllByReference() {
+		return new Dictionary<string, Job>(_records);
+	}
+
 	public List<Job> GetAll(Func<Job, bool> predicate = null) {
 		var jobs = new List<Job>();
-		foreach (var record in _records) {
-			if (predicate == null || predicate(record)) {
-				jobs.Add(record);
+		foreach (var kvp in _records) {
+			if (predicate == null || predicate(kvp.Value)) {
+				jobs.Add(kvp.Value);
 			}
 		}
 
@@ -73,13 +85,18 @@ public class JobImporter {
 	}
 
 	private Job ParseJob(string[] entries) {
-		var type = (UnitType)Enum.Parse(typeof(UnitType), entries[UNIT_TYPE]);
-		var slot = (Job.SlotRestriction)Enum.Parse(typeof(Job.SlotRestriction), entries[SLOT]);
-		int subJobCount = int.Parse(entries[SUBJOB_COUNT]);
-		return new Job(entries[NAME], entries[ABILIY_NAME], type, slot, subJobCount, entries[UNIQUE_UNIT]);
+		Job job = new Job();
+		job.Reference = entries[REFERENCE];
+		job.Name = entries[NAME];
+		job.AbilityName = entries[ABILITY_NAME];
+		job.UniqueCharacterName = entries[UNIQUE_UNIT];
+		job.UnitType = (UnitType)Enum.Parse(typeof(UnitType), entries[UNIT_TYPE]);
+		job.ValidSlots = (Job.SlotRestriction)Enum.Parse(typeof(Job.SlotRestriction), entries[SLOT]);
+		job.NumSubjobs = int.Parse(entries[SUBJOB_COUNT]);
+		return job;
 	}
 
-	private void ParseRequirementsEntry(Job job, Dictionary<string, Job> jobsByName, string entry) {
+	private void ParseRequirementsEntry(Job job, string entry) {
 		if (string.IsNullOrEmpty(entry)) {
 			return;
 		}
@@ -89,7 +106,7 @@ public class JobImporter {
 			string[] values = req.Split('-');
 			var newReq = new Job.Requirement();
 			newReq.Level = int.Parse(values[0]);
-			newReq.Job = jobsByName[values[1]];
+			newReq.Job = Get(values[1]);
 			if (newReq.Job == null) {
 				Debug.LogError($"Could not find loaded Job for Requirement: {reqs}");
 			} else {

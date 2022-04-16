@@ -18,25 +18,17 @@ public class Job : IEquatable<Job> {
 		Sub
 	}
 
-	public string Name { get; private set; }
-	public string AbilityName { get; private set; }
-	public UnitType UnitType { get; private set; }
-	public SlotRestriction ValidSlots { get; private set; }
-	public int NumSubjobs { get; private set; }
-	public string UniqueCharacterName { get; private set; }
+	public string Reference { get; set; }
+	public string Name { get; set; }
+	public string AbilityName { get; set; }
+	public UnitType UnitType { get; set; }
+	public SlotRestriction ValidSlots { get; set; }
+	public int NumSubjobs { get; set; }
+	public string UniqueCharacterName { get; set; }
 	public bool isGeneric => string.IsNullOrEmpty(UniqueCharacterName);
 
 	private List<Requirement> _unlockRequirements = new List<Requirement>();
 	private List<AbilitySet> _abilitySets = new List<AbilitySet>();
-
-	public Job(string name, string abilityName, UnitType type, SlotRestriction validSlots, int subJobCount, string uniqueCharName) {
-		Name = name;
-		AbilityName = abilityName;
-		UnitType = type;
-		ValidSlots = validSlots;
-		NumSubjobs = subJobCount;
-		UniqueCharacterName = uniqueCharName;
-	}
 
 	public List<Requirement> GetRequirements() {
 		List<Requirement> allReqs = new List<Requirement>();
@@ -145,7 +137,7 @@ public class Job : IEquatable<Job> {
 	}
 
 	public bool Equals(Job other) {
-		return !System.Object.ReferenceEquals(other, null) && Name == other.Name && UniqueCharacterName == other.UniqueCharacterName;
+		return !System.Object.ReferenceEquals(other, null) && Reference == other.Reference;
 	}
 
 	public override bool Equals(object obj) {
@@ -157,6 +149,6 @@ public class Job : IEquatable<Job> {
 	}
 
 	public override int GetHashCode() {
-		return base.GetHashCode() ^ Name.GetHashCode() ^ UniqueCharacterName.GetHashCode();
+		return base.GetHashCode() ^ Reference.GetHashCode();
 	}
 }
