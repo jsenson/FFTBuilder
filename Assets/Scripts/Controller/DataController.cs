@@ -5,6 +5,7 @@ using UnityEngine;
 public class DataController : MonoBehaviour {
 	[SerializeField] private SourceFiles[] _sources;
 	[SerializeField] private TypeSelectionView _selectionView;
+	[SerializeField] private JobSelectionView _jobSelectView;
 
 	public SourceFiles[] Sources => _sources;
 
@@ -15,6 +16,7 @@ public class DataController : MonoBehaviour {
 	public void Awake() {
 		Load(_sources[0]);
 		_selectionView.Initialize(_sources.Select(s => s.Name).ToList());
+		InitJobSelectionView(_selectionView.SelectedType);
 	}
 
 	public void Load(SourceFiles source) {
@@ -51,6 +53,28 @@ public class DataController : MonoBehaviour {
 
 	private void OnTypeChanged(UnitType newType) {
 		Debug.Log($"OnTypeChanged: {newType}");
+		InitJobSelectionView(newType);
+	}
+
+	private void InitJobSelectionView(UnitType unitType) {
+		var mainJobs = _jobImporter.GetAll(
+			job => job.IsUnitType(unitType)
+			&& (job.ValidSlots == Job.SlotRestriction.Main 
+			|| job.ValidSlots == Job.SlotRestriction.Both)
+		);
+
+		var subJobs = _jobImporter.GetAll(
+			job => job.IsUnitType(unitType) 
+			&& (job.ValidSlots == Job.SlotRestriction.Sub 
+			|| job.ValidSlots == Job.SlotRestriction.Both)
+		);
+
+		mainJobs.Sort((a, b) => a.Name.CompareTo(b.Name));
+		subJobs.Sort((a, b) => a.Name.CompareTo(b.Name));
+		_jobSelectView.Initialize(new JobSelectionView.Data() {
+			MainJobOptions = mainJobs,
+			SubJobOptions = subJobs
+		});
 	}
 
 	[Serializable]

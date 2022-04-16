@@ -1,5 +1,5 @@
 public enum UnitType {
-	None,
+	Human,
 	Male,
 	Female,
 	Monster

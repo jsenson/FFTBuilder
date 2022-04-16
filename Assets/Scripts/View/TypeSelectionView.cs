@@ -11,13 +11,19 @@ public class TypeSelectionView : MonoBehaviour {
 	public event Action<int> onGameValueChanged;
 	public event Action<UnitType> onTypeValueChanged;
 
+	public UnitType SelectedType => (UnitType)(_typeDropdown.value + 1);
+	public string SelectedGameName => _gameNames[_gameDropdown.value];
+
+	private List<string> _gameNames;
+
 	public void Initialize(List<string> gameNames) {
+		_gameNames = gameNames;
 		_gameDropdown.ClearOptions();
 		_gameDropdown.AddOptions(gameNames);
 	}
 
 	private void Awake() {
-		var typeNames = Enum.GetNames(typeof(UnitType)).Where(s => !s.Equals("None")).ToList();
+		var typeNames = Enum.GetNames(typeof(UnitType)).Where(t => t != "Human").ToList();
 		_gameDropdown.ClearOptions();
 		_typeDropdown.ClearOptions();
 		_typeDropdown.AddOptions(typeNames);
@@ -26,7 +32,6 @@ public class TypeSelectionView : MonoBehaviour {
 	}
 
 	private void OnTypeChange(int newIndex) {
-		// Lazy, just +1 the index since None is at index 0
 		onTypeValueChanged?.Invoke((UnitType)(newIndex + 1));
 	}
 }

@@ -1,7 +1,8 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Job {
+public class Job : IEquatable<Job> {
 	public struct Requirement {
 		public Job Job;
 		public int Level;
@@ -18,25 +19,23 @@ public class Job {
 	}
 
 	public string Name { get; private set; }
-
 	public string AbilityName { get; private set; }
-
-	public bool isGeneric => string.IsNullOrEmpty(_uniqueCharacterName);
+	public UnitType UnitType { get; private set; }
+	public SlotRestriction ValidSlots { get; private set; }
+	public int NumSubjobs { get; private set; }
+	public string UniqueCharacterName { get; private set; }
+	public bool isGeneric => string.IsNullOrEmpty(UniqueCharacterName);
 
 	private List<Requirement> _unlockRequirements = new List<Requirement>();
 	private List<AbilitySet> _abilitySets = new List<AbilitySet>();
-	private UnitType _requiredUnitType;
-	private SlotRestriction _validSlots;
-	private int _subJobCount;
-	private string _uniqueCharacterName;
 
 	public Job(string name, string abilityName, UnitType type, SlotRestriction validSlots, int subJobCount, string uniqueCharName) {
 		Name = name;
 		AbilityName = abilityName;
-		_requiredUnitType = type;
-		_validSlots = validSlots;
-		_subJobCount = subJobCount;
-		_uniqueCharacterName = uniqueCharName;
+		UnitType = type;
+		ValidSlots = validSlots;
+		NumSubjobs = subJobCount;
+		UniqueCharacterName = uniqueCharName;
 	}
 
 	public List<Requirement> GetRequirements() {
@@ -95,6 +94,18 @@ public class Job {
 		}
 	}
 
+	public bool IsUnitType(UnitType type) {
+		if (UnitType == type) {
+			return true;
+		}
+
+		if (type == UnitType.Male || type == UnitType.Female) {
+			return UnitType == UnitType.Human;
+		}
+
+		return false;
+	}
+
 	public override string ToString() {
 		return Name;
 	}
@@ -119,5 +130,33 @@ public class Job {
 		if (!added) {
 			list.Add(toAdd);
 		}
+	}
+
+	public static bool operator ==(Job a, Job b) {
+		if (System.Object.ReferenceEquals(a, null)) {
+			return System.Object.ReferenceEquals(b, null);
+		} else {
+			return a.Equals(b);
+		}
+	}
+
+	public static bool operator !=(Job a, Job b) {
+		return !(a == b);
+	}
+
+	public bool Equals(Job other) {
+		return !System.Object.ReferenceEquals(other, null) && Name == other.Name && UniqueCharacterName == other.UniqueCharacterName;
+	}
+
+	public override bool Equals(object obj) {
+		if (obj is Ability other) {
+			return Equals(other);
+		}
+
+		return false;
+	}
+
+	public override int GetHashCode() {
+		return base.GetHashCode() ^ Name.GetHashCode() ^ UniqueCharacterName.GetHashCode();
 	}
 }
