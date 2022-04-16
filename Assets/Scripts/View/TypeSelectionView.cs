@@ -24,7 +24,6 @@ public class TypeSelectionView : MonoBehaviour {
 
 	private void Awake() {
 		var typeNames = Enum.GetNames(typeof(UnitType)).Where(t => t != "Human").ToList();
-		_gameDropdown.ClearOptions();
 		_typeDropdown.ClearOptions();
 		_typeDropdown.AddOptions(typeNames);
 		_typeDropdown.onValueChanged.AddListener(OnTypeChange);

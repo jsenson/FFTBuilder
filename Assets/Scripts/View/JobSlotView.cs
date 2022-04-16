@@ -1,5 +1,4 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using TMPro;
@@ -19,24 +18,20 @@ public class JobSlotView : MonoBehaviour {
 	public bool IsMain => _data.IsMain;
 
 	private Data _data;
-	private int _mainJobIndex = -1;
-	private float _errorHeight;
+	private List<Job> _displayedJobs = new List<Job>();
+
 
 	public void Initialize(Data data) {
 		_data = data;
-		_mainJobIndex = data.Options.IndexOf(data.MainJob);
 		_label.text = $"{data.Name}:";
-		InitDropdown(GetJobAtIndex(0));
+		InitDropdown();
 	}
 
 	public void SetMainJob(Job mainJob) {
 		if (!_data.IsMain) {
-			int newMainIndex = _data.Options.IndexOf(mainJob);
-			if (newMainIndex != _mainJobIndex) {
-				Job selectedJob = SelectedJob;
+			if (_data.MainJob != mainJob) {
 				_data.MainJob = mainJob;
-				_mainJobIndex = newMainIndex;
-				InitDropdown(selectedJob);
+				InitDropdown(true);
 			}
 		}
 	}
@@ -46,33 +41,33 @@ public class JobSlotView : MonoBehaviour {
 		_dropdown.onValueChanged.AddListener(OnSelectionValueChanged);
 	}
 
-	private void InitDropdown(Job defaultSelection) {
-		_dropdown.ClearOptions();
-		_dropdown.AddOptions(_data.Options.Where(j => j != _data.MainJob).Select(j => j.isGeneric ? j.Name : $"{j.Name} <color=#FF0000>({j.UniqueCharacterName})</color>").ToList());
+	private void InitDropdown(bool triggerEvents = false) {
+		int currentIndex = _dropdown.value;
+		Job previousSelectedJob = SelectedJob;
 
-		int newIndex = GetIndexForJob(defaultSelection);
-		if (GetJobAtIndex(newIndex) != defaultSelection) {
-			_dropdown.value = newIndex;
+		_displayedJobs = _data.Options.Where(j => j != _data.MainJob).ToList();
+		_dropdown.ClearOptions();
+		_dropdown.AddOptions(_displayedJobs.Select(j => j.isGeneric ? j.Name : $"{j.Name} <color=#FF0000>({j.UniqueCharacterName})</color>").ToList());
+
+		if (currentIndex >= _displayedJobs.Count) {
+			currentIndex = _displayedJobs.Count - 1;
+		}
+
+		Job newSelectedJob = GetJobAtIndex(currentIndex);
+		if (triggerEvents && previousSelectedJob != newSelectedJob) {
+			if (_dropdown.value == currentIndex) {
+				OnSelectionValueChanged(currentIndex);
+			}
+
+			_dropdown.value = currentIndex;
 		} else {
-			_dropdown.SetValueWithoutNotify(newIndex);
+			_dropdown.SetValueWithoutNotify(currentIndex);
 		}
 	}
 
 	private Job GetJobAtIndex(int index) {
-		if (_mainJobIndex != -1 && index >= _mainJobIndex) {
-			index++;
-		}
-
-		return _data.Options[index];
-	}
-
-	private int GetIndexForJob(Job job) {
-		int index = _data.Options.IndexOf(job);
-		if (_mainJobIndex != -1 && index >= _mainJobIndex) {
-			index--;
-		}
-
-		return index;
+		int count = _displayedJobs.Count;
+		return count > 0 ? _displayedJobs[Mathf.Clamp(index, 0, count)] : null;
 	}
 
 	private void OnButtonClicked() {
