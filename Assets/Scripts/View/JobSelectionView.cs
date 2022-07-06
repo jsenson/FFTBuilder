@@ -16,7 +16,7 @@ public class JobSelectionView : MonoBehaviour {
 	public void Initialize(Data data) {
 		Clear();
 		_data = data;
-		_mainView = CreateView("Main", data.MainJobOptions, null);
+		_mainView = CreateView("Main", data.MainJobOptions, true);
 		PopulateSubViews(_mainView.SelectedJob);
 	}
 
@@ -44,37 +44,55 @@ public class JobSelectionView : MonoBehaviour {
 	private void PopulateSubViews(Job selectedMainJob) {
 		int numSubJobs = selectedMainJob.NumSubjobs;
 		for (int i = 0; i < numSubJobs; i++) {
-			_subViews.Add(CreateView("Sub", _data.SubJobOptions, selectedMainJob));
+			_subViews.Add(CreateView("Sub", _data.SubJobOptions, false, GetOtherSelectedJobs(null)));
 		}
 	}
 
-	private JobSlotView CreateView(string name, List<Job> options, Job mainJob) {
+	private JobSlotView CreateView(string name, List<Job> options, bool isMainJob, List<Job> restrictedJobs = null) {
 		var view = Instantiate(_viewPrefab, _layoutGroup.transform);
 		view.OnSelectionChanged += OnJobChanged;
 		view.OnExpandClicked += OnExpandClicked;
 		view.Initialize(new JobSlotView.Data() {
 			Name = name,
-			MainJob = mainJob,
-			Options = options
+			IsMainJob = isMainJob,
+			Options = options,
+			RestrictedJobs = restrictedJobs
 		});
 
 		return view;
 	}
 
 	private void OnJobChanged(JobSlotView sender, Job selectedJob) {
-		if (sender.IsMain) {
-			if (selectedJob.NumSubjobs != _subViews.Count) {
-				ClearSubs();
-				PopulateSubViews(selectedJob);
-			} else {
-				foreach (var view in _subViews) {
-					view.SetMainJob(selectedJob);
+		if (sender.IsMain && selectedJob.NumSubjobs != _subViews.Count) {
+			ClearSubs();
+			PopulateSubViews(selectedJob);
+			return;
+		} else {
+			foreach (var view in _subViews) {
+				if (view != sender) {
+					view.SetRestrictedJobs(GetOtherSelectedJobs(view));
 				}
 			}
-		} else {
-			// Do anything on selecting a sub?  Prevent selecting the same subjob twice?
-			// Gotta add tracking to subview to know what the previous selection was and revert.
 		}
+	}
+
+	private List<Job> GetOtherSelectedJobs(JobSlotView view) {
+		List<Job> selectedJobs = new List<Job>();
+		var selectedMainJob = _mainView != view ? _mainView?.SelectedJob : null;
+		if (selectedMainJob != null) {
+			selectedJobs.Add(selectedMainJob);
+		}
+
+		foreach (var currentView in _subViews) {
+			if (currentView != view) {
+				var selectedJob = currentView.SelectedJob;
+				if (selectedJob != null) {
+					selectedJobs.Add(selectedJob);
+				}
+			}
+		}
+
+		return selectedJobs;
 	}
 
 	private void OnExpandClicked(JobSlotView sender) {

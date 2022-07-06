@@ -15,7 +15,7 @@ public class JobSlotView : MonoBehaviour {
 
 	public Job SelectedJob => GetJobAtIndex(_dropdown.value);
 
-	public bool IsMain => _data.IsMain;
+	public bool IsMain => _data.IsMainJob;
 
 	private Data _data;
 	private List<Job> _displayedJobs = new List<Job>();
@@ -27,12 +27,10 @@ public class JobSlotView : MonoBehaviour {
 		InitDropdown();
 	}
 
-	public void SetMainJob(Job mainJob) {
-		if (!_data.IsMain) {
-			if (_data.MainJob != mainJob) {
-				_data.MainJob = mainJob;
-				InitDropdown(true);
-			}
+	public void SetRestrictedJobs(List<Job> restrictedJobs) {
+		if (!_data.IsMainJob) {
+			_data.RestrictedJobs = restrictedJobs;
+			InitDropdown(true);
 		}
 	}
 
@@ -42,26 +40,33 @@ public class JobSlotView : MonoBehaviour {
 	}
 
 	private void InitDropdown(bool triggerEvents = false) {
-		int currentIndex = _dropdown.value;
 		Job previousSelectedJob = SelectedJob;
+		bool includeNonGenerics = _data.IncludeNonGenerics;
 
-		_displayedJobs = _data.Options.Where(j => j != _data.MainJob).ToList();
+		_displayedJobs = _data.Options.Where(j => (includeNonGenerics || j.isGeneric) && (!_data.RestrictedJobs?.Contains(j) ?? true)).ToList();
 		_dropdown.ClearOptions();
-		_dropdown.AddOptions(_displayedJobs.Select(j => j.isGeneric ? j.Name : $"{j.Name} <color=#FF0000>({j.UniqueCharacterName})</color>").ToList());
+		_dropdown.AddOptions(_displayedJobs.Select(j => GetDisplayName(j)).ToList());
 
-		if (currentIndex >= _displayedJobs.Count) {
-			currentIndex = _displayedJobs.Count - 1;
-		}
-
-		Job newSelectedJob = GetJobAtIndex(currentIndex);
-		if (triggerEvents && previousSelectedJob != newSelectedJob) {
-			if (_dropdown.value == currentIndex) {
-				OnSelectionValueChanged(currentIndex);
-			}
-
-			_dropdown.value = currentIndex;
+		int oldJobIndex = _displayedJobs.IndexOf(previousSelectedJob);
+		if (oldJobIndex > -1) {
+			_dropdown.SetValueWithoutNotify(oldJobIndex);
 		} else {
-			_dropdown.SetValueWithoutNotify(currentIndex);
+			Job newSelectedJob = GetJobAtIndex(0);
+			if (triggerEvents && previousSelectedJob != newSelectedJob) {
+				if (_dropdown.value == 0) {
+					OnSelectionValueChanged(0);
+				}
+
+				_dropdown.value = 0;
+			}
+		}
+	}
+
+	private string GetDisplayName(Job job) {
+		if (job.isGeneric) {
+			return job.Name;
+		} else {
+			return $"{job.Name} <color=#FF0000>({job.UniqueCharacterName})</color>";
 		}
 	}
 
@@ -83,8 +88,9 @@ public class JobSlotView : MonoBehaviour {
 	public struct Data {
 		public string Name;
 		public List<Job> Options;
-		public Job MainJob;
+		public List<Job> RestrictedJobs;
+		public bool IsMainJob;
 
-		public bool IsMain => MainJob == null;
+		public bool IncludeNonGenerics => RestrictedJobs?.Find(j => !j.isGeneric) == null;
 	}
 }

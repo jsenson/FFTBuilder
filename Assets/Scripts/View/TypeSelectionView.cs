@@ -27,10 +27,14 @@ public class TypeSelectionView : MonoBehaviour {
 		_typeDropdown.ClearOptions();
 		_typeDropdown.AddOptions(typeNames);
 		_typeDropdown.onValueChanged.AddListener(OnTypeChange);
-		_gameDropdown.onValueChanged.AddListener(i => onGameValueChanged?.Invoke(i));
+		_gameDropdown.onValueChanged.AddListener(OnGameChange);
 	}
 
 	private void OnTypeChange(int newIndex) {
 		onTypeValueChanged?.Invoke((UnitType)(newIndex + 1));
+	}
+
+	private void OnGameChange(int newIndex) {
+		onGameValueChanged?.Invoke(newIndex);
 	}
 }
