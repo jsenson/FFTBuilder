@@ -1,80 +1,83 @@
 using System;
-using System.Linq;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class DataController : MonoBehaviour {
 	[SerializeField] private SourceFiles[] _sources;
-	[SerializeField] private TypeSelectionView _selectionView;
-	[SerializeField] private JobSelectionView _jobSelectView;
 
-	public SourceFiles[] Sources => _sources;
+	public JobImporter JobImporter => _jobImporter;
+	public AbilityImporter AbilityImporter => _abilityImporter;
+	public List<CharacterBuild> Characters => _characters;
 
 	private string _loadedSource;
-	private JobImporter _jobImporter = new JobImporter();
-	private AbilityImporter _abilityImporter = new AbilityImporter();
+	private readonly JobImporter _jobImporter = new JobImporter();
+	private readonly AbilityImporter _abilityImporter = new AbilityImporter();
+	private readonly List<CharacterBuild> _characters = new List<CharacterBuild>();
 
-	public void Awake() {
+	private void Awake() {
 		Load(_sources[0]);
-		_selectionView.Initialize(_sources.Select(s => s.Name).ToList());
-		InitJobSelectionView(_selectionView.SelectedType);
+		LoadCharacters();
 	}
 
-	public void Load(SourceFiles source) {
-		Unload();
-		_jobImporter.Load(source.JobFile);
-		_abilityImporter.Load(source.AbilityFile, _jobImporter.GetAllByReference());
-		_loadedSource = source.Name;
+	public void Load(int gameIndex) {
+		Load(_sources[Mathf.Clamp(gameIndex, 0, _sources.Length)]);
 	}
 
-	private void OnEnable() {
-		_selectionView.onGameValueChanged += OnGameChanged;
-		_selectionView.onTypeValueChanged += OnTypeChanged;
-	}
-
-	private void OnDisable() {
-		_selectionView.onGameValueChanged += OnGameChanged;
-		_selectionView.onTypeValueChanged += OnTypeChanged;
-	}
-
-	private void Unload() {
+	public void Unload() {
 		_abilityImporter.Unload();
 		_jobImporter.Unload();
+		_characters.Clear();
 		_loadedSource = null;
 	}
 
-	private void OnGameChanged(int newIndex) {
-		Debug.Log($"OnGameChanged: {newIndex}");
-		var source = _sources[newIndex];
-		if (_loadedSource != source.Name) {
-			Load(source);
-			Debug.Log($"Loaded {source.Name}");
+	private void Load(SourceFiles source) {
+		if (source.Name != _loadedSource) {
+			Unload();
+			_jobImporter.Load(source.JobFile);
+			_abilityImporter.Load(source.AbilityFile, _jobImporter.GetAllByReference());
+			_loadedSource = source.Name;
+			LoadCharacters();
 		}
 	}
 
-	private void OnTypeChanged(UnitType newType) {
-		Debug.Log($"OnTypeChanged: {newType}");
-		InitJobSelectionView(newType);
-	}
+	// private void OnGameChanged(int newIndex) {
+	// 	Debug.Log($"OnGameChanged: {newIndex}");
+	// 	var source = _sources[newIndex];
+	// 	if (_loadedSource != source.Name) {
+	// 		Load(source);
+	// 		Debug.Log($"Loaded {source.Name}");
+	// 	}
+	// }
 
-	private void InitJobSelectionView(UnitType unitType) {
-		var mainJobs = _jobImporter.GetAll(
-			job => job.IsUnitType(unitType)
-			&& (job.ValidSlots == Job.SlotRestriction.Main 
-			|| job.ValidSlots == Job.SlotRestriction.Both)
-		);
+	// private void OnTypeChanged(UnitType newType) {
+	// 	Debug.Log($"OnTypeChanged: {newType}");
+	// 	InitJobSelectionView(newType);
+	// }
 
-		var subJobs = _jobImporter.GetAll(
-			job => job.IsUnitType(unitType) 
-			&& (job.ValidSlots == Job.SlotRestriction.Sub 
-			|| job.ValidSlots == Job.SlotRestriction.Both)
-		);
+	// private void InitJobSelectionView(UnitType unitType) {
+	// 	var mainJobs = _jobImporter.GetAll(
+	// 		job => job.IsUnitType(unitType)
+	// 		&& (job.ValidSlots == Job.SlotRestriction.Main 
+	// 		|| job.ValidSlots == Job.SlotRestriction.Both)
+	// 	);
 
-		mainJobs.Sort((a, b) => a.Name.CompareTo(b.Name));
-		subJobs.Sort((a, b) => a.Name.CompareTo(b.Name));
-		_jobSelectView.Initialize(new JobSelectionView.Data() {
-			MainJobOptions = mainJobs,
-			SubJobOptions = subJobs
-		});
+	// 	var subJobs = _jobImporter.GetAll(
+	// 		job => job.IsUnitType(unitType) 
+	// 		&& (job.ValidSlots == Job.SlotRestriction.Sub 
+	// 		|| job.ValidSlots == Job.SlotRestriction.Both)
+	// 	);
+
+	// 	mainJobs.Sort((a, b) => a.Name.CompareTo(b.Name));
+	// 	subJobs.Sort((a, b) => a.Name.CompareTo(b.Name));
+	// 	_jobSelectView.Initialize(new JobSelectionView.Data() {
+	// 		MainJobOptions = mainJobs,
+	// 		SubJobOptions = subJobs
+	// 	});
+	// }
+
+	private void LoadCharacters() {
+		// No saved char set loading yet.
+		_characters.Add(CharacterBuild.GetDefault(_jobImporter));
 	}
 
 	[Serializable]

@@ -57,7 +57,7 @@ public class JobImporter {
 		return new Dictionary<string, Job>(_records);
 	}
 
-	public List<Job> GetAll(Func<Job, bool> predicate = null) {
+	public List<Job> FindAll(Predicate<Job> predicate = null) {
 		var jobs = new List<Job>();
 		foreach (var kvp in _records) {
 			if (predicate == null || predicate(kvp.Value)) {

@@ -20,7 +20,11 @@ public class JobSelectionView : MonoBehaviour {
 		PopulateSubViews(_mainView.SelectedJob);
 	}
 
-	private void Clear() {
+	public void Refresh(CharacterBuild character) {
+		// TODO
+	}
+
+	public void Clear() {
 		ClearMain();
 		ClearSubs();
 	}
