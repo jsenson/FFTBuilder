@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class DataController : MonoBehaviour {
@@ -28,6 +29,10 @@ public class DataController : MonoBehaviour {
 		_jobImporter.Unload();
 		_characters.Clear();
 		_loadedSource = null;
+	}
+
+	public List<string> GetGameNames() {
+		return _sources.Select(s => s.Name).ToList();
 	}
 
 	private void Load(SourceFiles source) {
