@@ -82,7 +82,6 @@ public class JobSlotView : MonoBehaviour {
 
 	private void OnSelectionValueChanged(int newIndex) {
 		Job selectedJob = GetJobAtIndex(newIndex);
-		Debug.Log($"OnSelectionChanged: new Job = {selectedJob.Name}");
 		OnSelectionChanged?.Invoke(this, selectedJob);
 	}
 

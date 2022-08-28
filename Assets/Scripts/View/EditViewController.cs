@@ -33,7 +33,6 @@ public class EditViewController : MonoBehaviour {
 	}
 
 	private void OnCharacterSelected(CharacterBuild selectedCharacter) {
-		Debug.Log($"Select {selectedCharacter.Name}");
 		ValidateCharacter(selectedCharacter);
 		_jobSelectionView.Refresh(new JobSelectionView.Data(selectedCharacter, _dataController.JobImporter));
 		_passiveSelectionView?.Refresh(selectedCharacter);
