@@ -49,6 +49,7 @@ public class CharacterListView : MonoBehaviour {
 		newView.Refresh(character);
 		newView.OnSelected += SelectView;
 		newView.OnDeletePressed += DeleteView;
+		newView.OnTypeChanged += OnTypeChanged;
 		_views.Add(newView);
 	}
 
@@ -72,5 +73,11 @@ public class CharacterListView : MonoBehaviour {
 		var newCharacter = new CharacterBuild();
 		AddView(newCharacter);
 		OnCharacterCreated?.Invoke(newCharacter);
+	}
+
+	private void OnTypeChanged(CharacterDetailView sender) {
+		if (sender.Selected) {
+			OnCharacterSelected?.Invoke(sender.Character);
+		}
 	}
 }

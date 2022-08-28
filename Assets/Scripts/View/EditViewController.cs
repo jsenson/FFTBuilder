@@ -1,5 +1,3 @@
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class EditViewController : MonoBehaviour {
@@ -35,12 +33,15 @@ public class EditViewController : MonoBehaviour {
 	}
 
 	private void OnCharacterSelected(CharacterBuild selectedCharacter) {
-		_jobSelectionView?.Refresh(selectedCharacter);
+		Debug.Log($"Select {selectedCharacter.Name}");
+		ValidateCharacter(selectedCharacter);
+		_jobSelectionView.Refresh(new JobSelectionView.Data(selectedCharacter, _dataController.JobImporter));
 		_passiveSelectionView?.Refresh(selectedCharacter);
 		_abilityListView?.Clear();
 	}
 
 	private void OnCharacterCreated(CharacterBuild character) {
+		ValidateCharacter(character);
 		_dataController.Characters.Add(character);
 	}
 
@@ -52,8 +53,14 @@ public class EditViewController : MonoBehaviour {
 	}
 
 	private void ClearSelectedSubViews() {
-		_jobSelectionView?.Clear();
+		_jobSelectionView.Clear();
 		_passiveSelectionView?.Clear();
 		_abilityListView?.Clear();
+	}
+
+	private void ValidateCharacter(CharacterBuild character) {
+		if (character.MainJob == null) {
+			character.SetMainJob(character.GetMainJobList(_dataController.JobImporter)[0], _dataController.JobImporter);
+		}
 	}
 }

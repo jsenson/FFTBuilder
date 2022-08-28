@@ -25,7 +25,7 @@ public class Job : IEquatable<Job> {
 	public SlotRestriction ValidSlots { get; set; }
 	public int NumSubjobs { get; set; }
 	public string UniqueCharacterName { get; set; }
-	public bool isGeneric => string.IsNullOrEmpty(UniqueCharacterName);
+	public bool IsGeneric => string.IsNullOrEmpty(UniqueCharacterName);
 
 	private List<Requirement> _unlockRequirements = new List<Requirement>();
 	private List<AbilitySet> _abilitySets = new List<AbilitySet>();
@@ -141,7 +141,7 @@ public class Job : IEquatable<Job> {
 	}
 
 	public override bool Equals(object obj) {
-		if (obj is Ability other) {
+		if (obj is Job other) {
 			return Equals(other);
 		}
 

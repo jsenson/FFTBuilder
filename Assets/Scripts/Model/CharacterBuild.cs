@@ -12,7 +12,7 @@ public class CharacterBuild {
 	public UnitType Type { get; private set; }
 	public Job MainJob { get; private set; }
 
-	private List<Job> _subJobs = new List<Job>();
+	private Job[] _subJobs = new Job[0];
 	private Dictionary<Ability.AbilityType, Ability> _passives = new Dictionary<Ability.AbilityType, Ability>();
 
 	public static CharacterBuild GetDefault(JobImporter jobImporter) {
@@ -20,8 +20,9 @@ public class CharacterBuild {
 		defaultBuild.MainJob = defaultBuild.GetMainJobList(jobImporter)[0];
 		var subJobs = defaultBuild.GetSubJobList(jobImporter);
 		int subCount = subJobs.Count;
+		defaultBuild._subJobs = new Job[defaultBuild.MainJob.NumSubjobs];
 		for (int i = 0; i < defaultBuild.MainJob.NumSubjobs && i < subCount; i++) {
-			defaultBuild._subJobs.Add(subJobs[i]);
+			defaultBuild._subJobs[i] = subJobs[i];
 		}
 
 		return defaultBuild;
@@ -34,6 +35,7 @@ public class CharacterBuild {
 
 	public void SetName(string newName) {
 		if (newName != Name) {
+			UnityEngine.Debug.Log($"{Name}: Set Name to '{newName}'");
 			Name = newName;
 			OnNameChanged?.Invoke(this);
 		}
@@ -42,29 +44,41 @@ public class CharacterBuild {
 	public void SetType(UnitType newType) {
 		if (newType != Type) {
 			Type = newType;
+			MainJob = null;
+			_subJobs = new Job[0];
 			OnTypeChanged?.Invoke(this);
+			UnityEngine.Debug.Log($"{Name}: Set Type to '{newType}'");
 		}
 	}
 
-	public void SetMainJob(Job newJob) {
+	public void SetMainJob(Job newJob, JobImporter importer) {
 		if (newJob != MainJob) {
 			MainJob = newJob;
+			UpdateSubJobArrayLength(GetSubJobList(importer).ToArray());
 			OnMainJobChanged?.Invoke(this);
+			UnityEngine.Debug.Log($"{Name}: Set Main Job to '{MainJob}'");
 		}
 	}
 
-	public Job[] GetCurrentSubJobs() {
-		return _subJobs.ToArray();
+	public Job[] GetCurrentSubJobs(Predicate<Job> predicate = null) {
+		if (predicate == null) {
+			var jobs = new Job[_subJobs.Length];
+			Array.Copy(_subJobs, jobs, _subJobs.Length);
+			return jobs;
+		} else {
+			return Array.FindAll(_subJobs, predicate);
+		}
 	}
 
 	public Job GetSubJob(int index) {
-		return index > 0 && index < _subJobs.Count ? _subJobs[index] : null;
+		return index >= 0 && index < _subJobs.Length ? _subJobs[index] : null;
 	}
 
 	public void SetSubJob(int index, Job job) {
-		if (index > 0 && index < _subJobs.Count && _subJobs[index] != job) {
+		if (index >= 0 && index < _subJobs.Length && _subJobs[index] != job) {
 			_subJobs[index] = job;
 			OnSubJobChanged?.Invoke(this, index);
+			UnityEngine.Debug.Log($"{Name}: Set Sub Job {index} to '{job}'");
 		}
 	}
 
@@ -80,11 +94,9 @@ public class CharacterBuild {
 	}
 
 	public List<Job> GetMainJobList(JobImporter importer, bool sortByName = true) {
-		bool includeNonGenerics = IsGeneric();
 		List<Job> jobs = importer.FindAll(j =>
 			j.IsUnitType(Type)
 			&& (j.ValidSlots == Job.SlotRestriction.Both || j.ValidSlots == Job.SlotRestriction.Main)
-			&& (includeNonGenerics || j.isGeneric)
 		);
 
 		if (sortByName) {
@@ -94,13 +106,19 @@ public class CharacterBuild {
 		return jobs;
 	}
 
-	public List<Job> GetSubJobList(JobImporter importer, bool sortByName = true) {
-		bool includeNonGenerics = IsGeneric();
+	public List<Job> GetSubJobList(JobImporter importer, bool sortByName = true, int subJobSlot = -1) {
+		if (MainJob == null) {
+			throw new InvalidOperationException("Can not call GetSubJobList before setting a MainJob value.");
+		}
+
+		Job[] excludedJobs = GetRestrictedJobsForSubJobSlot(subJobSlot);
+		bool includeNonGenerics = CanSelectGeneric(subJobSlot);
 		List<Job> jobs = importer.FindAll(j =>
 			j != MainJob
 			&& j.IsUnitType(Type)
 			&& (j.ValidSlots == Job.SlotRestriction.Both || j.ValidSlots == Job.SlotRestriction.Sub)
-			&& (includeNonGenerics || j.isGeneric)
+			&& (includeNonGenerics || j.IsGeneric)
+			&& Array.Find(excludedJobs, ex => ex == j) == null
 		);
 
 		if (sortByName) {
@@ -110,17 +128,50 @@ public class CharacterBuild {
 		return jobs;
 	}
 
-	private bool IsGeneric() {
-		bool generic = MainJob == null || MainJob.isGeneric;
-		if (generic) {
-			foreach (var subJob in _subJobs) {
-				if (!subJob.isGeneric) {
-					generic = false;
-					break;
+	private bool CanSelectGeneric(int slotIndex) {
+		bool canSelect = slotIndex < 0 || slotIndex >= _subJobs.Length;
+		if (!canSelect) {
+			canSelect = MainJob.IsGeneric;
+			for (int i = 0; i < _subJobs.Length; i++) {
+				if (i != slotIndex && !_subJobs[i].IsGeneric) {
+					canSelect = false;
 				}
 			}
 		}
 
-		return generic;
+		return canSelect;
+	}
+
+	private Job[] GetRestrictedJobsForSubJobSlot(int jobSlot) {
+		if (jobSlot < 0 || jobSlot >= _subJobs.Length) {
+			return new Job[0];
+		}
+
+		var jobs = new List<Job>() { MainJob };
+		for (int i = 0; i < _subJobs.Length; i++) {
+			if (i != jobSlot) {
+				jobs.Add(_subJobs[i]);
+			}
+		}
+
+		return jobs.ToArray();
+	}
+
+	private void UpdateSubJobArrayLength(Job[] subJobs) {
+		int newLength = MainJob.NumSubjobs;
+		if (newLength < _subJobs.Length) {
+			Array.Resize(ref _subJobs, newLength);
+		} else if (newLength > _subJobs.Length) {
+			int i = _subJobs.Length;
+			Array.Resize(ref _subJobs, newLength);
+			for (int j = 0; j < subJobs.Length; j++) {
+				if (MainJob != subJobs[j] && Array.Find(_subJobs, job => job == subJobs[j]) == null) {
+					_subJobs[i] = subJobs[j];
+					if (++i >= _subJobs.Length) {
+						break;
+					}
+				}
+			}
+		}
 	}
 }

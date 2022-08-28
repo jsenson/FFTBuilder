@@ -13,6 +13,7 @@ public class CharacterDetailView : MonoBehaviour {
 
 	public event Action<CharacterDetailView> OnDeletePressed;
 	public event Action<CharacterDetailView> OnSelected;
+	public event Action<CharacterDetailView> OnTypeChanged;
 
 	public CharacterBuild Character { get; private set; }
 
@@ -42,13 +43,13 @@ public class CharacterDetailView : MonoBehaviour {
 
 	private void OnEnable() {
 		_nameInput.onValueChanged.AddListener(OnNameChanged);
-		_typeDropdown.onValueChanged.AddListener(OnTypeChanged);
+		_typeDropdown.onValueChanged.AddListener(OnTypeSelected);
 		_selectButton.onClick.AddListener(OnSelectButonPressed);
 	}
 
 	private void OnDisable() {
 		_nameInput.onValueChanged.RemoveListener(OnNameChanged);
-		_typeDropdown.onValueChanged.RemoveListener(OnTypeChanged);
+		_typeDropdown.onValueChanged.RemoveListener(OnTypeSelected);
 		_selectButton.onClick.RemoveListener(OnSelectButonPressed);
 	}
 
@@ -56,9 +57,10 @@ public class CharacterDetailView : MonoBehaviour {
 		Character.SetName(value);
 	}
 
-	private void OnTypeChanged(int newIndex) {
+	private void OnTypeSelected(int newIndex) {
 		// Offset by one because we strip the "Human" value at pos 0 and I'm too lazy to waste time calculating it correctly
 		Character.SetType((UnitType)(newIndex + 1));
+		OnTypeChanged?.Invoke(this);
 	}
 
 	private void OnDeleteButtonPressed() {

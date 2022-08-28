@@ -13,15 +13,11 @@ public class JobSelectionView : MonoBehaviour {
 	private JobSlotView _mainView;
 	private List<JobSlotView> _subViews = new List<JobSlotView>();
 
-	public void Initialize(Data data) {
+	public void Refresh(Data data) {
 		Clear();
 		_data = data;
-		_mainView = CreateView("Main", data.MainJobOptions, true);
+		_mainView = CreateView("Main", -1);
 		PopulateSubViews(_mainView.SelectedJob);
-	}
-
-	public void Refresh(CharacterBuild character) {
-		// TODO
 	}
 
 	public void Clear() {
@@ -48,25 +44,32 @@ public class JobSelectionView : MonoBehaviour {
 	private void PopulateSubViews(Job selectedMainJob) {
 		int numSubJobs = selectedMainJob.NumSubjobs;
 		for (int i = 0; i < numSubJobs; i++) {
-			_subViews.Add(CreateView("Sub", _data.SubJobOptions, false, GetOtherSelectedJobs(null)));
+			var view = CreateView("Sub", i);
+			_subViews.Add(view);
 		}
 	}
 
-	private JobSlotView CreateView(string name, List<Job> options, bool isMainJob, List<Job> restrictedJobs = null) {
+	private JobSlotView CreateView(string name, int jobIndex) {
 		var view = Instantiate(_viewPrefab, _layoutGroup.transform);
 		view.OnSelectionChanged += OnJobChanged;
 		view.OnExpandClicked += OnExpandClicked;
 		view.Initialize(new JobSlotView.Data() {
 			Name = name,
-			IsMainJob = isMainJob,
-			Options = options,
-			RestrictedJobs = restrictedJobs
+			Character = _data.Character,
+			JobIndex = jobIndex,
+			JobImporter = _data.JobImporter
 		});
 
 		return view;
 	}
 
 	private void OnJobChanged(JobSlotView sender, Job selectedJob) {
+		if (sender.IsMain) {
+			_data.Character.SetMainJob(selectedJob, _data.JobImporter);
+		} else {
+			_data.Character.SetSubJob(_subViews.IndexOf(sender), selectedJob);
+		}
+
 		if (sender.IsMain && selectedJob.NumSubjobs != _subViews.Count) {
 			ClearSubs();
 			PopulateSubViews(selectedJob);
@@ -74,29 +77,10 @@ public class JobSelectionView : MonoBehaviour {
 		} else {
 			foreach (var view in _subViews) {
 				if (view != sender) {
-					view.SetRestrictedJobs(GetOtherSelectedJobs(view));
+					view.Refresh();
 				}
 			}
 		}
-	}
-
-	private List<Job> GetOtherSelectedJobs(JobSlotView view) {
-		List<Job> selectedJobs = new List<Job>();
-		var selectedMainJob = _mainView != view ? _mainView?.SelectedJob : null;
-		if (selectedMainJob != null) {
-			selectedJobs.Add(selectedMainJob);
-		}
-
-		foreach (var currentView in _subViews) {
-			if (currentView != view) {
-				var selectedJob = currentView.SelectedJob;
-				if (selectedJob != null) {
-					selectedJobs.Add(selectedJob);
-				}
-			}
-		}
-
-		return selectedJobs;
 	}
 
 	private void OnExpandClicked(JobSlotView sender) {
@@ -104,7 +88,12 @@ public class JobSelectionView : MonoBehaviour {
 	}
 
 	public struct Data {
-		public List<Job> MainJobOptions;
-		public List<Job> SubJobOptions;
+		public CharacterBuild Character;
+		public JobImporter JobImporter;
+
+		public Data(CharacterBuild character, JobImporter jobImporter) {
+			Character = character;
+			JobImporter = jobImporter;
+		}
 	}
 }
