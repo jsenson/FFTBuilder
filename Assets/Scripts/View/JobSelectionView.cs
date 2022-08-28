@@ -40,7 +40,7 @@ public class JobSelectionView : MonoBehaviour {
 
 	private void ClearMain() {
 		if (_mainView != null) {
-			GameObject.Destroy(_mainView.gameObject);
+			Destroy(_mainView.gameObject);
 			_mainView = null;
 		}
 	}

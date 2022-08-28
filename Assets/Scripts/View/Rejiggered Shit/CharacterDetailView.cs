@@ -16,6 +16,8 @@ public class CharacterDetailView : MonoBehaviour {
 
 	public CharacterBuild Character { get; private set; }
 
+	public bool Selected => _selection.Selected;
+
 	public void Refresh(CharacterBuild character) {
 		var typeNames = Enum.GetNames(typeof(UnitType)).Where(t => t != "Human").ToList();
 		Character = character;
@@ -24,11 +26,11 @@ public class CharacterDetailView : MonoBehaviour {
 	}
 
 	public void Select() {
-		_selection?.Select();
+		_selection.Select();
 	}
 
 	public void Deselect() {
-		_selection?.Deselect();
+		_selection.Deselect();
 	}
 
 	private void Awake() {

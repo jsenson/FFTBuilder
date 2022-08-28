@@ -31,22 +31,29 @@ public class EditViewController : MonoBehaviour {
 	private void OnSelectedGameChanged(int selectedIndex) {
 		_dataController.Load(selectedIndex);
 		_characterListView.Refresh(_dataController.Characters);
-		_jobSelectionView.Clear();
-		_abilityListView.Clear();
-		_passiveSelectionView.Clear();
+		ClearSelectedSubViews();
 	}
 
 	private void OnCharacterSelected(CharacterBuild selectedCharacter) {
-		_jobSelectionView.Refresh(selectedCharacter);
-		_passiveSelectionView.Refresh(selectedCharacter);
-		_abilityListView.Clear();
+		_jobSelectionView?.Refresh(selectedCharacter);
+		_passiveSelectionView?.Refresh(selectedCharacter);
+		_abilityListView?.Clear();
 	}
 
 	private void OnCharacterCreated(CharacterBuild character) {
 		_dataController.Characters.Add(character);
 	}
 
-	private void OnCharacterDeleted(CharacterBuild character) {
+	private void OnCharacterDeleted(CharacterBuild character, bool selected) {
 		_dataController.Characters.Remove(character);
+		if (selected) {
+			ClearSelectedSubViews();
+		}
+	}
+
+	private void ClearSelectedSubViews() {
+		_jobSelectionView?.Clear();
+		_passiveSelectionView?.Clear();
+		_abilityListView?.Clear();
 	}
 }

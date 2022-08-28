@@ -11,7 +11,7 @@ public class CharacterListView : MonoBehaviour {
 
 	public event Action<CharacterBuild> OnCharacterSelected;
 	public event Action<CharacterBuild> OnCharacterCreated;
-	public event Action<CharacterBuild> OnCharacterDeleted;
+	public event Action<CharacterBuild, bool> OnCharacterDeleted;
 
 	private readonly List<CharacterDetailView> _views = new List<CharacterDetailView>();
 
@@ -65,7 +65,7 @@ public class CharacterListView : MonoBehaviour {
 	private void DeleteView(CharacterDetailView view) {
 		_views.Remove(view);
 		Destroy(view.gameObject);
-		OnCharacterDeleted?.Invoke(view.Character);
+		OnCharacterDeleted?.Invoke(view.Character, view.Selected);
 	}
 
 	private void CreateNewCharacter() {

@@ -11,7 +11,7 @@ public class AbilityImporter {
 	private const int COST = 5;
 	private const int COLUMNS = 6;
 
-	private Dictionary<string, Record> _records;
+	private readonly Dictionary<string, Record> _records;
 
 	public AbilityImporter() {
 		_records = new Dictionary<string, Record>();

@@ -13,7 +13,7 @@ public class JobImporter {
 	private const int UNIQUE_UNIT = 7;
 	private const int COLUMNS = 8;
 
-	private Dictionary<string, Job> _records;
+	private readonly Dictionary<string, Job> _records;
 
 	public JobImporter() {
 		_records = new Dictionary<string, Job>();
