@@ -128,6 +128,17 @@ public class CharacterBuild {
 		return jobs;
 	}
 
+	public List<Ability> GetAvailablePassivesList(AbilityImporter importer, Ability.AbilityType type, bool sortByName = true) {
+		_passives.TryGetValue(type, out Ability currentPassive);
+		List<Ability> passives = importer.FindAll((a, _) => a.Type == type && a != currentPassive);
+
+		if (sortByName) {
+			passives.Sort((a,b) => a.Name.CompareTo(b.Name));
+		}
+
+		return passives;
+	}
+
 	private bool CanSelectGeneric(int slotIndex) {
 		bool canSelect = slotIndex < 0 || slotIndex >= _subJobs.Length;
 		if (!canSelect) {

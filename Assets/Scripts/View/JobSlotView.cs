@@ -9,6 +9,7 @@ public class JobSlotView : MonoBehaviour {
 	[SerializeField] private TMP_Text _label;
 	[SerializeField] private TMP_Dropdown _dropdown;
 	[SerializeField] private Button _button;
+	[SerializeField] private TintOnSelect _selection;
 
 	public event Action<JobSlotView, Job> OnSelectionChanged;
 	public event Action<JobSlotView> OnExpandClicked;
@@ -30,9 +31,18 @@ public class JobSlotView : MonoBehaviour {
 		InitDropdown(true);
 	}
 
-	private void Awake() {
+	public void Deselect() {
+		_selection.Deselect();
+	}
+
+	private void OnEnable() {
 		_button.onClick.AddListener(OnButtonClicked);
 		_dropdown.onValueChanged.AddListener(OnSelectionValueChanged);
+	}
+
+	private void OnDisable() {
+		_button.onClick.RemoveListener(OnButtonClicked);
+		_dropdown.onValueChanged.RemoveListener(OnSelectionValueChanged);
 	}
 
 	private void InitDropdown(bool triggerEvents = false) {
@@ -77,7 +87,10 @@ public class JobSlotView : MonoBehaviour {
 	}
 
 	private void OnButtonClicked() {
-		OnExpandClicked?.Invoke(this);
+		if (!_selection.Selected) {
+			_selection.Select();
+			OnExpandClicked?.Invoke(this);
+		}
 	}
 
 	private void OnSelectionValueChanged(int newIndex) {

@@ -7,7 +7,7 @@ public class JobSelectionView : MonoBehaviour {
 	[SerializeField] private VerticalLayoutGroup _layoutGroup;
 	[SerializeField] private JobSlotView _viewPrefab;
 
-	public event Action<Job> OnShowJobDetailsClicked;
+	public event Action<CharacterBuild, Job> OnShowJobDetailsClicked;
 
 	private Data _data;
 	private JobSlotView _mainView;
@@ -23,6 +23,13 @@ public class JobSelectionView : MonoBehaviour {
 	public void Clear() {
 		ClearMain();
 		ClearSubs();
+	}
+
+	public void ClearSelection() {
+		_mainView.Deselect();
+		foreach (var view in _subViews) {
+			view.Deselect();
+		}
 	}
 
 	private void ClearSubs() {
@@ -84,7 +91,17 @@ public class JobSelectionView : MonoBehaviour {
 	}
 
 	private void OnExpandClicked(JobSlotView sender) {
-		OnShowJobDetailsClicked?.Invoke(sender.SelectedJob);
+		if (sender != _mainView) {
+			_mainView.Deselect();
+		}
+
+		foreach (var view in _subViews) {
+			if (view != sender) {
+				view.Deselect();
+			}
+		}
+
+		OnShowJobDetailsClicked?.Invoke(_data.Character, sender.SelectedJob);
 	}
 
 	public struct Data {

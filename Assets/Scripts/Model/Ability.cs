@@ -6,7 +6,7 @@ public class Ability : IEquatable<Ability> {
 		Support,
 		Reaction,
 		Movement,
-		Passive
+		_Count_
 	}
 
 	public string Reference { get; set; }
