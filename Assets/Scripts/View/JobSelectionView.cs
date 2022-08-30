@@ -9,13 +9,13 @@ public class JobSelectionView : MonoBehaviour {
 
 	public event Action<CharacterBuild, Job> OnShowJobDetailsClicked;
 
-	private Data _data;
+	private CharacterBuild _character;
 	private JobSlotView _mainView;
 	private List<JobSlotView> _subViews = new List<JobSlotView>();
 
-	public void Refresh(Data data) {
+	public void Refresh(CharacterBuild character) {
 		Clear();
-		_data = data;
+		_character = character;
 		_mainView = CreateView("Main", -1);
 		PopulateSubViews(_mainView.SelectedJob);
 	}
@@ -62,9 +62,8 @@ public class JobSelectionView : MonoBehaviour {
 		view.OnExpandClicked += OnExpandClicked;
 		view.Initialize(new JobSlotView.Data() {
 			Name = name,
-			Character = _data.Character,
-			JobIndex = jobIndex,
-			JobImporter = _data.JobImporter
+			Character = _character,
+			JobIndex = jobIndex
 		});
 
 		return view;
@@ -72,9 +71,9 @@ public class JobSelectionView : MonoBehaviour {
 
 	private void OnJobChanged(JobSlotView sender, Job selectedJob) {
 		if (sender.IsMain) {
-			_data.Character.SetMainJob(selectedJob, _data.JobImporter);
+			_character.SetMainJob(selectedJob);
 		} else {
-			_data.Character.SetSubJob(_subViews.IndexOf(sender), selectedJob);
+			_character.SetSubJob(_subViews.IndexOf(sender), selectedJob);
 		}
 
 		if (sender.IsMain && selectedJob.NumSubjobs != _subViews.Count) {
@@ -87,6 +86,10 @@ public class JobSelectionView : MonoBehaviour {
 					view.Refresh();
 				}
 			}
+		}
+
+		if (sender.Selected) {
+			OnShowJobDetailsClicked?.Invoke(_character, selectedJob);
 		}
 	}
 
@@ -101,16 +104,14 @@ public class JobSelectionView : MonoBehaviour {
 			}
 		}
 
-		OnShowJobDetailsClicked?.Invoke(_data.Character, sender.SelectedJob);
+		OnShowJobDetailsClicked?.Invoke(_character, sender.SelectedJob);
 	}
 
 	public struct Data {
 		public CharacterBuild Character;
-		public JobImporter JobImporter;
 
-		public Data(CharacterBuild character, JobImporter jobImporter) {
+		public Data(CharacterBuild character) {
 			Character = character;
-			JobImporter = jobImporter;
 		}
 	}
 }

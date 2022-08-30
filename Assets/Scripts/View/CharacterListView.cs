@@ -14,10 +14,12 @@ public class CharacterListView : MonoBehaviour {
 	public event Action<CharacterBuild, bool> OnCharacterDeleted;
 
 	private readonly List<CharacterDetailView> _views = new List<CharacterDetailView>();
+	private Data _data;
 
-	public void Refresh(List<CharacterBuild> characters) {
+	public void Refresh(Data data) {
+		_data = data;
 		Clear();
-		foreach(var character in characters) {
+		foreach(var character in data.Characters) {
 			AddView(character);
 		}
 	}
@@ -70,7 +72,7 @@ public class CharacterListView : MonoBehaviour {
 	}
 
 	private void CreateNewCharacter() {
-		var newCharacter = new CharacterBuild();
+		var newCharacter = new CharacterBuild(_data.JobImporter, _data.AbilityImporter);
 		AddView(newCharacter);
 		OnCharacterCreated?.Invoke(newCharacter);
 	}
@@ -79,5 +81,11 @@ public class CharacterListView : MonoBehaviour {
 		if (sender.Selected) {
 			OnCharacterSelected?.Invoke(sender.Character);
 		}
+	}
+
+	public struct Data {
+		public List<CharacterBuild> Characters;
+		public JobImporter JobImporter;
+		public AbilityImporter AbilityImporter;
 	}
 }

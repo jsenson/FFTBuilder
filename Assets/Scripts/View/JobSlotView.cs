@@ -18,6 +18,8 @@ public class JobSlotView : MonoBehaviour {
 
 	public bool IsMain => _data.IsMainJob;
 
+	public bool Selected => _selection.Selected;
+
 	private Data _data;
 	private List<Job> _displayedJobs = new List<Job>();
 
@@ -102,13 +104,12 @@ public class JobSlotView : MonoBehaviour {
 		public string Name;
 		public CharacterBuild Character;
 		public int JobIndex;
-		public JobImporter JobImporter;
 
 		public bool IsMainJob => JobIndex < 0;
 		public Job CurrentJob => IsMainJob ? Character.MainJob : Character.GetSubJob(JobIndex);
 
 		public List<Job> GetCurrentOptions() {
-			return IsMainJob ? Character.GetMainJobList(JobImporter) : Character.GetSubJobList(JobImporter, true, JobIndex);
+			return IsMainJob ? Character.GetMainJobList() : Character.GetSubJobList(JobIndex);
 		}
 	}
 }

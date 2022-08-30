@@ -17,7 +17,6 @@ public class DataController : MonoBehaviour {
 
 	private void Awake() {
 		Load(_sources[0]);
-		LoadCharacters();
 	}
 
 	public void Load(int gameIndex) {
@@ -45,44 +44,9 @@ public class DataController : MonoBehaviour {
 		}
 	}
 
-	// private void OnGameChanged(int newIndex) {
-	// 	Debug.Log($"OnGameChanged: {newIndex}");
-	// 	var source = _sources[newIndex];
-	// 	if (_loadedSource != source.Name) {
-	// 		Load(source);
-	// 		Debug.Log($"Loaded {source.Name}");
-	// 	}
-	// }
-
-	// private void OnTypeChanged(UnitType newType) {
-	// 	Debug.Log($"OnTypeChanged: {newType}");
-	// 	InitJobSelectionView(newType);
-	// }
-
-	// private void InitJobSelectionView(UnitType unitType) {
-	// 	var mainJobs = _jobImporter.GetAll(
-	// 		job => job.IsUnitType(unitType)
-	// 		&& (job.ValidSlots == Job.SlotRestriction.Main 
-	// 		|| job.ValidSlots == Job.SlotRestriction.Both)
-	// 	);
-
-	// 	var subJobs = _jobImporter.GetAll(
-	// 		job => job.IsUnitType(unitType) 
-	// 		&& (job.ValidSlots == Job.SlotRestriction.Sub 
-	// 		|| job.ValidSlots == Job.SlotRestriction.Both)
-	// 	);
-
-	// 	mainJobs.Sort((a, b) => a.Name.CompareTo(b.Name));
-	// 	subJobs.Sort((a, b) => a.Name.CompareTo(b.Name));
-	// 	_jobSelectView.Initialize(new JobSelectionView.Data() {
-	// 		MainJobOptions = mainJobs,
-	// 		SubJobOptions = subJobs
-	// 	});
-	// }
-
 	private void LoadCharacters() {
 		// No saved char set loading yet.
-		_characters.Add(CharacterBuild.GetDefault(_jobImporter));
+		_characters.Add(CharacterBuild.GetDefault(_jobImporter, _abilityImporter));
 	}
 
 	[Serializable]

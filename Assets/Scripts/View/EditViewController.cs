@@ -13,6 +13,7 @@ public class EditViewController : MonoBehaviour {
 
 	private void Start() {
 		_gameSelectView.Initialize(_dataController.GetGameNames());
+		RefreshCharacterListView();
 	}
 
 	private void OnEnable() {
@@ -29,19 +30,19 @@ public class EditViewController : MonoBehaviour {
 		_characterListView.OnCharacterSelected -= OnCharacterSelected;
 		_characterListView.OnCharacterCreated -= OnCharacterCreated;
 		_characterListView.OnCharacterDeleted -= OnCharacterDeleted;
-		_jobSelectionView.OnShowJobDetailsClicked += OnJobSlotClicked;
+		_jobSelectionView.OnShowJobDetailsClicked -= OnJobSlotClicked;
 		_passiveSelectionView.OnSlotSelected -= OnPassiveSlotClicked;
 	}
 
 	private void OnSelectedGameChanged(int selectedIndex) {
 		_dataController.Load(selectedIndex);
-		_characterListView.Refresh(_dataController.Characters);
+		RefreshCharacterListView();
 		ClearSelectedSubViews();
 	}
 
 	private void OnCharacterSelected(CharacterBuild selectedCharacter) {
 		ValidateCharacter(selectedCharacter);
-		_jobSelectionView.Refresh(new JobSelectionView.Data(selectedCharacter, _dataController.JobImporter));
+		_jobSelectionView.Refresh(selectedCharacter);
 		_passiveSelectionView.Refresh(selectedCharacter);
 		_abilityListView?.Clear();
 		StartCoroutine(FixTheAssholeLayout());
@@ -73,8 +74,15 @@ public class EditViewController : MonoBehaviour {
 		_abilityListView?.Refresh(new AbilityListView.Data() {
 			Character = character,
 			Type = type,
-			Importer = _dataController.AbilityImporter,
 			Job = job
+		});
+	}
+
+	private void RefreshCharacterListView() {
+		_characterListView.Refresh(new CharacterListView.Data() {
+			Characters = _dataController.Characters,
+			JobImporter = _dataController.JobImporter,
+			AbilityImporter = _dataController.AbilityImporter
 		});
 	}
 
@@ -86,7 +94,7 @@ public class EditViewController : MonoBehaviour {
 
 	private void ValidateCharacter(CharacterBuild character) {
 		if (character.MainJob == null) {
-			character.SetMainJob(character.GetMainJobList(_dataController.JobImporter)[0], _dataController.JobImporter);
+			character.SetMainJob(character.GetMainJobList()[0]);
 		}
 	}
 

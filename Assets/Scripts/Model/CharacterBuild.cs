@@ -14,11 +14,14 @@ public class CharacterBuild {
 
 	private Job[] _subJobs = new Job[0];
 	private Dictionary<Ability.AbilityType, Ability> _passives = new Dictionary<Ability.AbilityType, Ability>();
+	private HashSet<Ability> _classAbilities = new HashSet<Ability>();
+	private JobImporter _jobImporter;
+	private AbilityImporter _abilityImporter;
 
-	public static CharacterBuild GetDefault(JobImporter jobImporter) {
-		var defaultBuild = new CharacterBuild();
-		defaultBuild.MainJob = defaultBuild.GetMainJobList(jobImporter)[0];
-		var subJobs = defaultBuild.GetSubJobList(jobImporter);
+	public static CharacterBuild GetDefault(JobImporter jobImporter, AbilityImporter abilityImporter) {
+		var defaultBuild = new CharacterBuild(jobImporter, abilityImporter);
+		defaultBuild.MainJob = defaultBuild.GetMainJobList()[0];
+		var subJobs = defaultBuild.GetSubJobList();
 		int subCount = subJobs.Count;
 		defaultBuild._subJobs = new Job[defaultBuild.MainJob.NumSubjobs];
 		for (int i = 0; i < defaultBuild.MainJob.NumSubjobs && i < subCount; i++) {
@@ -28,7 +31,9 @@ public class CharacterBuild {
 		return defaultBuild;
 	}
 
-	public CharacterBuild() {
+	public CharacterBuild(JobImporter jobImporter, AbilityImporter abilityImporter) {
+		_jobImporter = jobImporter;
+		_abilityImporter = abilityImporter;
 		Name = "<Name>";
 		Type = UnitType.Male;
 	}
@@ -46,15 +51,17 @@ public class CharacterBuild {
 			Type = newType;
 			MainJob = null;
 			_subJobs = new Job[0];
+			_classAbilities.Clear();
 			OnTypeChanged?.Invoke(this);
 			UnityEngine.Debug.Log($"{Name}: Set Type to '{newType}'");
 		}
 	}
 
-	public void SetMainJob(Job newJob, JobImporter importer) {
+	public void SetMainJob(Job newJob) {
 		if (newJob != MainJob) {
+			RemoveClassAbilities(MainJob);
 			MainJob = newJob;
-			UpdateSubJobArrayLength(GetSubJobList(importer).ToArray());
+			UpdateSubJobArrayLength(GetSubJobList().ToArray());
 			OnMainJobChanged?.Invoke(this);
 			UnityEngine.Debug.Log($"{Name}: Set Main Job to '{MainJob}'");
 		}
@@ -76,6 +83,7 @@ public class CharacterBuild {
 
 	public void SetSubJob(int index, Job job) {
 		if (index >= 0 && index < _subJobs.Length && _subJobs[index] != job) {
+			RemoveClassAbilities(_subJobs[index]);
 			_subJobs[index] = job;
 			OnSubJobChanged?.Invoke(this, index);
 			UnityEngine.Debug.Log($"{Name}: Set Sub Job {index} to '{job}'");
@@ -93,27 +101,32 @@ public class CharacterBuild {
 		}
 	}
 
-	public List<Job> GetMainJobList(JobImporter importer, bool sortByName = true) {
-		List<Job> jobs = importer.FindAll(j =>
+	public void AddClassAbility(Ability ability) {
+		if (ability.Type == Ability.AbilityType.Class) {
+			_classAbilities.Add(ability);
+		} else {
+			throw new ArgumentException($"AddClassAbility called with ability of type '{ability.Type}'.  Only AbilityType.Class is valid.");
+		}
+	}
+
+	public List<Job> GetMainJobList() {
+		List<Job> jobs = _jobImporter.FindAll(j =>
 			j.IsUnitType(Type)
 			&& (j.ValidSlots == Job.SlotRestriction.Both || j.ValidSlots == Job.SlotRestriction.Main)
 		);
 
-		if (sortByName) {
-			jobs.Sort((a, b) => a.Name.CompareTo(b.Name));
-		}
-
+		jobs.Sort((a, b) => a.Name.CompareTo(b.Name));
 		return jobs;
 	}
 
-	public List<Job> GetSubJobList(JobImporter importer, bool sortByName = true, int subJobSlot = -1) {
+	public List<Job> GetSubJobList(int subJobSlot = -1) {
 		if (MainJob == null) {
 			throw new InvalidOperationException("Can not call GetSubJobList before setting a MainJob value.");
 		}
 
 		Job[] excludedJobs = GetRestrictedJobsForSubJobSlot(subJobSlot);
 		bool includeNonGenerics = CanSelectGeneric(subJobSlot);
-		List<Job> jobs = importer.FindAll(j =>
+		List<Job> jobs = _jobImporter.FindAll(j =>
 			j != MainJob
 			&& j.IsUnitType(Type)
 			&& (j.ValidSlots == Job.SlotRestriction.Both || j.ValidSlots == Job.SlotRestriction.Sub)
@@ -121,19 +134,18 @@ public class CharacterBuild {
 			&& Array.Find(excludedJobs, ex => ex == j) == null
 		);
 
-		if (sortByName) {
-			jobs.Sort((a, b) => a.Name.CompareTo(b.Name));
-		}
-
+		jobs.Sort((a, b) => a.Name.CompareTo(b.Name));
 		return jobs;
 	}
 
-	public List<Ability> GetAvailablePassivesList(AbilityImporter importer, Ability.AbilityType type, bool sortByName = true) {
-		_passives.TryGetValue(type, out Ability currentPassive);
-		List<Ability> passives = importer.FindAll((a, _) => a.Type == type && a != currentPassive);
+	public List<Ability> GetAvailablePassivesList(Ability.AbilityType type, Job job) {
+		List<Ability> passives = _abilityImporter.FindAll((a, j) => a.Type == type && (job == null || j == job));
 
-		if (sortByName) {
-			passives.Sort((a,b) => a.Name.CompareTo(b.Name));
+		if (type == Ability.AbilityType.Class) {
+			// Sort class abilities by reference by default to matchin-game order
+			passives.Sort((a, b) => a.Reference.CompareTo(b.Reference));
+		} else {
+			passives.Sort((a, b) => a.Name.CompareTo(b.Name));
 		}
 
 		return passives;
@@ -182,6 +194,15 @@ public class CharacterBuild {
 						break;
 					}
 				}
+			}
+		}
+	}
+
+	private void RemoveClassAbilities(Job job) {
+		if (job != null) {
+			var jobAbilities = _abilityImporter.FindAll((a, j) => a.Type == Ability.AbilityType.Class && j == job);
+			foreach (var ability in jobAbilities) {
+				_classAbilities.Remove(ability);
 			}
 		}
 	}
