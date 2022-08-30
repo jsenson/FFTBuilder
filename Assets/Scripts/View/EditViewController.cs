@@ -44,7 +44,7 @@ public class EditViewController : MonoBehaviour {
 		ValidateCharacter(selectedCharacter);
 		_jobSelectionView.Refresh(selectedCharacter);
 		_passiveSelectionView.Refresh(selectedCharacter);
-		_abilityListView?.Clear();
+		_abilityListView.Clear();
 		StartCoroutine(FixTheAssholeLayout());
 	}
 
@@ -71,7 +71,7 @@ public class EditViewController : MonoBehaviour {
 	}
 
 	private void ShowAbilityView(CharacterBuild character, Ability.AbilityType type, Job job = null) {
-		_abilityListView?.Refresh(new AbilityListView.Data() {
+		_abilityListView.Refresh(new AbilityListView.Data() {
 			Character = character,
 			Type = type,
 			Job = job
@@ -89,7 +89,7 @@ public class EditViewController : MonoBehaviour {
 	private void ClearSelectedSubViews() {
 		_jobSelectionView.Clear();
 		_passiveSelectionView.Clear();
-		_abilityListView?.Clear();
+		_abilityListView.Clear();
 	}
 
 	private void ValidateCharacter(CharacterBuild character) {

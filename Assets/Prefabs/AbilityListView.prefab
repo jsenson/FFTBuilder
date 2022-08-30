@@ -464,13 +464,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Content: {fileID: 1346681737471050623}
-  m_Horizontal: 1
+  m_Horizontal: 0
   m_Vertical: 1
-  m_MovementType: 1
+  m_MovementType: 2
   m_Elasticity: 0.1
   m_Inertia: 1
   m_DecelerationRate: 0.135
-  m_ScrollSensitivity: 1
+  m_ScrollSensitivity: 50
   m_Viewport: {fileID: 1346681736904974873}
   m_HorizontalScrollbar: {fileID: 0}
   m_VerticalScrollbar: {fileID: 1346681737035878470}
@@ -532,3 +532,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _contentParent: {fileID: 1346681737471050623}
   _abilityViewPrefab: {fileID: 6811347393487353890, guid: a26c81af9fb0b0249951cb74eb8ab7fc, type: 3}
+  _spacerPrefab: {fileID: 517563100913603213, guid: 97b22da93717b4948a3f63d31e8dd1dc, type: 3}
