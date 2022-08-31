@@ -41,7 +41,7 @@ public class AbilityListView : MonoBehaviour {
 	private void AddView(Ability ability) {
 		var newView = Instantiate(_abilityViewPrefab, _contentParent);
 		newView.OnToggled += OnAbilityToggled;
-		newView.Refresh(ability);
+		newView.Refresh(ability, IsSelected(ability));
 		_views.Add(newView);
 	}
 
@@ -52,8 +52,34 @@ public class AbilityListView : MonoBehaviour {
 		}
 	}
 
+	private bool IsSelected(Ability ability) {
+		if (ability.Type == Ability.AbilityType.Class) {
+			return _data.Character.HasClassAbility(ability);
+		} else {
+			return _data.Character.GetPassive(ability.Type) == ability;
+		}
+	}
+
 	private void OnAbilityToggled(AbilityDetailView sender) {
-		Debug.Log($"{sender.Ability.Name}: {sender.Selected}");
+		if (!_data.CanSelectMultiple) {
+			foreach (var view in _views) {
+				if (view != sender) {
+					view.Deselect(false);
+				}
+			}
+		}
+
+		if (sender.Selected) {
+			if (sender.Ability.Type == Ability.AbilityType.Class) {
+				_data.Character.AddClassAbility(sender.Ability);
+			} else {
+				_data.Character.SetPassive(sender.Ability);
+			}
+		} else {
+			if (sender.Ability.Type == Ability.AbilityType.Class) {
+				_data.Character.RemoveClassAbility(sender.Ability);
+			}
+		}
 	}
 
 	public struct Data {

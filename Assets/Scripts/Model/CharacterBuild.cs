@@ -97,16 +97,27 @@ public class CharacterBuild {
 	public void SetPassive(Ability passive) {
 		if (!_passives.ContainsKey(passive.Type) || _passives[passive.Type] != passive) {
 			_passives[passive.Type] = passive;
+			UnityEngine.Debug.Log($"{Name}: Set {passive.Type} Passive to '{passive.Name}'");
 			OnPassiveChanged?.Invoke(this, passive.Type);
 		}
+	}
+
+	public bool HasClassAbility(Ability ability) {
+		return _classAbilities.Contains(ability);
 	}
 
 	public void AddClassAbility(Ability ability) {
 		if (ability.Type == Ability.AbilityType.Class) {
 			_classAbilities.Add(ability);
+			UnityEngine.Debug.Log($"{Name}: Added Class ability '{ability.Name}'");
 		} else {
 			throw new ArgumentException($"AddClassAbility called with ability of type '{ability.Type}'.  Only AbilityType.Class is valid.");
 		}
+	}
+
+	public void RemoveClassAbility(Ability ability) {
+		_classAbilities.Remove(ability);
+		UnityEngine.Debug.Log($"{Name}: Removed Class ability '{ability.Name}'");
 	}
 
 	public List<Job> GetMainJobList() {
@@ -139,7 +150,11 @@ public class CharacterBuild {
 	}
 
 	public List<Ability> GetAvailablePassivesList(Ability.AbilityType type, Job job) {
-		List<Ability> passives = _abilityImporter.FindAll((a, j) => a.Type == type && (job == null || j == job));
+		List<Ability> passives = _abilityImporter.FindAll((a, j) => 
+			a.Type == type
+			&& (job == null || j == job)
+			&& j.IsUnitType(Type)
+		);
 
 		if (type == Ability.AbilityType.Class) {
 			// Sort class abilities by reference by default to matchin-game order

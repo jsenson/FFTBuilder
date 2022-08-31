@@ -42,4 +42,8 @@ public class Ability : IEquatable<Ability> {
 	public override int GetHashCode() {
 		return base.GetHashCode() ^ Reference.GetHashCode();
 	}
+
+	public override string ToString() {
+		return Name;
+	}
 }

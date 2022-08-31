@@ -15,11 +15,20 @@ public class AbilityDetailView : MonoBehaviour {
 
 	public bool Selected => _selectedToggle.isOn;
 
-	public void Refresh(Ability ability) {
+	public void Refresh(Ability ability, bool selected) {
 		Ability = ability;
 		_nameLabel.text = ability.Name;
 		_descriptionLabel.text = ability.Description;
 		_costLabel.text = $"{ability.Cost:N0} JP";
+		_selectedToggle.SetIsOnWithoutNotify(selected);
+	}
+
+	public void Deselect(bool fireEvent = true) {
+		if (fireEvent) {
+			_selectedToggle.isOn = false;
+		} else {
+			_selectedToggle.SetIsOnWithoutNotify(false);
+		}
 	}
 
 	private void OnEnable() {
@@ -31,6 +40,10 @@ public class AbilityDetailView : MonoBehaviour {
 	}
 
 	private void OnToggleChanged(bool active) {
-		OnToggled?.Invoke(this);
+		if (Ability.Type != Ability.AbilityType.Class && !active) {
+			_selectedToggle.SetIsOnWithoutNotify(true);
+		} else {
+			OnToggled?.Invoke(this);
+		}
 	}
 }
