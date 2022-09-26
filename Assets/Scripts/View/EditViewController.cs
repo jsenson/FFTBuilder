@@ -10,6 +10,8 @@ public class EditViewController : MonoBehaviour {
 	[SerializeField] private PassiveSelectionView _passiveSelectionView;
 	[SerializeField] private AbilityListView _abilityListView;
 	[SerializeField] private VerticalLayoutGroup _fucker;
+	[SerializeField] private Button _saveButton;
+	[SerializeField] private Button _loadButton;
 
 	private void Start() {
 		_gameSelectView.Initialize(_dataController.GetGameNames());
@@ -17,6 +19,8 @@ public class EditViewController : MonoBehaviour {
 	}
 
 	private void OnEnable() {
+		_saveButton.onClick.AddListener(OnSaveButtonClicked);
+		_loadButton.onClick.AddListener(OnLoadButtonClicked);
 		_gameSelectView.OnSelectedGameChanged += OnSelectedGameChanged;
 		_characterListView.OnCharacterSelected += OnCharacterSelected;
 		_characterListView.OnCharacterCreated += OnCharacterCreated;
@@ -26,6 +30,8 @@ public class EditViewController : MonoBehaviour {
 	}
 
 	private void OnDisable() {
+		_saveButton.onClick.RemoveListener(OnSaveButtonClicked);
+		_loadButton.onClick.RemoveListener(OnLoadButtonClicked);
 		_gameSelectView.OnSelectedGameChanged -= OnSelectedGameChanged;
 		_characterListView.OnCharacterSelected -= OnCharacterSelected;
 		_characterListView.OnCharacterCreated -= OnCharacterCreated;
@@ -96,6 +102,14 @@ public class EditViewController : MonoBehaviour {
 		if (character.MainJob == null) {
 			character.SetMainJob(character.GetMainJobList()[0]);
 		}
+	}
+
+	private void OnSaveButtonClicked() {
+
+	}
+
+	private void OnLoadButtonClicked() {
+		new SpreadsheetReader().Load();
 	}
 
 	private IEnumerator FixTheAssholeLayout() {
