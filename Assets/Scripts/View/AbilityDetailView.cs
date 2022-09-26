@@ -23,12 +23,18 @@ public class AbilityDetailView : MonoBehaviour {
 		_selectedToggle.SetIsOnWithoutNotify(selected);
 	}
 
-	public void Deselect(bool fireEvent = true) {
-		if (fireEvent) {
-			_selectedToggle.isOn = false;
-		} else {
-			_selectedToggle.SetIsOnWithoutNotify(false);
+	public bool SetSelected(bool selected, bool fireEvent = true) {
+		if (_selectedToggle.isOn != selected) {
+			if (fireEvent) {
+				_selectedToggle.isOn = selected;
+			} else {
+				_selectedToggle.SetIsOnWithoutNotify(selected);
+			}
+
+			return true;
 		}
+
+		return false;
 	}
 
 	private void OnEnable() {

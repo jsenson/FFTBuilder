@@ -1,11 +1,12 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AbilityListView : MonoBehaviour {
 	[SerializeField] private Transform _contentParent;
 	[SerializeField] private AbilityDetailView _abilityViewPrefab;
 	[SerializeField] private GameObject _spacerPrefab;
+	[SerializeField] private Toggle _selectAllToggle;
 
 	private readonly List<AbilityDetailView> _views = new List<AbilityDetailView>();
 	private readonly List<GameObject> _spacers = new List<GameObject>();
@@ -29,13 +30,25 @@ public class AbilityListView : MonoBehaviour {
 
 		_spacers.Clear();
 		_views.Clear();
+		_selectAllToggle.gameObject.SetActive(false);
+	}
+
+	private void OnEnable() {
+		_selectAllToggle.onValueChanged.AddListener(OnSelectAllChanged);
+	}
+
+	private void OnDisable() {
+		_selectAllToggle.onValueChanged.RemoveListener(OnSelectAllChanged);
 	}
 
 	private void InitViews() {
+		_selectAllToggle.gameObject.SetActive(_data.CanSelectMultiple);
 		foreach (var ability in _data.GetCurrentAbilityList()) {
 			AddSpacer();
 			AddView(ability);
 		}
+
+		UpdateSelectAllToggle();
 	}
 
 	private void AddView(Ability ability) {
@@ -64,20 +77,44 @@ public class AbilityListView : MonoBehaviour {
 		if (!_data.CanSelectMultiple) {
 			foreach (var view in _views) {
 				if (view != sender) {
-					view.Deselect(false);
+					view.SetSelected(false, false);
 				}
 			}
 		}
 
-		if (sender.Selected) {
-			if (sender.Ability.Type == Ability.AbilityType.Class) {
-				_data.Character.AddClassAbility(sender.Ability);
+		AddOrRemoveAbility(sender.Selected, sender.Ability);
+		UpdateSelectAllToggle();
+	}
+
+	private void OnSelectAllChanged(bool selected) {
+		foreach (var view in _views) {
+			if (view.SetSelected(selected, false)) {
+				AddOrRemoveAbility(selected, view.Ability);
+			}
+		}
+	}
+
+	private void UpdateSelectAllToggle() {
+		bool allSelected = true;
+		foreach (var view in _views) {
+			if (!view.Selected) {
+				allSelected = false;
+			}
+		}
+
+		_selectAllToggle.SetIsOnWithoutNotify(allSelected);
+	}
+
+	private void AddOrRemoveAbility(bool selected, Ability ability) {
+		if (selected) {
+			if (ability.Type == Ability.AbilityType.Class) {
+				_data.Character.AddClassAbility(ability);
 			} else {
-				_data.Character.SetPassive(sender.Ability);
+				_data.Character.SetPassive(ability);
 			}
 		} else {
-			if (sender.Ability.Type == Ability.AbilityType.Class) {
-				_data.Character.RemoveClassAbility(sender.Ability);
+			if (ability.Type == Ability.AbilityType.Class) {
+				_data.Character.RemoveClassAbility(ability);
 			}
 		}
 	}
