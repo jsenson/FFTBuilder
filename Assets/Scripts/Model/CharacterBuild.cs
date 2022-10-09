@@ -150,7 +150,7 @@ public class CharacterBuild {
 	}
 
 	public List<Ability> GetAvailablePassivesList(Ability.AbilityType type, Job job) {
-		List<Ability> passives = _abilityImporter.FindAll((a, j) => 
+		List<Ability> passives = _abilityImporter.FindAll((a, j) =>
 			a.Type == type
 			&& (job == null || j == job)
 			&& j.IsUnitType(Type)
@@ -219,6 +219,63 @@ public class CharacterBuild {
 			foreach (var ability in jobAbilities) {
 				_classAbilities.Remove(ability);
 			}
+		}
+	}
+
+	public struct Writer {
+		public void Write(CharacterBuild source, System.IO.BinaryWriter writer) {
+			if (source.MainJob == null) {
+				source.SetMainJob(source.GetMainJobList()[0]);
+			}
+
+			writer.Write(source.Name);
+			writer.Write((int)source.Type);
+			writer.Write(source.MainJob.Reference);
+			writer.Write(source._subJobs.Length);
+			for (int i = 0; i < source._subJobs.Length; i++) {
+				writer.Write(source._subJobs[i].Reference);
+			}
+
+			writer.Write(source._passives.Count);
+			foreach (var kvp in source._passives) {
+				writer.Write((int)kvp.Key);
+				writer.Write(kvp.Value.Reference);
+			}
+
+			writer.Write(source._classAbilities.Count);
+			foreach (var ability in source._classAbilities) {
+				writer.Write(ability.Reference);
+			}
+		}
+	}
+
+	public struct Reader {
+		public CharacterBuild Read(System.IO.BinaryReader reader, JobImporter jobImporter, AbilityImporter abilityImporter) {
+			var build = new CharacterBuild(jobImporter, abilityImporter);
+			build.Name = reader.ReadString();
+			build.Type = (UnitType)reader.ReadInt32();
+			build.MainJob = jobImporter.Get(reader.ReadString());
+
+			int count = reader.ReadInt32();
+			build._subJobs = new Job[count];
+			for (int i = 0; i < count; i++) {
+				build._subJobs[i] = jobImporter.Get(reader.ReadString());
+			}
+
+			count = reader.ReadInt32();
+			build._passives = new Dictionary<Ability.AbilityType, Ability>();
+			for (int i = 0; i < count; i++) {
+				var type = (Ability.AbilityType)reader.ReadInt32();
+				build._passives[type] = abilityImporter.Get(reader.ReadString());
+			}
+
+			count = reader.ReadInt32();
+			build._classAbilities = new HashSet<Ability>();
+			for (int i = 0; i < count; i++) {
+				build._classAbilities.Add(abilityImporter.Get(reader.ReadString()));
+			}
+
+			return build;
 		}
 	}
 }

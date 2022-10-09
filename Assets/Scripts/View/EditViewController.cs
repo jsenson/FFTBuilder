@@ -1,6 +1,6 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections;
 
 public class EditViewController : MonoBehaviour {
 	[SerializeField] private DataController _dataController;
@@ -14,6 +14,8 @@ public class EditViewController : MonoBehaviour {
 	[SerializeField] private Button _loadButton;
 
 	private void Start() {
+		_dataController.Load(0);
+		_dataController.Characters.Add(CharacterBuild.GetDefault(_dataController.JobImporter, _dataController.AbilityImporter));
 		_gameSelectView.Initialize(_dataController.GetGameNames());
 		RefreshCharacterListView();
 	}
@@ -105,11 +107,31 @@ public class EditViewController : MonoBehaviour {
 	}
 
 	private void OnSaveButtonClicked() {
-
+		var dialog = new FileDialog(_dataController.JobImporter, _dataController.AbilityImporter);
+		StartCoroutine(dialog.SaveAsync(
+			gameIndex: _dataController.LoadedIndex,
+			characters: _dataController.Characters.ToArray(),
+			onSuccess: null,
+			onCancel: null)
+		);
 	}
 
 	private void OnLoadButtonClicked() {
-		new SpreadsheetReader().Load();
+		var dialog = new FileDialog(_dataController.JobImporter, _dataController.AbilityImporter);
+		dialog.OnReadGameIndexFromFile += (gameIndex) => {
+			_dataController.Unload();
+			_dataController.Load(gameIndex);
+			dialog.UpdateImporters(_dataController.JobImporter, _dataController.AbilityImporter);
+		};
+
+		StartCoroutine(dialog.LoadAsync(OnCharacterFileLoaded, null));
+	}
+
+	private void OnCharacterFileLoaded(int gameIndex, CharacterBuild[] loadedCharacters) {
+		_dataController.Characters.AddRange(loadedCharacters);
+		_gameSelectView.SelectGameIndex(gameIndex, false);
+		RefreshCharacterListView();
+		ClearSelectedSubViews();
 	}
 
 	private IEnumerator FixTheAssholeLayout() {

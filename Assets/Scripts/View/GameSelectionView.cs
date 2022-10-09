@@ -18,6 +18,14 @@ public class GameSelectionView : MonoBehaviour {
 		_gameDropdown.AddOptions(gameNames);
 	}
 
+	public void SelectGameIndex(int gameIndex, bool triggerEvents = true) {
+		if (triggerEvents) {
+			_gameDropdown.value = gameIndex;
+		} else {
+			_gameDropdown.SetValueWithoutNotify(gameIndex);
+		}
+	}
+
 	private void Awake() {
 		_gameDropdown.onValueChanged.AddListener(OnGameChange);
 	}

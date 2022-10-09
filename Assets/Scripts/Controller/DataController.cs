@@ -9,18 +9,17 @@ public class DataController : MonoBehaviour {
 	public JobImporter JobImporter => _jobImporter;
 	public AbilityImporter AbilityImporter => _abilityImporter;
 	public List<CharacterBuild> Characters => _characters;
+	public int LoadedIndex { get; private set; }
 
 	private string _loadedSource;
 	private readonly JobImporter _jobImporter = new JobImporter();
 	private readonly AbilityImporter _abilityImporter = new AbilityImporter();
 	private readonly List<CharacterBuild> _characters = new List<CharacterBuild>();
 
-	private void Awake() {
-		Load(_sources[0]);
-	}
-
 	public void Load(int gameIndex) {
-		Load(_sources[Mathf.Clamp(gameIndex, 0, _sources.Length)]);
+		gameIndex = Mathf.Clamp(gameIndex, 0, _sources.Length);
+		Load(_sources[gameIndex]);
+		LoadedIndex = gameIndex;
 	}
 
 	public void Unload() {
@@ -28,6 +27,7 @@ public class DataController : MonoBehaviour {
 		_jobImporter.Unload();
 		_characters.Clear();
 		_loadedSource = null;
+		LoadedIndex = -1;
 	}
 
 	public List<string> GetGameNames() {
@@ -40,13 +40,7 @@ public class DataController : MonoBehaviour {
 			_jobImporter.Load(source.JobFile);
 			_abilityImporter.Load(source.AbilityFile, _jobImporter.GetAllByReference());
 			_loadedSource = source.Name;
-			LoadCharacters();
 		}
-	}
-
-	private void LoadCharacters() {
-		// No saved char set loading yet.
-		_characters.Add(CharacterBuild.GetDefault(_jobImporter, _abilityImporter));
 	}
 
 	[Serializable]
