@@ -12,6 +12,7 @@ public class EditViewController : MonoBehaviour {
 	[SerializeField] private VerticalLayoutGroup _fucker;
 	[SerializeField] private Button _saveButton;
 	[SerializeField] private Button _loadButton;
+	[SerializeField] private Button _exportButton;
 
 	private void Start() {
 		_dataController.Load(0);
@@ -23,6 +24,7 @@ public class EditViewController : MonoBehaviour {
 	private void OnEnable() {
 		_saveButton.onClick.AddListener(OnSaveButtonClicked);
 		_loadButton.onClick.AddListener(OnLoadButtonClicked);
+		_exportButton.onClick.AddListener(OnExportButtonClicked);
 		_gameSelectView.OnSelectedGameChanged += OnSelectedGameChanged;
 		_characterListView.OnCharacterSelected += OnCharacterSelected;
 		_characterListView.OnCharacterCreated += OnCharacterCreated;
@@ -34,6 +36,7 @@ public class EditViewController : MonoBehaviour {
 	private void OnDisable() {
 		_saveButton.onClick.RemoveListener(OnSaveButtonClicked);
 		_loadButton.onClick.RemoveListener(OnLoadButtonClicked);
+		_exportButton.onClick.RemoveListener(OnExportButtonClicked);
 		_gameSelectView.OnSelectedGameChanged -= OnSelectedGameChanged;
 		_characterListView.OnCharacterSelected -= OnCharacterSelected;
 		_characterListView.OnCharacterCreated -= OnCharacterCreated;
@@ -132,6 +135,11 @@ public class EditViewController : MonoBehaviour {
 		_gameSelectView.SelectGameIndex(gameIndex, false);
 		RefreshCharacterListView();
 		ClearSelectedSubViews();
+	}
+
+	private void OnExportButtonClicked() {
+		var exporter = new SheetExporter();
+		StartCoroutine(exporter.ExportAsync(_dataController.Characters.ToArray(), null, null));
 	}
 
 	private IEnumerator FixTheAssholeLayout() {

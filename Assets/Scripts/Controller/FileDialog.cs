@@ -1,7 +1,6 @@
 using System;
 using System.Collections;
 using System.IO;
-using GemBox.Spreadsheet;
 using SimpleFileBrowser;
 using UnityEngine;
 
@@ -12,10 +11,6 @@ public class FileDialog {
 
 	private JobImporter _jobImporter;
 	private AbilityImporter _abilityImporter;
-
-	static FileDialog() {
-		SpreadsheetInfo.SetLicense("FREE-LIMITED-KEY");
-	}
 
 	public FileDialog(JobImporter jobImporter, AbilityImporter abilityImporter) {
 		_jobImporter = jobImporter;

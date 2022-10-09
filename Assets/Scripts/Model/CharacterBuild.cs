@@ -166,6 +166,29 @@ public class CharacterBuild {
 		return passives;
 	}
 
+	public List<Job.Requirement> GetRequirements() {
+		// TODO: Gonna need to refactor this whole GetRequirements jazz.  Something like IBuildStep with LearnAbilityStep, LevelJobStep, MasterJobStep...
+		// Treat these existing Requirements as a "LevelJobStep" and insert the other ones into the list immediately after the last step that's added by AddRequirementsToList
+
+
+		// Prioritize unlocking sub-jobs first
+		var requirements = new List<Job.Requirement>();
+		foreach	(var subJob in _subJobs) {
+			subJob.AddRequirementsToList(requirements);
+		}
+
+		// then passives
+		foreach	(var kvp in _passives) {
+			if (kvp.Value != null) {
+				_abilityImporter.GetSourceJob(kvp.Value.Reference).AddRequirementsToList(requirements);
+			}
+		}
+
+		// End on main job
+		MainJob.AddRequirementsToList(requirements);
+		return requirements;
+	}
+
 	private bool CanSelectGeneric(int slotIndex) {
 		bool canSelect = slotIndex < 0 || slotIndex >= _subJobs.Length;
 		if (!canSelect) {

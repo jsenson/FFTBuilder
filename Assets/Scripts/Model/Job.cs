@@ -31,19 +31,22 @@ public class Job : IEquatable<Job> {
 	private List<AbilitySet> _abilitySets = new List<AbilitySet>();
 
 	public List<Requirement> GetRequirements() {
-		List<Requirement> allReqs = new List<Requirement>();
+		List<Requirement> requirements = new List<Requirement>();
+		AddRequirementsToList(requirements);
+		return requirements;
+	}
+
+	public void AddRequirementsToList(List<Requirement> requirements) {
 		foreach (var req in _unlockRequirements) {
 			List<Requirement> subReqs = req.Job.GetRequirements();
 			foreach (var subReq in subReqs) {
-				AppendRequirement(subReq, allReqs);
+				AppendRequirement(subReq, requirements);
 			}
 		}
 
 		foreach (var req in _unlockRequirements) {
-			AppendRequirement(req, allReqs);
+			AppendRequirement(req, requirements);
 		}
-
-		return allReqs;
 	}
 
 	public List<Ability> GetAbilities(Ability.AbilityType type) {

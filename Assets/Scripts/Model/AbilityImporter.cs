@@ -52,6 +52,11 @@ public class AbilityImporter {
 		return record?.Ability;
 	}
 
+	public Job GetSourceJob(string reference) {
+		_records.TryGetValue(reference, out Record record);
+		return record?.Job;
+	}
+
 	public List<Ability> FindAll(Func<Ability, Job, bool> predicate = null) {
 		var abilities = new List<Ability>();
 		foreach (var record in _records) {
