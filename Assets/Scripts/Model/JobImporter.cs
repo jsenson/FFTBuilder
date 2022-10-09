@@ -104,10 +104,10 @@ public class JobImporter {
 		string[] reqs = entry.Split('|');
 		foreach (string req in reqs) {
 			string[] values = req.Split('-');
-			var newReq = new Job.Requirement();
-			newReq.Level = int.Parse(values[0]);
-			newReq.Job = Get(values[1]);
-			if (newReq.Job == null) {
+			int level = int.Parse(values[0]);
+			Job reqJob = Get(values[1]);
+			var newReq = new LevelBuildStep(reqJob, level);
+			if (reqJob == null) {
 				Debug.LogError($"Could not find loaded Job for Requirement: {reqs}");
 			} else {
 				job.AddUnlockRequirement(newReq);

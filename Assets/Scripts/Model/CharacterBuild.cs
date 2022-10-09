@@ -166,27 +166,48 @@ public class CharacterBuild {
 		return passives;
 	}
 
-	public List<Job.Requirement> GetRequirements() {
-		// TODO: Gonna need to refactor this whole GetRequirements jazz.  Something like IBuildStep with LearnAbilityStep, LevelJobStep, MasterJobStep...
-		// Treat these existing Requirements as a "LevelJobStep" and insert the other ones into the list immediately after the last step that's added by AddRequirementsToList
-
-
+	public List<IBuildStep> GetBuildSteps() {
 		// Prioritize unlocking sub-jobs first
-		var requirements = new List<Job.Requirement>();
-		foreach	(var subJob in _subJobs) {
-			subJob.AddRequirementsToList(requirements);
+		var requirements = new List<IBuildStep>();
+		foreach (var subJob in _subJobs) {
+			AddClassSkillSteps(subJob, requirements, true);
 		}
 
 		// then passives
-		foreach	(var kvp in _passives) {
+		foreach (var kvp in _passives) {
 			if (kvp.Value != null) {
-				_abilityImporter.GetSourceJob(kvp.Value.Reference).AddRequirementsToList(requirements);
+				var job = _abilityImporter.GetSourceJob(kvp.Value.Reference);
+				new LearnBuildStep(kvp.Value, job).AppendToList(requirements);
 			}
 		}
 
 		// End on main job
-		MainJob.AddRequirementsToList(requirements);
+		AddClassSkillSteps(MainJob, requirements, false);
 		return requirements;
+	}
+
+	private void AddClassSkillSteps(Job job, List<IBuildStep> requirements, bool enableSorting) {
+		var jobAbilities = job.GetAbilities(Ability.AbilityType.Class);
+		var toLearn = new List<Ability>(jobAbilities);
+		bool learnAll = true;
+		foreach (var ability in jobAbilities) {
+			if (!_classAbilities.Contains(ability)) {
+				learnAll = false;
+				toLearn.Remove(ability);
+			}
+		}
+
+		if (learnAll) {
+			var step = new MasterBuildStep(job);
+			step.EnableSorting = enableSorting;
+			step.AppendToList(requirements);
+		} else {
+			foreach (var ability in toLearn) {
+				var step = new LearnBuildStep(ability, job);
+				step.EnableSorting = enableSorting;
+				step.AppendToList(requirements);
+			}
+		}
 	}
 
 	private bool CanSelectGeneric(int slotIndex) {

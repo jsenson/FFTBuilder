@@ -3,15 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Job : IEquatable<Job> {
-	public struct Requirement {
-		public Job Job;
-		public int Level;
-
-		public override string ToString() {
-			return $"{Level} {Job}";
-		}
-	}
-
 	public enum SlotRestriction {
 		Both,
 		Main,
@@ -27,26 +18,16 @@ public class Job : IEquatable<Job> {
 	public string UniqueCharacterName { get; set; }
 	public bool IsGeneric => string.IsNullOrEmpty(UniqueCharacterName);
 
-	private List<Requirement> _unlockRequirements = new List<Requirement>();
+	private List<IBuildStep> _unlockRequirements = new List<IBuildStep>();
 	private List<AbilitySet> _abilitySets = new List<AbilitySet>();
 
-	public List<Requirement> GetRequirements() {
-		List<Requirement> requirements = new List<Requirement>();
-		AddRequirementsToList(requirements);
+	public List<IBuildStep> GetRequirements() {
+		var requirements = new List<IBuildStep>();
+		foreach (var req in _unlockRequirements) {
+			req.AppendToList(requirements);
+		}
+
 		return requirements;
-	}
-
-	public void AddRequirementsToList(List<Requirement> requirements) {
-		foreach (var req in _unlockRequirements) {
-			List<Requirement> subReqs = req.Job.GetRequirements();
-			foreach (var subReq in subReqs) {
-				AppendRequirement(subReq, requirements);
-			}
-		}
-
-		foreach (var req in _unlockRequirements) {
-			AppendRequirement(req, requirements);
-		}
 	}
 
 	public List<Ability> GetAbilities(Ability.AbilityType type) {
@@ -79,13 +60,13 @@ public class Job : IEquatable<Job> {
 		return false;
 	}
 
-	public void AddUnlockRequirement(Requirement newRquirement) {
+	public void AddUnlockRequirement(IBuildStep newRquirement) {
 		_unlockRequirements.Add(newRquirement);
 	}
 
 	public void PrintRequirements() {
 		foreach (var req in GetRequirements()) {
-			Debug.Log($"{req.Level} {req.Job.Name}");
+			Debug.Log(req.Description);
 		}
 	}
 
@@ -107,24 +88,6 @@ public class Job : IEquatable<Job> {
 
 	private bool HasAbility(Ability abilityToFind) {
 		return _abilitySets.Find(set => set.Type == abilityToFind.Type && set.Abilities.Contains(abilityToFind)) != null;
-	}
-
-	private void AppendRequirement(Requirement toAdd, List<Requirement> list) {
-		bool added = false;
-		for (int i = 0; i < list.Count; i++) {
-			var req = list[i];
-			if (req.Job.Name.Equals(toAdd.Job.Name)) {
-				added = true;
-				if (toAdd.Level > req.Level) {
-					req.Level = toAdd.Level;
-					list[i] = req;
-				}
-			}
-		}
-
-		if (!added) {
-			list.Add(toAdd);
-		}
 	}
 
 	public static bool operator ==(Job a, Job b) {

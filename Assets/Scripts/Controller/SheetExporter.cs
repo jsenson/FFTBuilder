@@ -45,7 +45,7 @@ public class SheetExporter {
 			row = SetPassives(sheet.Cells[row, col], character);
 			row++;
 
-			var buildSteps = character.GetRequirements();
+			var buildSteps = character.GetBuildSteps();
 			SetCheckmarks(sheet.Cells[row, checkCol], buildSteps, sheet);
 			SetBuildSteps(sheet.Cells[row, col], buildSteps);
 		}
@@ -95,7 +95,7 @@ public class SheetExporter {
 		return row;
 	}
 
-	private void SetCheckmarks(ExcelCell startCell, List<Job.Requirement> buildSteps, ExcelWorksheet sheet) {
+	private void SetCheckmarks(ExcelCell startCell, List<IBuildStep> buildSteps, ExcelWorksheet sheet) {
 		int row = startCell.Row.Index;
 		for (int i = 0, count = buildSteps.Count; i < count; i++) {
 			var cell = startCell.Worksheet.Cells[row + i, startCell.Column.Index];
@@ -106,12 +106,12 @@ public class SheetExporter {
 		}
 	}
 
-	private void SetBuildSteps(ExcelCell startCell, List<Job.Requirement> buildSteps) {
+	private void SetBuildSteps(ExcelCell startCell, List<IBuildStep> buildSteps) {
 		int row = startCell.Row.Index;
 		for (int i = 0, count = buildSteps.Count; i < count; i++) {
 			var cell = startCell.Worksheet.Cells[row + i, startCell.Column.Index];
 			var step = buildSteps[i];
-			cell.Value = $"{step.Level} {step.Job.Name}";
+			cell.Value = step.Description;
 		}
 	}
 }
