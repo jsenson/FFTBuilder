@@ -46,7 +46,7 @@ public class SheetExporter {
 			row++;
 
 			var buildSteps = character.GetRequirements();
-			SetCheckmarks(sheet.Cells[row, checkCol], buildSteps);
+			SetCheckmarks(sheet.Cells[row, checkCol], buildSteps, sheet);
 			SetBuildSteps(sheet.Cells[row, col], buildSteps);
 		}
 
@@ -61,8 +61,12 @@ public class SheetExporter {
 	}
 
 	private int SetMainJob(ExcelCell cell, CharacterBuild character) {
-		cell.Value = character.MainJob.Name;
-		Debug.Log($"Main Job: ({cell.Row.Index}, {cell.Column.Index}) = {cell.Value}");
+		if (!character.MainJob.IsGeneric) {
+			cell.Value = $"{character.MainJob.Name} ({character.MainJob.UniqueCharacterName})";
+		} else {
+			cell.Value = character.MainJob.Name;
+		}
+
 		return cell.Row.Index + 1;
 	}
 
@@ -72,7 +76,6 @@ public class SheetExporter {
 		for (int i = 0; i < jobs.Length; i++) {
 			var cell = startCell.Worksheet.Cells[row + i, startCell.Column.Index];
 			cell.Value = jobs[i].Name;
-			Debug.Log($"Sub Job: ({cell.Row.Index}, {cell.Column.Index}) = {cell.Value}");
 		}
 
 		return row + jobs.Length;
@@ -85,21 +88,21 @@ public class SheetExporter {
 			if (type != Ability.AbilityType.Class) {
 				var cell = startCell.Worksheet.Cells[row++, startCell.Column.Index];
 				cell.Value = character.GetPassive(type)?.Name ?? "<none>";
-				Debug.Log($"Passive: ({cell.Row.Index}, {cell.Column.Index}) = {cell.Value}");
 			}
 		}
 
 		// This is horrible... gave up on possibly allowing multiple passives of the same type
-		Debug.Log(row.ToString());
 		return row;
 	}
 
-	private void SetCheckmarks(ExcelCell startCell, List<Job.Requirement> buildSteps) {
+	private void SetCheckmarks(ExcelCell startCell, List<Job.Requirement> buildSteps, ExcelWorksheet sheet) {
 		int row = startCell.Row.Index;
 		for (int i = 0, count = buildSteps.Count; i < count; i++) {
 			var cell = startCell.Worksheet.Cells[row + i, startCell.Column.Index];
-			cell.SetValue(false);
-			// TODO: Formatting to a checkbox?
+			cell.Style.HorizontalAlignment = HorizontalAlignmentStyle.Center;
+			var checkbox = sheet.FormControls.AddCheckBox(string.Empty, cell.Name, 15, 15, LengthUnit.Point);
+			checkbox.CellLink = cell;
+			checkbox.Checked = false;
 		}
 	}
 
@@ -109,7 +112,6 @@ public class SheetExporter {
 			var cell = startCell.Worksheet.Cells[row + i, startCell.Column.Index];
 			var step = buildSteps[i];
 			cell.Value = $"{step.Level} {step.Job.Name}";
-			Debug.Log($"Step: ({cell.Row.Index}, {cell.Column.Index}) = {cell.Value}");
 		}
 	}
 }
