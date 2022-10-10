@@ -62,16 +62,14 @@ public class JobSlotView : MonoBehaviour {
 		}
 
 		Job newSelectedJob = GetJobAtIndex(selection);
-		if (previousSelectedJob != newSelectedJob) {
-			if (triggerEvents) {
-				if (_dropdown.value == selection) {
-					OnSelectionValueChanged(selection);
-				}
-
-				_dropdown.value = selection;
-			} else {
-				_dropdown.SetValueWithoutNotify(selection);
+		if (previousSelectedJob != newSelectedJob && triggerEvents) {
+			if (_dropdown.value == selection) {
+				OnSelectionValueChanged(selection);
 			}
+
+			_dropdown.value = selection;
+		} else {
+			_dropdown.SetValueWithoutNotify(selection);
 		}
 	}
 
