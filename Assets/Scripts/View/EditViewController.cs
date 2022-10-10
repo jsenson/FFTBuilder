@@ -16,7 +16,9 @@ public class EditViewController : MonoBehaviour {
 
 	private void Start() {
 		_dataController.Load(0);
-		_dataController.Characters.Add(CharacterBuild.GetDefault(_dataController.JobImporter, _dataController.AbilityImporter));
+		var defaultCharacter = new CharacterBuild(_dataController.JobImporter, _dataController.AbilityImporter);
+		defaultCharacter.Initialize();
+		_dataController.Characters.Add(defaultCharacter);
 		_gameSelectView.Initialize(_dataController.GetGameNames());
 		RefreshCharacterListView();
 	}
@@ -105,7 +107,7 @@ public class EditViewController : MonoBehaviour {
 
 	private void ValidateCharacter(CharacterBuild character) {
 		if (character.MainJob == null) {
-			character.SetMainJob(character.GetMainJobList()[0]);
+			character.Initialize();
 		}
 	}
 

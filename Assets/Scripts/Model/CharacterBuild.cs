@@ -18,24 +18,24 @@ public class CharacterBuild {
 	private JobImporter _jobImporter;
 	private AbilityImporter _abilityImporter;
 
-	public static CharacterBuild GetDefault(JobImporter jobImporter, AbilityImporter abilityImporter) {
-		var defaultBuild = new CharacterBuild(jobImporter, abilityImporter);
-		defaultBuild.MainJob = defaultBuild.GetMainJobList()[0];
-		var subJobs = defaultBuild.GetSubJobList();
-		int subCount = subJobs.Count;
-		defaultBuild._subJobs = new Job[defaultBuild.MainJob.NumSubjobs];
-		for (int i = 0; i < defaultBuild.MainJob.NumSubjobs && i < subCount; i++) {
-			defaultBuild._subJobs[i] = subJobs[i];
-		}
-
-		return defaultBuild;
-	}
-
 	public CharacterBuild(JobImporter jobImporter, AbilityImporter abilityImporter) {
 		_jobImporter = jobImporter;
 		_abilityImporter = abilityImporter;
 		Name = "<Name>";
 		Type = UnitType.Male;
+	}
+
+	public void Initialize() {
+		MainJob = GetMainJobList()[0];
+		AddClassAbilities(MainJob);
+
+		var subJobs = GetSubJobList();
+		int subCount = subJobs.Count;
+		_subJobs = new Job[MainJob.NumSubjobs];
+		for (int i = 0; i < MainJob.NumSubjobs && i < subCount; i++) {
+			AddClassAbilities(subJobs[i]);
+			_subJobs[i] = subJobs[i];
+		}
 	}
 
 	public void SetName(string newName) {
@@ -60,6 +60,7 @@ public class CharacterBuild {
 	public void SetMainJob(Job newJob) {
 		if (newJob != MainJob) {
 			RemoveClassAbilities(MainJob);
+			AddClassAbilities(newJob);
 			MainJob = newJob;
 			UpdateSubJobArrayLength(GetSubJobList().ToArray());
 			OnMainJobChanged?.Invoke(this);
@@ -84,6 +85,7 @@ public class CharacterBuild {
 	public void SetSubJob(int index, Job job) {
 		if (index >= 0 && index < _subJobs.Length && _subJobs[index] != job) {
 			RemoveClassAbilities(_subJobs[index]);
+			AddClassAbilities(job);
 			_subJobs[index] = job;
 			OnSubJobChanged?.Invoke(this, index);
 			UnityEngine.Debug.Log($"{Name}: Set Sub Job {index} to '{job}'");
@@ -104,6 +106,12 @@ public class CharacterBuild {
 
 	public bool HasClassAbility(Ability ability) {
 		return _classAbilities.Contains(ability);
+	}
+
+	public void AddClassAbilities(Job job) {
+		foreach (var ability in job.GetAbilities(Ability.AbilityType.Class)) {
+			AddClassAbility(ability);
+		}
 	}
 
 	public void AddClassAbility(Ability ability) {

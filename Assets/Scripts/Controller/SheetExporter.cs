@@ -33,7 +33,7 @@ public class SheetExporter {
 		var sheet = file.Worksheets.Add("Builds");
 
 		for (int i = 0; i < characters.Length; i++) {
-			int checkCol = i * 2;
+			int checkCol = i * 3;
 			int col = checkCol + 1;
 			int row = 0;
 			var character = characters[i];
