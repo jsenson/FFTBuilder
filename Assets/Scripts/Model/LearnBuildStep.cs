@@ -7,7 +7,6 @@ public class LearnBuildStep : IBuildStep {
 	public Ability Ability => _ability;
 	public Job Job => _job;
 	public bool EnableSorting { get; set; } = true;
-
 	public string Description => $"{_ability.Name}: ({_job.Name} - {_ability.Cost:N0} JP)";
 
 	public LearnBuildStep(Ability ability, Job job) {

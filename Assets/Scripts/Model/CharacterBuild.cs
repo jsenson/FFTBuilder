@@ -117,7 +117,7 @@ public class CharacterBuild {
 	public void AddClassAbility(Ability ability) {
 		if (ability.Type == Ability.AbilityType.Class) {
 			_classAbilities.Add(ability);
-			UnityEngine.Debug.Log($"{Name}: Added Class ability '{ability.Name}'");
+			// UnityEngine.Debug.Log($"{Name}: Added Class ability '{ability.Name}'");
 		} else {
 			throw new ArgumentException($"AddClassAbility called with ability of type '{ability.Type}'.  Only AbilityType.Class is valid.");
 		}
@@ -125,7 +125,7 @@ public class CharacterBuild {
 
 	public void RemoveClassAbility(Ability ability) {
 		_classAbilities.Remove(ability);
-		UnityEngine.Debug.Log($"{Name}: Removed Class ability '{ability.Name}'");
+		// UnityEngine.Debug.Log($"{Name}: Removed Class ability '{ability.Name}'");
 	}
 
 	public List<Job> GetMainJobList() {
@@ -174,9 +174,15 @@ public class CharacterBuild {
 		return passives;
 	}
 
-	public List<IBuildStep> GetBuildSteps() {
-		// Prioritize unlocking sub-jobs first
+	public List<IBuildStep> GetBuildSteps(bool includeBasicSkills = true) {
 		var requirements = new List<IBuildStep>();
+		if (includeBasicSkills) {
+			new LearnBuildStep(_abilityImporter.Get("Squire-10"), _jobImporter.Get("Squire")).AppendToList(requirements);	// Gained-JP Up
+			new LearnBuildStep(_abilityImporter.Get("Squire-5"), _jobImporter.Get("Squire")).AppendToList(requirements);	// Move +1
+			new LearnBuildStep(_abilityImporter.Get("Chemist-16"), _jobImporter.Get("Chemist")).AppendToList(requirements);	// Auto-Potion
+		}
+
+		// Prioritize unlocking sub-jobs first
 		foreach (var subJob in _subJobs) {
 			AddClassSkillSteps(subJob, requirements, true);
 		}
@@ -195,6 +201,14 @@ public class CharacterBuild {
 	}
 
 	private void AddClassSkillSteps(Job job, List<IBuildStep> requirements, bool enableSorting) {
+		if (job.Reference == "Calculator") {
+			// Special case for Calculator.  Master all jobs with magic it can cast (Being lazy and ignoring that this includes spells it can't cast)
+			new MasterBuildStep(_jobImporter.Get("Priest")).AppendToList(requirements);
+			new MasterBuildStep(_jobImporter.Get("Wizard")).AppendToList(requirements);
+			new MasterBuildStep(_jobImporter.Get("Time Mage")).AppendToList(requirements);
+			new MasterBuildStep(_jobImporter.Get("Oracle")).AppendToList(requirements);
+		}
+
 		var jobAbilities = job.GetAbilities(Ability.AbilityType.Class);
 		var toLearn = new List<Ability>(jobAbilities);
 		bool learnAll = true;

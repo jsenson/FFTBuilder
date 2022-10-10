@@ -3,6 +3,7 @@ using System.Collections.Generic;
 public class MasterBuildStep : IBuildStep {
 	private Job _job;
 
+	public Job Job => _job;
 	public string Description => $"Master {_job.Name}! ({GetTotalCost():N0} JP)";
 	public bool EnableSorting { get; set; } = true;
 

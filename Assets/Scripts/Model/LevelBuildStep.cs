@@ -7,7 +7,6 @@ public class LevelBuildStep : IBuildStep {
 	public Job Job => _job;
 	public int Level => _level;
 	public bool EnableSorting { get; set; } = true;
-
 	public string Description => $"{_level} {_job}";
 
 	public LevelBuildStep(Job job, int level) {
@@ -33,9 +32,10 @@ public class LevelBuildStep : IBuildStep {
 				}
 			}
 
-			// Check for any Learn Steps and insert after the last one in the list
+			// Check for any Learn or Master Steps and insert after the last one in the list
 			for (int i = steps.Count - 2; i >= 0; i--) {
-				if (steps[i] is LearnBuildStep learnStep && _job == learnStep.Job) {
+				if (steps[i] is LearnBuildStep learnStep && _job == learnStep.Job
+					|| steps[i] is MasterBuildStep masterStep && _job == masterStep.Job) {
 					steps.Insert(i + 1, this);
 					return;
 				}
