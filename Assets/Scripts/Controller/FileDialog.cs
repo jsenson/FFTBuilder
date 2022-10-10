@@ -54,6 +54,7 @@ public class FileDialog {
 	}
 
 	private CharacterBuild[] LoadFromFile(string path, out int gameIndex) {
+		InitialPath = path;
 		using var fs = new FileStream(path, FileMode.Open);
 		using var reader = new BinaryReader(fs);
 		var buildReader = new CharacterBuild.Reader();
@@ -70,6 +71,7 @@ public class FileDialog {
 	}
 
 	private void SaveToFile(int gameIndex, CharacterBuild[] characters, string path) {
+		InitialPath = path;
 		var backup = File.Exists(path) ? File.ReadAllBytes(path) : null;
 		try {
 			using var fs = new FileStream(path, FileMode.Create);

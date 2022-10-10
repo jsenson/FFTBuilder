@@ -29,6 +29,7 @@ public class SheetExporter {
 	}
 
 	private void SaveToFile(CharacterBuild[] characters, string path) {
+		InitialPath = path;
 		var file = new ExcelFile();
 		var sheet = file.Worksheets.Add("Builds");
 
