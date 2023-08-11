@@ -178,6 +178,7 @@ public class CharacterBuild {
 		var requirements = new List<IBuildStep>();
 		if (includeBasicSkills && Type != UnitType.Monster) {
 			new LearnBuildStep(_abilityImporter.Get("Squire-10"), _jobImporter.Get("Squire")).AppendToList(requirements);	// Gained-JP Up
+			new LearnBuildStep(_abilityImporter.Get("Squire-01"), _jobImporter.Get("Squire")).AppendToList(requirements);	// Accumulate
 			new LearnBuildStep(_abilityImporter.Get("Squire-05"), _jobImporter.Get("Squire")).AppendToList(requirements);	// Move +1
 			new LearnBuildStep(_abilityImporter.Get("Chemist-16"), _jobImporter.Get("Chemist")).AppendToList(requirements);	// Auto-Potion
 		}
