@@ -332,13 +332,25 @@ public class CharacterBuild {
 			build._passives = new Dictionary<Ability.AbilityType, Ability>();
 			for (int i = 0; i < count; i++) {
 				var type = (Ability.AbilityType)reader.ReadInt32();
-				build._passives[type] = abilityImporter.Get(reader.ReadString());
+				string reference = reader.ReadString();
+				var ability = abilityImporter.Get(reference);
+				if (ability != null) {
+					build._passives[type] = ability;
+				} else {
+					UnityEngine.Debug.LogError($"{build.Name}: Read invalid {type} ability reference '{reference}'");
+				}
 			}
 
 			count = reader.ReadInt32();
 			build._classAbilities = new HashSet<Ability>();
 			for (int i = 0; i < count; i++) {
-				build._classAbilities.Add(abilityImporter.Get(reader.ReadString()));
+				string reference = reader.ReadString();
+				var ability = abilityImporter.Get(reference);
+				if (ability != null) {
+					build._classAbilities.Add(ability);
+				} else {
+					UnityEngine.Debug.LogError($"{build.Name}: Read invalid {build.MainJob} ability reference '{reference}'");
+				}
 			}
 
 			return build;
