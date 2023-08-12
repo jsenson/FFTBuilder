@@ -204,6 +204,7 @@ public class CharacterBuild {
 	private void AddClassSkillSteps(Job job, List<IBuildStep> requirements, bool enableSorting) {
 		if (job.Reference == "Calculator") {
 			// Special case for Calculator.  Master all jobs with magic it can cast (Being lazy and ignoring that this includes spells it can't cast)
+			// TODO: Actually list these job abilities when selecting Calculator so we can selectively add them as Class Skills
 			new MasterBuildStep(_jobImporter.Get("Priest")).AppendToList(requirements);
 			new MasterBuildStep(_jobImporter.Get("Wizard")).AppendToList(requirements);
 			new MasterBuildStep(_jobImporter.Get("Time Mage")).AppendToList(requirements);
