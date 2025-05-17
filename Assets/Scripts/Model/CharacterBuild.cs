@@ -112,6 +112,12 @@ public class CharacterBuild {
 		foreach (var ability in job.GetAbilities(Ability.AbilityType.Class)) {
 			AddClassAbility(ability);
 		}
+
+		if (job.IsCalculator) {
+			foreach (var ability in _abilityImporter.FindAllCalculatorSpells()) {
+				AddClassAbility(ability);
+			}
+		}
 	}
 
 	public void AddClassAbility(Ability ability) {
@@ -165,8 +171,14 @@ public class CharacterBuild {
 		);
 
 		if (type == Ability.AbilityType.Class) {
-			// Sort class abilities by reference by default to matchin-game order
+			// Sort class abilities by reference by default to match in-game order
 			passives.Sort((a, b) => a.Reference.CompareTo(b.Reference));
+
+			if (job.IsCalculator) {
+				var calcAbilities = _abilityImporter.FindAllCalculatorSpells();
+				calcAbilities.Sort((a, b) => a.Reference.CompareTo(b.Reference));
+				passives.AddRange(calcAbilities);
+			}
 		} else {
 			passives.Sort((a, b) => a.Name.CompareTo(b.Name));
 		}
@@ -177,10 +189,10 @@ public class CharacterBuild {
 	public List<IBuildStep> GetBuildSteps(bool includeBasicSkills = true) {
 		var requirements = new List<IBuildStep>();
 		if (includeBasicSkills && Type != UnitType.Monster) {
-			new LearnBuildStep(_abilityImporter.Get("Squire-10"), _jobImporter.Get("Squire")).AppendToList(requirements);	// Gained-JP Up
-			new LearnBuildStep(_abilityImporter.Get("Squire-01"), _jobImporter.Get("Squire")).AppendToList(requirements);	// Accumulate
-			new LearnBuildStep(_abilityImporter.Get("Squire-05"), _jobImporter.Get("Squire")).AppendToList(requirements);	// Move +1
-			new LearnBuildStep(_abilityImporter.Get("Chemist-16"), _jobImporter.Get("Chemist")).AppendToList(requirements);	// Auto-Potion
+			new LearnBuildStep(_abilityImporter.Get("Squire-10"), _jobImporter.Get("Squire")).AppendToList(requirements); // Gained-JP Up
+			new LearnBuildStep(_abilityImporter.Get("Squire-01"), _jobImporter.Get("Squire")).AppendToList(requirements); // Accumulate
+			new LearnBuildStep(_abilityImporter.Get("Squire-05"), _jobImporter.Get("Squire")).AppendToList(requirements); // Move +1
+			new LearnBuildStep(_abilityImporter.Get("Chemist-16"), _jobImporter.Get("Chemist")).AppendToList(requirements); // Auto-Potion
 		}
 
 		// Prioritize unlocking sub-jobs first
@@ -202,34 +214,39 @@ public class CharacterBuild {
 	}
 
 	private void AddClassSkillSteps(Job job, List<IBuildStep> requirements, bool enableSorting) {
-		if (job.Reference == "Calculator") {
-			// Special case for Calculator.  Master all jobs with magic it can cast (Being lazy and ignoring that this includes spells it can't cast)
-			// TODO: Actually list these job abilities when selecting Calculator so we can selectively add them as Class Skills
-			new MasterBuildStep(_jobImporter.Get("Priest")).AppendToList(requirements);
-			new MasterBuildStep(_jobImporter.Get("Wizard")).AppendToList(requirements);
-			new MasterBuildStep(_jobImporter.Get("Time Mage")).AppendToList(requirements);
-			new MasterBuildStep(_jobImporter.Get("Oracle")).AppendToList(requirements);
-		}
+		var abilitiesByJob = new Dictionary<Job, List<Ability>>() {
+		 	{ job, new List<Ability>(job.GetAbilities(Ability.AbilityType.Class)) }
+		};
 
-		var jobAbilities = job.GetAbilities(Ability.AbilityType.Class);
-		var toLearn = new List<Ability>(jobAbilities);
-		bool learnAll = true;
-		foreach (var ability in jobAbilities) {
-			if (!_classAbilities.Contains(ability)) {
-				learnAll = false;
-				toLearn.Remove(ability);
+		if (job.IsCalculator) {
+			foreach (var ability in _abilityImporter.FindAllCalculatorSpells()) {
+				if (!abilitiesByJob.ContainsKey(ability.Job)) abilitiesByJob[ability.Job] = new List<Ability>();
+				abilitiesByJob[ability.Job].Add(ability);
 			}
 		}
 
-		if (learnAll) {
-			var step = new MasterBuildStep(job);
-			step.EnableSorting = enableSorting;
-			step.AppendToList(requirements);
-		} else {
-			foreach (var ability in toLearn) {
-				var step = new LearnBuildStep(ability, job);
-				step.EnableSorting = enableSorting;
+		foreach (var kvp in abilitiesByJob) {
+			bool learnAll = true;
+			Job currentJob = kvp.Key;
+			List<Ability> abilitiesToLearn = kvp.Value;
+			for (int i = abilitiesToLearn.Count - 1; i >= 0; i--) {
+				var ability = abilitiesToLearn[i];
+				if (!_classAbilities.Contains(ability)) {
+					learnAll = false;
+					abilitiesToLearn.RemoveAt(i);
+				}
+			}
+
+			if (learnAll) {
+				var step = new MasterBuildStep(currentJob);
+				step.EnableSorting = enableSorting || currentJob != job;
 				step.AppendToList(requirements);
+			} else {
+				foreach (var ability in abilitiesToLearn) {
+					var step = new LearnBuildStep(ability, ability.Job);
+					step.EnableSorting = enableSorting || currentJob != job;
+					step.AppendToList(requirements);
+				}
 			}
 		}
 	}

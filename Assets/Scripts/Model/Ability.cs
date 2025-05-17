@@ -12,8 +12,10 @@ public class Ability : IEquatable<Ability> {
 	public string Reference { get; set; }
 	public string Name { get; set; }
 	public AbilityType Type { get; set; }
+	public Job Job { get; set; }
 	public int Cost { get; set; }
 	public string Description { get; set; }
+	public bool IsCalculatorSpell { get; set; }
 
 	public static bool operator ==(Ability a, Ability b) {
 		if (Object.ReferenceEquals(a, null)) {

@@ -1,362 +1,362 @@
-Archer-01	Archer	Class	Charge +1	Attack that increases the damage a weapon does through charging.	100
-Archer-02	Archer	Class	Charge +2	Attack that increases the damage a weapon does through charging.	150
-Archer-03	Archer	Class	Charge +3	Attack that increases the damage a weapon does through charging.	200
-Archer-04	Archer	Class	Charge +4	Attack that increases the damage a weapon does through charging.	250
-Archer-05	Archer	Class	Charge +5	Attack that increases the damage a weapon does through charging.	300
-Archer-06	Archer	Class	Charge +7	Attack that increases the damage a weapon does through charging.	400
-Archer-07	Archer	Class	Charge +10	Attack that increases the damage a weapon does through charging.	600
-Archer-08	Archer	Class	Charge +20	Attack that increases the damage a weapon does through charging.	1000
-Archer-09	Archer	Movement	Jump +1	Increases a character's jump elevation by one panel.	200
-Archer-10	Archer	Reaction	Speed Save	When a character takes HP damage, it raises his or her Speed by 1.	800
-Archer-11	Archer	Reaction	Arrow Guard	Increases the character's chances of evading a Bow/Crossbow attack.	450
-Archer-12	Archer	Support	Equip Crossbow	Allows the character to equip a Crossbow, regardless of job.	350
-Archer-13	Archer	Support	Concentrate	Makes the enemy unable to evade the character's attacks. If the enemy is within a targeted panel, the attack is sure to succeed.	400
-Bard-01	Bard	Class	Angel Song	Restores MP to all allied units on the field.	100
-Bard-02	Bard	Class	Life Song	Restores a small amount of HP to all allied units on the field.	100
-Bard-03	Bard	Class	Cheer Song	Raises the Speed level of all allied units.	100
-Bard-04	Bard	Class	Battle Song	Raises the physical attack power of all allied units.	100
-Bard-05	Bard	Class	Magic Song	Raises the magic attack power of all allied units.	100
-Bard-06	Bard	Class	Nameless Song	Song causes various positive status effects. Adds: Reraise, Regen, Protect, Shell, Haste	100
-Bard-07	Bard	Class	Last Song	Raises ally's CT count to 100.	100
-Bard-08	Bard	Movement	Fly	Character can leap over enemies and obstacles while moving.	1200
-Bard-09	Bard	Movement	Move +3	Increases character's movement range by three panels.	1000
-Bard-10	Bard	Reaction	MA Save	Raises a character's magic attack power when he or she takes HP damage.	450
-Bard-11	Bard	Reaction	Faith Up	Raises a character's Faith level when he/she's hit with a magical spell.	500
-Calculator-01	Calculator	Class	CT	Calculate CT.	250
-Calculator-02	Calculator	Class	Level	Calculate level.	350
-Calculator-03	Calculator	Class	Exp	Calculate Exp.	200
-Calculator-04	Calculator	Class	Height	Calculate height.	250
-Calculator-05	Calculator	Class	Prime Number	Calculate prime numbers.	300
-Calculator-06	Calculator	Class	5	Calculate multiples of 5.	200
-Calculator-07	Calculator	Class	4	Calculate multiples of 4.	400
-Calculator-08	Calculator	Class	3	Calculate multiples of 3.	600
-Calculator-09	Calculator	Movement	Move-Get Experience	Character gains Experience Points as he or she moves around.	400
-Calculator-10	Calculator	Movement	Move-Get JP	Character gains a small amount of JP as he or she moves around.	400
-Calculator-11	Calculator	Reaction	Distribute	When the character's HP are maxed, he or she shares any excess HP with his or her allies.	200
-Calculator-12	Calculator	Reaction	Damage Split	Character heals themselves for half of all damage recieved and returns the other half to the attacker as damage.	300
-Calculator-13	Calculator	Support	Gained Exp Up	Increases the Experience Points a character earns by 1.5.	350
-Chemist-01	Chemist	Class	Potion	Recovers 30 HP. Causes damage to the undead.	30
-Chemist-02	Chemist	Class	Hi-Potion	Recovers 70 HP. Causes damage to the undead.	200
-Chemist-03	Chemist	Class	X-Potion	The strongest potion, recovering 150 HP. Causes damage to the undead.	300
-Chemist-04	Chemist	Class	Ether	Recovers 20 MP.	300
-Chemist-05	Chemist	Class	Hi-Ether	Recovers 50 MP.	400
-Chemist-06	Chemist	Class	Elixir	Restores all HP and MP. Elixirs cannot be found in stores and must be found on the battlefield.	900
-Chemist-07	Chemist	Class	Antidote	Neutralizes all poisons. Cancels: Poison	70
-Chemist-08	Chemist	Class	Eye Drop	Restores sight. Cancels: Darkness	80
-Chemist-09	Chemist	Class	Echo Grass	Restores speech, allowing the character to cast spells again. Cancels: Silence	120
-Chemist-10	Chemist	Class	Maiden's Kiss	Changes the character back to his/her original shape. Cancels: Frog	200
-Chemist-11	Chemist	Class	Soft	A golden needle which cures petrificaction. Cancels: Petrify	250
-Chemist-12	Chemist	Class	Holy Water	Restores life to the undead. Cancels: Undead, Blood Suck	400
-Chemist-13	Chemist	Class	Remedy	This all-purpose medicine cures most status anomalies. Cancels: Petrify, Darkness, Confusion, Silence, Oil, Frog, Poison, Sleep	700
-Chemist-14	Chemist	Class	Phoenix Down	This tailfeather revives dead units. Cancels: Dead	90
-Chemist-15	Chemist	Movement	Move-Find Item	Allows the character to find any hidden items on the destination panel.	100
-Chemist-16	Chemist	Reaction	Auto Potion	When a character receives any form of HP damage, he or she uses the lowest-level potion available.	400
-Chemist-17	Chemist	Support	Throw Item	Makes a character able to throw items over an extended range, even if he or she's not a Chemist.	350
-Chemist-18	Chemist	Support	Maintenance	Makes equipped items immune to break techniques.	250
-Chemist-19	Chemist	Support	Equip Change	Allows the character to change equipment in battle. Activated by selecting the action command Equip Change.	0
-Dancer-01	Dancer	Class	Witch Hunt	Causes MP damage to all enemy units on the battlefield.	100
-Dancer-02	Dancer	Class	Wiznaibus	Causes HP damage to all enemy units on the battlefield.	100
-Dancer-03	Dancer	Class	Slow Dance	Lowers enemy's Speed level.	100
-Dancer-04	Dancer	Class	Polka Polka	Lowers enemy's physical attack power.	100
-Dancer-05	Dancer	Class	Disillusion	Lowers enemy's magic attack power.	100
-Dancer-06	Dancer	Class	Nameless Dance	Dance causes various abnormal statuses to all enemy units no the battlefield. Adds: Darkness, Confusion, Silence, Frog, Poison, Slow, Stop, Sleep	100
-Dancer-07	Dancer	Class	Last Dance	Lowers enemy's CT count to zero.	100
-Dancer-08	Dancer	Movement	Jump +3	Increases character's jump elevation by three panels.	1000
-Dancer-09	Dancer	Movement	Fly	Character can leap over enemies and obstacles while moving.	1200
-Dancer-10	Dancer	Reaction	A Save	Rasies the character's physical attack power when attacked by the enemy.	550
-Dancer-11	Dancer	Reaction	Brave Up	This raises the character's Brave level when attacked by the enemy.	500
-Meliadoul-01	Meliadoul	Class	Shellbust Stab	Does HP damage and destroys target's armor.	200
-Meliadoul-02	Meliadoul	Class	Blaster Punch	Does HP damage and destroys target's helmet.	400
-Meliadoul-03	Meliadoul	Class	Hellcry Punch	Does HP damage and destroys target's weapon.	500
-Meliadoul-04	Meliadoul	Class	Icewolf Bite	Does HP damage and destroys target's accessory.	800
-Reis-01	Reis	Class	Ice Bracelet	Attack with arctic breath.	0
-Reis-02	Reis	Class	Fire Bracelet	Attack with fire breath.	0
-Reis-03	Reis	Class	Thunder Bracelet	Attack with lightning breath.	0
-Reis-04	Reis	Class	Dragon Tame	Charms enemy Dragon into joining party. Adds: Invitation	300
-Reis-05	Reis	Class	Dragon Care	Restores ally Dragon's HP and Status by offering own HP. Cancels: Darkness, Confusion, Silence, Oil, Berserk, Frog, Stop, Sleep, Don't Move, Don't Act	300
-Reis-06	Reis	Class	Dragon PowerUp	Raises ally Dragon's Brave, Speed, physical and magic attack power.	400
-Reis-07	Reis	Class	Dragon LevelUp	Raises ally Dragon's CT, allowing its attack to occur sooner.	400
-Reis-08	Reis	Class	Holy Bracelet	Holy breath randomly attacks targets within effect range.	900
-Mustadio-01	Mustadio	Class	Leg Aim	Prevents target from moving. Adds: Don't Move	200
-Mustadio-02	Mustadio	Class	Arm Aim	Prevents target from attacking. Adds: Don't Act	300
-Mustadio-03	Mustadio	Class	Seal Evil	Turns undead targets into stone. Adds: Petrify	200
-Geomancer-01	Geomancer	Class	Pitfall	Effective on Natural Surface, Wasteland, Road. Adds: Don't Move	150
-Geomancer-02	Geomancer	Class	Water Ball	Water Elemental attack effective on Waterway, River, Lake, Sea, Waterfall. Adds: Frog	150
-Geomancer-03	Geomancer	Class	Hell Ivy	Effective on Grassland, Thicket, Water Plant, Ivy. Adds: Stop	150
-Geomancer-04	Geomancer	Class	Carve Model	Effective on Gravel, Stone Floor, Stone Wall, Mud Wall, Tombstone. Adds: Petrify	150
-Geomancer-05	Geomancer	Class	Local Quake	Earth Elemental attack effective on Rocky Cliff, Lava Rocks. Adds: Confusion	150
-Geomancer-06	Geomancer	Class	Kamaitachi	Wind Elemental attack effective on Book, Tree, Brick, Bridge, Furniture, Iron Plate, Moss, Coffin. Adds: Don't Act	150
-Geomancer-07	Geomancer	Class	Demon Fire	Fire Elemental attack effective on Wooden Floor, Rug, Box, Stairs, Deck. Adds: Sleep	150
-Geomancer-08	Geomancer	Class	Quicksand	Water Elemental attack effective on Swamp, Marsh, Poisoned Marsh. Adds: Darkness	150
-Geomancer-09	Geomancer	Class	Sand Storm	Wind Elemental attack effective on Sand Area, Stalactite, Salt. Adds: Darkness	150
-Geomancer-10	Geomancer	Class	Blizzard	Ice Elemental attack effective on Snow, Ice. Adds: Silence	150
-Geomancer-11	Geomancer	Class	Gusty Wind	Wind Elemental attack effective on Roof, Sky, Chimney. Adds: Slow	150
-Geomancer-12	Geomancer	Class	Lava Ball	Fire Elemental attack effective on Lava, Machinery. Adds: Dead	150
-Geomancer-13	Geomancer	Movement	Any Ground	Character can walk easily over watery terrain such as rivers.	220
-Geomancer-14	Geomancer	Movement	Move on Lava	Allows the character to move and walk over volcanic terrain.	150
-Geomancer-15	Geomancer	Reaction	Counter Flood	Character counters a physical attack by invoking the appropriate geomancy effect.	300
-Geomancer-16	Geomancer	Support	Attack Up	Increases damage a character's physical attacks cause.	400
-Malak-01	Malak	Class	Heaven Bolt Back	Lightning magic randomly attacks targets within effect range.	0
-Malak-02	Malak	Class	Asura Back	Fire magic randomly attacks targets within effect range.	200
-Malak-03	Malak	Class	Diamond Sword Back	Wind Magic randomly attacks targets within effect range.	300
-Malak-04	Malak	Class	Dragon Pit Back	Water magic randomly attacks targets within effect range.	400
-Malak-05	Malak	Class	Space Storage Back	Magic randomly attacks targets within effect range causing various abnormal statuses. Adds: Darkness, Confusion, Silence, Frog, Poison, Slow, Sleep	500
-Malak-06	Malak	Class	Sky Demon Back	Earth magic randomly attacks targets within effect range.	600
-Rafa-01	Rafa	Class	Heaven Bolt	Lightning magic randomly attacks targets within effect range.	0
-Rafa-02	Rafa	Class	Asura	Fire magic randomly attacks targets within effect range.	200
-Rafa-03	Rafa	Class	Diamond Sword	Wind Magic randomly attacks targets within effect range.	300
-Rafa-04	Rafa	Class	Dragon Pit	Water magic randomly attacks targets within effect range.	400
-Rafa-05	Rafa	Class	Space Storage	Magic randomly attacks targets within effect range causing various abnormal statuses. Adds: Darkness, Confusion, Silence, Frog, Poison, Slow, Sleep	500
-Rafa-06	Rafa	Class	Sky Demon	Earth magic randomly attacks targets within effect range.	600
-Agrias-01	Agrias	Class	Stasis Sword	Basic Holy Elemental Sword attack. Adds: Stop	100
-Agrias-02	Agrias	Class	Split Punch	Holy Elemental Sword attack. Adds: Death Sentence	400
-Agrias-03	Agrias	Class	Crush Punch	Holy Elemental Sword attack. Adds: Dead	500
-Agrias-04	Agrias	Class	Lightning Stab	Powerful Lightning Elemental Sword attack. Adds: Silence	700
-Agrias-05	Agrias	Class	Holy Explosion	Powerful Holy Elemental Sword attack with a long effect radius. Adds: Confusion	800
-Orlandu-01	Orlandu	Class	Stasis Sword	Basic Holy Elemental attack. Adds: Stop	100
-Orlandu-02	Orlandu	Class	Split Punch	Holy Elemental Sword attack. Adds: Death Sentence	400
-Orlandu-03	Orlandu	Class	Crush Punch	Holy Elemental Sword attack. Adds: Dead	500
-Orlandu-04	Orlandu	Class	Lightning Stab	Powerful Lightning Elemental Sword attack. Adds: Silence	700
-Orlandu-05	Orlandu	Class	Holy Explosion	Powerful Holy Elemental Sword attack with a long effect radius. Adds: Conclusion	800
-Orlandu-06	Orlandu	Class	Shellbust Stab	Does HP damage and destroys target's armor.	200
-Orlandu-07	Orlandu	Class	Blaster Punch	Does HP damage and destroys target's helmet.	400
-Orlandu-08	Orlandu	Class	Hellcry Punch	Does HP damage and destroys target's weapon.	500
-Orlandu-09	Orlandu	Class	Icewolf Bite	Does HP damage and destroys target's accessory.	800
-Orlandu-10	Orlandu	Class	Dark Sword	Darkness Elemental Sword spell that absorbs target's MP.	500
-Orlandu-11	Orlandu	Class	Night Sword	Darkness Elemental Sword spell that absorbs target's HP.	100
-Knight-01	Knight	Class	Head Break	Destroys target's equipped hat or helmet, decreasing protection and HP.	300
-Knight-02	Knight	Class	Armor Break	Destroys target's equipped armor, clothes, or robe, decreasing his/her protection and HP.	400
-Knight-03	Knight	Class	Shield Break	Destroys target's equipped shield.	300
-Knight-04	Knight	Class	Weapon Break	Destroys target's equipped weapon, reducing his/her attack power greatly.	400
-Knight-05	Knight	Class	Magic Break	Reduces target's MP by half.	250
-Knight-06	Knight	Class	Speed Break	Diminishes target's Speed level, two points at a time.	250
-Knight-07	Knight	Class	Power Break	Reduces target's physical attack power, two points at a time.	250
-Knight-08	Knight	Class	Mind Break	Reduces target's magic attack power, two points at a time.	250
-Knight-09	Knight	Reaction	Weapon Guard	Allows character to evade an attack with an equipped weapon (not always successful).	200
-Knight-10	Knight	Support	Equip Armor	Allows the character to equip heavy armor, regardless of Job Class.	500
-Knight-11	Knight	Support	Equip Shield	Allows the character to equip a shield, regardless of Job Class.	250
-Knight-12	Knight	Support	Equip Sword	Allows the character to equip a sword, regardless of Job Class.	400
-Lancer-01	Lancer	Class	Horizontal Jump 2	Allows the character to jump two panels horizontally.	150
-Lancer-02	Lancer	Class	Horizontal Jump 3	Allows the character to jump three panels horizontally.	300
-Lancer-03	Lancer	Class	Horizontal Jump 4	Allows the character to jump four panels horizontally.	450
-Lancer-04	Lancer	Class	Horizontal Jump 5	Allows the character to jump five panels horizontally.	600
-Lancer-05	Lancer	Class	Horizontal Jump 8	Allows the character to jump eight panels horizontally.	900
-Lancer-06	Lancer	Class	Vertical Jump 2	Allows the character to jump two panels vertically.	100
-Lancer-07	Lancer	Class	Vertical Jump 3	Allows the character to jump three panels vertically.	200
-Lancer-08	Lancer	Class	Vertical Jump 4	Allows the character to jump four panels vertically.	300
-Lancer-09	Lancer	Class	Vertical Jump 5	Allows the character to jump five panels vertically	400
-Lancer-10	Lancer	Class	Vertical Jump 6	Allows the character to jump six panels vertically.	500
-Lancer-11	Lancer	Class	Vertical Jump 7	Allows the character to jump seven panels vertically.	600
-Lancer-12	Lancer	Class	Vertical Jump 8	Allows the character to jump eight panels vertically.	900
-Lancer-13	Lancer	Movement	Ignore Height	Allows the character to jump to any height, regardless of jumping ability.	150
-Lancer-14	Lancer	Reaction	Dragon Spirit	When a character receives HP damage, that character casts the Reraise status.	560
-Lancer-15	Lancer	Support	Equip Spear	Allows the character to equip a spear regardless of job.	400
-Mediator-01	Mediator	Class	Invitation	Turns an enemy into an ally. Adds: Invitation	100
-Mediator-02	Mediator	Class	Persuade	Resets an enemy's CT count.	100
-Mediator-03	Mediator	Class	Praise	Raises target's Brave level by 4 points.	200
-Mediator-04	Mediator	Class	Threaten	Lowers target's Brave level by 20 points.	200
-Mediator-05	Mediator	Class	Preach	Raises target's Faith level by 4 points.	200
-Mediator-06	Mediator	Class	Solution	Lowers target's Faith level by 20 points.	200
-Mediator-07	Mediator	Class	Death Sentence	Sentences target to death. Adds: Death Sentence	500
-Mediator-08	Mediator	Class	Negotiate	Receive Gil from enemy as tribute.	100
-Mediator-09	Mediator	Class	Insult	Character emerges enemy target, causing it to attack wildly, lowering its success rate. Adds: Berserk	300
-Mediator-10	Mediator	Class	Mimic Daravon	Droning on like Professor Daravon puts the target to sleep. Adds: Sleep	300
-Mediator-11	Mediator	Reaction	Finger Guard	Character plugs his or her ears to dodge Talk Skill (word based) attacks.	300
-Mediator-12	Mediator	Support	Equip Gun	Allows the character to equip a gun regardless of Job Class.	750
-Mediator-13	Mediator	Support	Train	When an enemy reaches terminal status, the character can persuade it to become an ally.	450
-Mediator-14	Mediator	Support	Monster Talk	Allows a character to speak with monsters, even if he or she's not a Mediator.	100
-Mediator-15	Monk	Class	Spin Fist	Character attacks surrounding enemies with his/her fists as he/she spins around.	150
-Monk-01	Monk	Class	Repeating Fist	Character punches the target repeatedly with his/her fist.	300
-Monk-02	Monk	Class	Wave Fist	Character can attack an enemy from afar with a surge of energy.	300
-Monk-03	Monk	Class	Earth Slash	A line of energy flowing through the ground causes damage to enemies standing in its path.	600
-Monk-04	Monk	Class	Secret Fist	Casts a Death Sentence on the enemy after attack. Do not use against undead enemies. Adds: Death Sentence	300
-Monk-05	Monk	Class	Stigma Magic	Use the spirit of Yang to nullify status anomalies. Cancels: Petrify, Darkness, Confusion, Silence, Berserk, Frog, Poison, Sleep, Don't Move, Don't Act	200
-Monk-06	Monk	Class	Chakra	A concentration of Ki restores both HP and MP to the caster and those surrounding him/her.	350
-Monk-07	Monk	Class	Revive	Resurrects a dead character, restoring his/her HP slightly. Cancels: Dead	500
-Monk-08	Monk	Movement	Move-HP Up	Allows the character to recover a small amount of HP as he or she moves around the battlefield.	300
-Monk-09	Monk	Reaction	HP Restore	Restores HP to the character when an attack brings him or her down to critical levels.	500
-Monk-10	Monk	Reaction	Counter	Character counters an enemy's physical attack with one of his or her own.	300
-Monk-11	Monk	Reaction	Hamedo	Gives the character a chance to attack before being attacked.	1200
-Monk-12	Monk	Support	Martial Arts	Character gains the bare-handed fighting strength of a Monk, regardless of Job Class.	200
-Ninja-01	Ninja	Class	Shuriken	Allows the character to throw Shuriken.	50
-Ninja-02	Ninja	Class	Ball	Allows the character to throw an Elemental Ball.	70
-Ninja-03	Ninja	Class	Knife	Allows the character to throw Knives.	100
-Ninja-04	Ninja	Class	Sword	Allows the character to throw Swords.	100
-Ninja-05	Ninja	Class	Hammer	Allows the character to throw Hammers.	100
-Ninja-06	Ninja	Class	Katana	Allows the character to throw Katanas.	100
-Ninja-07	Ninja	Class	Ninja Sword	Allows the character to throw Ninja Swords.	100
-Ninja-08	Ninja	Class	Axe	Allows the character to throw Axes.	100
-Ninja-09	Ninja	Class	Spear	Allows the character to throw Spears.	100
-Ninja-10	Ninja	Class	Stick	Allows the character to throw Sticks.	100
-Ninja-11	Ninja	Class	Knight Sword	Allows the character to throw Knight Swords.	100
-Ninja-12	Ninja	Class	Dictionary	Allows the character to throw a Dictionary.	100
-Ninja-13	Ninja	Movement	Move in Water	Character can move or stop on water.	420
-Ninja-14	Ninja	Reaction	Sunken State	Character hides and becomes Invisible once he or she receives HP damage. Adds: Invisible.	900
-Ninja-15	Ninja	Reaction	Abandon	Raises the character's evade percentage, allowing him or her to dodge attacks more easily.	400
-Ninja-16	Ninja	Support	Two Swords	The character can use a weapon in each hand, even if he/she's not a Ninja.	900
-Oracle-01	Oracle	Class	Blind	Blinding the enemy lowers its success rate at landing physical attacks. Adds: Darkness	100
-Oracle-02	Oracle	Class	Spell Absorb	Absorbs the target's MP and restores the character's own MP.	200
-Oracle-03	Oracle	Class	Life Drain	Absorbs target's HP and restores the character's own HP.	350
-Oracle-04	Oracle	Class	Pray Faith	Temporarily raises the target's Faith level to 100. Adds: Faith	400
-Oracle-05	Oracle	Class	Doubt Faith	Lowers Faith level to 0. Adds: Innocent	400
-Oracle-06	Oracle	Class	Zombie	Makes target undead and therefore unable to restore HP. Adds: Undead	300
-Oracle-07	Oracle	Class	Silence Song	Silences target, making it unable to cast spells. Adds: Silence	170
-Oracle-08	Oracle	Class	Blind Rage	Enrages target causing it to attack wildly and lowering its success rate. Adds: Berserk	400
-Oracle-09	Oracle	Class	Foxbird	Lowers Brave level by 10 points.	200
-Oracle-10	Oracle	Class	Confusion Song	Makes target act unpredictably. Adds: Confusion	400
-Oracle-11	Oracle	Class	Dispel Magic	Prevents positive status effects. Cancels: Float, Reraise, Transparent, Regen, Protect, Shell, Haste, Faith, Reflect	700
-Oracle-12	Oracle	Class	Paralyze	Prevents target from taking action. Adds: Don't Act	100
-Oracle-13	Oracle	Class	Sleep	Puts target to sleep. Adds: Sleep	350
-Oracle-14	Oracle	Class	Petrify	Turns enemy into stone. Adds: Petrify	600
-Oracle-15	Oracle	Movement	Any Weather	Allows the character to walk over swamps, marshes, poison marshes, regardless of climate.	200
-Oracle-16	Oracle	Movement	Move-MP Up	The character recovers MP as he or she moves.	350
-Oracle-17	Oracle	Reaction	Absorb Used MP	Restores character's MP by the same amount the enemy used to cast its spell.	250
-Oracle-18	Oracle	Support	Defense Up	Lessens damage incurred from physical attacks by half.	400
-Priest-01	Priest	Class	Cure	Restores a small amount of HP	50
-Priest-02	Priest	Class	Cure 2	Restores a medium amount of HP.	180
-Priest-03	Priest	Class	Cure 3	Restores more HP than Cure 2, but at a greater cost.	400
-Priest-04	Priest	Class	Cure 4	Restores a large amount of HP.	700
-Priest-05	Priest	Class	Raise	Revives dead units and restores half of their HP. Cancels: Dead	180
-Priest-06	Priest	Class	Raise 2	Revives dead units and restores the highest amount of HP. Cancels: Dead	500
-Priest-07	Priest	Class	Reraise	Automatically raises units from the dead. Adds: Reraise	800
-Priest-08	Priest	Class	Regen	Restores HP incrementally over a period of time. Adds: Regen	300
-Priest-09	Priest	Class	Protect	Decreases amount of physical attack damage sustained. Adds: Protect	70
-Priest-10	Priest	Class	Protect 2	Decreases amount of physical attack damage sustained. Has a higher success ratio than Protect. Adds: Protect	500
-Priest-11	Priest	Class	Shell	Decreases amount of magic attack damage sustained. Adds: Shell	70
-Priest-12	Priest	Class	Shell 2	Decreases amount of magic attack damage sustained. Has a higher success ratio than Shell. Adds: Shell	500
-Priest-13	Priest	Class	Wall	Protects units from both physical and magic attacks. Adds: Protect, Shell	380
-Priest-14	Priest	Class	Esuna	Cures the majority of abnormal statuses. Cancels: Petrify, Darkness, Confusion, Silence, Berserk, Frog, Poison, Sleep, Don't Move, Don't Act	280
-Priest-15	Priest	Class	Holy	Powerful Holy Elemental attack.	600
-Priest-16	Priest	Reaction	Regenerator	Apply Regen to the character when struck.	400
-Priest-17	Priest	Support	Magic Defend Up	Lessens damage caused by enemy magic attacks.	400
-Samurai-01	Samurai	Class	Asura	The slashing of an invisible blade causes damage to enemy units.	100
-Samurai-02	Samurai	Class	Koutesu	The wailing of a ghost causes damage to the enemy.	180
-Samurai-03	Samurai	Class	Bizen Boat	The whisper of the Katana's spirit causes MP damage to the enemy.	260
-Samurai-04	Samurai	Class	Murasame	The tears of the Katana's spirit restores HP of allied units.	340
-Samurai-05	Samurai	Class	Heaven's Cloud	Magic Katana attack causing damage to enemy units. Adds: Slow	420
-Samurai-06	Samurai	Class	Kiyomori	Spirit in the Katana protects allied units, reducing physical and magic damage. Adds: Protect, Shell	500
-Samurai-07	Samurai	Class	Muramasa	Ghosts from the Katana make the enemy act unpredictably and in some cases sentences them to death. Adds: Confusion, Death Sentence	580
-Samurai-08	Samurai	Class	Kikuichimoji	Vengeful spirit makes a beeline toward the enemy.	660
-Samurai-09	Samurai	Class	Masamune	Katana spirit gradually restores ally's HP and increases speed. Sword for attack must be stolen from Elmdor. Adds: Regen, Haste	740
-Samurai-10	Samurai	Class	Chirijiraden	Powerful Katana attack that causes a blue flame to attack enemy units. Sword for attack must be found in the Deep Dungeon.	820
-Samurai-11	Samurai	Movement	Walk on Water	Allows the character to walk or stop on the surface of water.	300
-Samurai-12	Samurai	Reaction	Meatbone Slash	When critical, allows the character to damage the target in the amount of his or her max HP.	200
-Samurai-13	Samurai	Reaction	Blade Grasp	Allows the character to evade physical attacks other than Bow/Crossbow attacks.	700
-Samurai-14	Samurai	Support	Equip Knife	Allows the character to equip a knife, regardless of job.	400
-Samurai-15	Samurai	Support	Two Hands	Allows the character to hold his/her weapon with both hands, increasing its attack power.	900
-Cloud-01	Cloud	Class	Braver	Samurai-style sword attack.	150
-Cloud-02	Cloud	Class	Cross-slash	Cuts enemies within effect radius four times.	200
-Cloud-03	Cloud	Class	Blade Beam	Similar to Shock!-the greater your damage, the more damage you can inflict.	250
-Cloud-04	Cloud	Class	Climhazzard	The greater the target's damage, the more damage you can inflict.	450
-Cloud-05	Cloud	Class	Meteorain	Attack causes a meteor to fall on targets.	560
-Cloud-06	Cloud	Class	Finishing Touch	Causes different status anomalies. Adds: Dead, Petrify, Stop	670
-Cloud-07	Cloud	Class	Omnislash	The ultimate limit skill.	900
-Cloud-08	Cloud	Class	Cherry Blossom	The most powerful limit skill.	1200
-Squire-01	Squire	Class	Accumulate	Raises the character's physical attack power.	300
-Squire-02	Squire	Class	Dash	Attacks the enemy with a body blow.	80
-Squire-03	Squire	Class	Throw Stone	Throws a stone at an enemy unit. This is one of the first long-range attacks your characters can learn.	90
-Squire-04	Squire	Class	Heal	Cures abnormal status effects such as Darkness, Silence, and Poison.	150
-Squire-05	Squire	Movement	Move +1	Increases the character's movement range by one panel.	200
-Squire-06	Squire	Reaction	Counter Tackle	Counters a physical attack with a Dash attack's body blow.	180
-Squire-07	Squire	Support	Equip Axe	Allows the character to equip an Axe, regardless of Job Classes.	170
-Squire-08	Squire	Support	Monster Skill	The character can target friendly monsters within a range of three panels, helping them acquire new abilities.	200
-Squire-09	Squire	Support	Defend	Character defends and prepares for an attack. Activated by choosing the command Defend on the Action menu.	50
-Squire-10	Squire	Support	Gained JP Up	Increases the amount of JP earned in battle. A must-have for the beginning and middle stages of a character's development!	250
-Ramza-01	Ramza	Class	Yell	Raises speed by 1 point.	200
-Ramza-02	Ramza	Class	Wish	Character offers his own HP to the target, doubling the target's HP.	0
-Ramza-03	Ramza	Class	Cheer Up	Raises Brave level by 5 points. Available in Chapter Two.	200
-Ramza-04	Ramza	Class	Scream	Raises character's own Brave level, Speed level, Physical and Magic attack powers. Available in Chapter Four.	500
-Ramza-05	Ramza	Class	Ultima	Powerful magic attack that must be learned from either the assassins, Celia and Lede, or an Ultima Demon when cast on the character. This is possible only during Chapter Four.	0
-Summoner-01	Summoner	Class	Moogle	Restores a small amount of HP to allies.	110
-Summoner-02	Summoner	Class	Shiva	Summons Ice Elemental to attack enemies.	200
-Summoner-03	Summoner	Class	Ramuh	Summons Lightning Elemental to attack enemies.	200
-Summoner-04	Summoner	Class	Ifrit	Summons Fire Elemental to attack enemies.	200
-Summoner-05	Summoner	Class	Titan	Summons Earth Elemental to attack enemies.	220
-Summoner-06	Summoner	Class	Golem	Golem shares ally's damage, allowing them to evade physical weapon damage.	500
-Summoner-07	Summoner	Class	Carbuncle	Summoned monster helps allies to reflect magic spells. Adds: Reflect	350
-Summoner-08	Summoner	Class	Bahamut	Summoned monsters enemy with a blast of hot breath.	1200
-Summoner-09	Summoner	Class	Odin	Summoned monster causes damage to enemies while riding its dragon-horse across the battlefield.	900
-Summoner-10	Summoner	Class	Leviathan	Water Elemental attacks enemies with tsunami.	850
-Summoner-11	Summoner	Class	Salamander	Summoned Fire Elemental burns battlefield with flaming breath.	820
-Summoner-12	Summoner	Class	Silf	Summoned monster silences enemies. Adds: Silence	400
-Summoner-13	Summoner	Class	Fairy	Summoned fairy restores HP to allies. Effect is more powerful than Moogle.	400
-Summoner-14	Summoner	Class	Lich	Summoned Darkness Elemental drains off 50% of the enemy's HP.	600
-Summoner-15	Summoner	Class	Cyclops	Summoned Holy Elemental causes damage to enemies by shaking up the battlefield.	1000
-Summoner-16	Summoner	Class	Zodiac	Summoned monster attacks enemies with a strong beam of star light. Must be learned from the Zodiac monster, Elidibs, on the 10th level of the Deep Dungeon.	0
-Summoner-17	Summoner	Reaction	MP Restore	Restores MP to the character when an attack brings them down to critical levels.	400
-Summoner-18	Summoner	Support	Half MP	Halves the MP used when casting a spell.	900
-Beowulf-01	Beowulf	Class	Blind	Lowers target's success rate with physical attacks. Adds: Darkness	50
-Beowulf-02	Beowulf	Class	Aspel	Absorbs target's MP and restores own.	100
-Beowulf-03	Beowulf	Class	Drain	Absorbs target's HP and restores own.	180
-Beowulf-04	Beowulf	Class	Faith	Temporarily raises Faith level to 100. Adds: Faith	200
-Beowulf-05	Beowulf	Class	Innocent	Lowers Faith level to 0. Adds: Innocent	200
-Beowulf-06	Beowulf	Class	Zombie	Prevents target from restoring HP. Adds: Undead	150
-Beowulf-07	Beowulf	Class	Silence	Prevents target from casting magic. Adds: Silence	90
-Beowulf-08	Beowulf	Class	Berserk	Causes target to attack wildly, lowering its success rate. Adds: Berserk	200
-Beowulf-09	Beowulf	Class	Chicken	Lowers Brave level by 50 points.	500
-Beowulf-10	Beowulf	Class	Confuse	Causes target to act unpredictably. Adds: Confusion	200
-Beowulf-11	Beowulf	Class	Despair	Cancels target's positive status effects. Cancels: Float, Reraise, Transparent, Regen, Protect, Shell, Haste, Faith, Reflect	300
-Beowulf-12	Beowulf	Class	Don't Act	Prevents target from attacking. Adds: Don't Act	50
-Beowulf-13	Beowulf	Class	Sleep	Causes target to be inactive. This is great for characters who are immune to Don't Act. Adds: Sleep	170
-Beowulf-14	Beowulf	Class	Break	Turns target into stone. Adds: Petrify	300
-Beowulf-15	Beowulf	Class	Shock!	The more damage you receive, the more damage you can inflict on the target.	600
-Thief-01	Thief	Class	Gil Taking	Character can steal gil from the enemy target.	10
-Thief-02	Thief	Class	Steal Heart	Charms enemy unit. Is revoked when unit takes damage. Adds: Charm	150
-Thief-03	Thief	Class	Steal Helmet	Steal enemy's equipped helmet.	350
-Thief-04	Thief	Class	Steal Armor	Steal enemy's equipped armor.	450
-Thief-05	Thief	Class	Steal Shield	Steal enemy's equipped shield.	350
-Thief-06	Thief	Class	Steal Weapon	Steal enemy's equipped weapon.	600
-Thief-07	Thief	Class	Steal Accessory	Steal enemy's equipped accessory.	500
-Thief-08	Thief	Class	Steal Experience	Steal enemy's experience.	250
-Thief-09	Thief	Movement	Move +2	Increases the character's movement range by two panels.	520
-Thief-10	Thief	Movement	Jump +2	Increases a character's jump elevation by two panels.	480
-Thief-11	Thief	Reaction	Caution	Receiving an enemy's attack causes the character to take up a defensive position that halves all damage.	200
-Thief-12	Thief	Reaction	Gilgame Heart	Character receives from the enemy the same amount of Gil as HP damage incurred.	200
-Thief-13	Thief	Reaction	Catch	Character can catch and keep items thrown across the battlefield.	200
-Thief-14	Thief	Support	Secret Hunt	This ability allows you obtain the pelts of monsters you've killed which can be traded for items.	200
-Time Mage-01	Time Mage	Class	Haste	Increases target's speed. Adds: Haste	100
-Time Mage-02	Time Mage	Class	Haste 2	Increases target's speed. Adds: Haste	550
-Time Mage-03	Time Mage	Class	Slow	Decreases target's speed. Adds: Slow	100
-Time Mage-04	Time Mage	Class	Slow 2	Decreases target's speed. Adds: Slow	520
-Time Mage-05	Time Mage	Class	Stop	Prevents target from moving or attacking. Adds: Stop	330
-Time Mage-06	Time Mage	Class	Don't Move	Prevents target from moving. Adds: Don't Move	100
-Time Mage-07	Time Mage	Class	Float	Allows target to float 1 panel above ground. Adds: Float	200
-Time Mage-08	Time Mage	Class	Reflect	Allows target to reflect magic spells. Adds: Reflect	300
-Time Mage-09	Time Mage	Class	Quick	Increases speed of AT.	800
-Time Mage-10	Time Mage	Class	Demi	Decreases target's max HP by 25%.	250
-Time Mage-11	Time Mage	Class	Demi 2	Decreases target's max HP by 50%.	550
-Time Mage-12	Time Mage	Class	Meteor	Causes a huge meteor to fall from the sky on top of the target.	1500
-Time Mage-13	Time Mage	Movement	Teleport	Allows the character to move to any space on the battlefield instantly. However, the farther the destination panel, the greater the chance of failure.	600
-Time Mage-14	Time Mage	Movement	Float	Allows the character to float 1 panel above the ground.	540
-Time Mage-15	Time Mage	Reaction	Critical Quick	The character's AT is elevated to next position when his or her HP totals fall within critical levels.	700
-Time Mage-16	Time Mage	Reaction	MP Switch	Character loses MP instead of HP when attacked.	400
-Time Mage-17	Time Mage	Support	Short Charge	Increases a character's CT speed, halving the time it takes him or her to cast spells.	800
-Wizard-01	Wizard	Class	Fire	Basic Fire Elemental attack.	50
-Wizard-02	Wizard	Class	Fire 2	Medium-level Fire Elemental attack.	200
-Wizard-03	Wizard	Class	Fire 3	High-level Fire Elemental attack.	480
-Wizard-04	Wizard	Class	Fire 4	Massive Fire Elemental attack.	850
-Wizard-05	Wizard	Class	Bolt	Basic Lightning Elemental attack.	50
-Wizard-06	Wizard	Class	Bolt 2	Medium-level Lightning Elemental attack.	200
-Wizard-07	Wizard	Class	Bolt 3	High-level Lightning Elemental attack.	480
-Wizard-08	Wizard	Class	Bolt 4	Massive Lightning Elemental attack.	850
-Wizard-09	Wizard	Class	Ice	Basic Ice Elemental attack.	50
-Wizard-10	Wizard	Class	Ice 2	Medium-level Ice Elemental attack.	200
-Wizard-11	Wizard	Class	Ice 3	High-level Ice Elemental attack.	480
-Wizard-12	Wizard	Class	Ice 4	Massive Ice Elemental attack.	850
-Wizard-13	Wizard	Class	Poison	Gradually lowers target's HP through poisoning. Adds: Poison	150
-Wizard-14	Wizard	Class	Frog	Turns target into a frog and vice versa. Adds: Frog	500
-Wizard-15	Wizard	Class	Death	Has a small chance to kill the target instantly. Adds: Dead	600
-Wizard-16	Wizard	Class	Flare	Large fireball falls from the sky causing a large amount of damage to the target.	900
-Wizard-17	Wizard	Reaction	Counter Magic	The character counters with the same magic attack he or she receives.	800
-Wizard-18	Wizard	Support	Magic Attack Up	Increases the damage a character's magic attacks will inflict.	400
-Byblos-01	Byblos	Class	Energy	Character recovers twice as much HP as its own.	0
-Byblos-02	Byblos	Class	Parasite	Surge of negative power causes a variety of status anomalies.  Adds: Petrify, Darkness, Confusion, Silence, Oil, Frog, Poison, Sleep	0
-Byblos-03	Byblos	Class	Shock	The more damage an enemy has sustained, the more powerful the attack.	0
-Byblos-04	Byblos	Class	Difference	The enemy's MP total becomes the amount of damage given to the enemy.	0
-Reis Dragon-01	Reis Dragon	Class	Ice Bracelet	Attack with arctic breath.	0
-Reis Dragon-02	Reis Dragon	Class	Fire Bracelet	Attack with fire breath.	0
-Reis Dragon-03	Reis Dragon	Class	Thunder Bracelet	Attack with lightning breath.	0
-Worker 8-01	Worker 8	Class	Destroy	Aims to destroy its target.	0
-Worker 8-02	Worker 8	Class	Compress	Aims to compress its target.  Adds: Dead	0
-Worker 8-03	Worker 8	Class	Dispose	Disposes of all enemies at once within effect range.	0
-Worker 8-04	Worker 8	Class	Crush	Aims to crush its target.	0
+Archer-01	Archer	Class	Charge +1	Attack that increases the damage a weapon does through charging.	100	0
+Archer-02	Archer	Class	Charge +2	Attack that increases the damage a weapon does through charging.	150	0
+Archer-03	Archer	Class	Charge +3	Attack that increases the damage a weapon does through charging.	200	0
+Archer-04	Archer	Class	Charge +4	Attack that increases the damage a weapon does through charging.	250	0
+Archer-05	Archer	Class	Charge +5	Attack that increases the damage a weapon does through charging.	300	0
+Archer-06	Archer	Class	Charge +7	Attack that increases the damage a weapon does through charging.	400	0
+Archer-07	Archer	Class	Charge +10	Attack that increases the damage a weapon does through charging.	600	0
+Archer-08	Archer	Class	Charge +20	Attack that increases the damage a weapon does through charging.	1000	0
+Archer-09	Archer	Movement	Jump +1	Increases a character's jump elevation by one panel.	200	0
+Archer-10	Archer	Reaction	Speed Save	When a character takes HP damage, it raises his or her Speed by 1.	800	0
+Archer-11	Archer	Reaction	Arrow Guard	Increases the character's chances of evading a Bow/Crossbow attack.	450	0
+Archer-12	Archer	Support	Equip Crossbow	Allows the character to equip a Crossbow, regardless of job.	350	0
+Archer-13	Archer	Support	Concentrate	Makes the enemy unable to evade the character's attacks. If the enemy is within a targeted panel, the attack is sure to succeed.	400	0
+Bard-01	Bard	Class	Angel Song	Restores MP to all allied units on the field.	100	0
+Bard-02	Bard	Class	Life Song	Restores a small amount of HP to all allied units on the field.	100	0
+Bard-03	Bard	Class	Cheer Song	Raises the Speed level of all allied units.	100	0
+Bard-04	Bard	Class	Battle Song	Raises the physical attack power of all allied units.	100	0
+Bard-05	Bard	Class	Magic Song	Raises the magic attack power of all allied units.	100	0
+Bard-06	Bard	Class	Nameless Song	Song causes various positive status effects. Adds: Reraise, Regen, Protect, Shell, Haste	100	0
+Bard-07	Bard	Class	Last Song	Raises ally's CT count to 100.	100	0
+Bard-08	Bard	Movement	Fly	Character can leap over enemies and obstacles while moving.	1200	0
+Bard-09	Bard	Movement	Move +3	Increases character's movement range by three panels.	1000	0
+Bard-10	Bard	Reaction	MA Save	Raises a character's magic attack power when he or she takes HP damage.	450	0
+Bard-11	Bard	Reaction	Faith Up	Raises a character's Faith level when he/she's hit with a magical spell.	500	0
+Calculator-01	Calculator	Class	CT	Calculate CT.	250	0
+Calculator-02	Calculator	Class	Level	Calculate level.	350	0
+Calculator-03	Calculator	Class	Exp	Calculate Exp.	200	0
+Calculator-04	Calculator	Class	Height	Calculate height.	250	0
+Calculator-05	Calculator	Class	Prime Number	Calculate prime numbers.	300	0
+Calculator-06	Calculator	Class	5	Calculate multiples of 5.	200	0
+Calculator-07	Calculator	Class	4	Calculate multiples of 4.	400	0
+Calculator-08	Calculator	Class	3	Calculate multiples of 3.	600	0
+Calculator-09	Calculator	Movement	Move-Get Experience	Character gains Experience Points as he or she moves around.	400	0
+Calculator-10	Calculator	Movement	Move-Get JP	Character gains a small amount of JP as he or she moves around.	400	0
+Calculator-11	Calculator	Reaction	Distribute	When the character's HP are maxed, he or she shares any excess HP with his or her allies.	200	0
+Calculator-12	Calculator	Reaction	Damage Split	Character heals themselves for half of all damage recieved and returns the other half to the attacker as damage.	300	0
+Calculator-13	Calculator	Support	Gained Exp Up	Increases the Experience Points a character earns by 1.5.	350	0
+Chemist-01	Chemist	Class	Potion	Recovers 30 HP. Causes damage to the undead.	30	0
+Chemist-02	Chemist	Class	Hi-Potion	Recovers 70 HP. Causes damage to the undead.	200	0
+Chemist-03	Chemist	Class	X-Potion	The strongest potion, recovering 150 HP. Causes damage to the undead.	300	0
+Chemist-04	Chemist	Class	Ether	Recovers 20 MP.	300	0
+Chemist-05	Chemist	Class	Hi-Ether	Recovers 50 MP.	400	0
+Chemist-06	Chemist	Class	Elixir	Restores all HP and MP. Elixirs cannot be found in stores and must be found on the battlefield.	900	0
+Chemist-07	Chemist	Class	Antidote	Neutralizes all poisons. Cancels: Poison	70	0
+Chemist-08	Chemist	Class	Eye Drop	Restores sight. Cancels: Darkness	80	0
+Chemist-09	Chemist	Class	Echo Grass	Restores speech, allowing the character to cast spells again. Cancels: Silence	120	0
+Chemist-10	Chemist	Class	Maiden's Kiss	Changes the character back to his/her original shape. Cancels: Frog	200	0
+Chemist-11	Chemist	Class	Soft	A golden needle which cures petrificaction. Cancels: Petrify	250	0
+Chemist-12	Chemist	Class	Holy Water	Restores life to the undead. Cancels: Undead, Blood Suck	400	0
+Chemist-13	Chemist	Class	Remedy	This all-purpose medicine cures most status anomalies. Cancels: Petrify, Darkness, Confusion, Silence, Oil, Frog, Poison, Sleep	700	0
+Chemist-14	Chemist	Class	Phoenix Down	This tailfeather revives dead units. Cancels: Dead	90	0
+Chemist-15	Chemist	Movement	Move-Find Item	Allows the character to find any hidden items on the destination panel.	100	0
+Chemist-16	Chemist	Reaction	Auto Potion	When a character receives any form of HP damage, he or she uses the lowest-level potion available.	400	0
+Chemist-17	Chemist	Support	Throw Item	Makes a character able to throw items over an extended range, even if he or she's not a Chemist.	350	0
+Chemist-18	Chemist	Support	Maintenance	Makes equipped items immune to break techniques.	250	0
+Chemist-19	Chemist	Support	Equip Change	Allows the character to change equipment in battle. Activated by selecting the action command Equip Change.	0	0
+Dancer-01	Dancer	Class	Witch Hunt	Causes MP damage to all enemy units on the battlefield.	100	0
+Dancer-02	Dancer	Class	Wiznaibus	Causes HP damage to all enemy units on the battlefield.	100	0
+Dancer-03	Dancer	Class	Slow Dance	Lowers enemy's Speed level.	100	0
+Dancer-04	Dancer	Class	Polka Polka	Lowers enemy's physical attack power.	100	0
+Dancer-05	Dancer	Class	Disillusion	Lowers enemy's magic attack power.	100	0
+Dancer-06	Dancer	Class	Nameless Dance	Dance causes various abnormal statuses to all enemy units no the battlefield. Adds: Darkness, Confusion, Silence, Frog, Poison, Slow, Stop, Sleep	100	0
+Dancer-07	Dancer	Class	Last Dance	Lowers enemy's CT count to zero.	100	0
+Dancer-08	Dancer	Movement	Jump +3	Increases character's jump elevation by three panels.	1000	0
+Dancer-09	Dancer	Movement	Fly	Character can leap over enemies and obstacles while moving.	1200	0
+Dancer-10	Dancer	Reaction	A Save	Rasies the character's physical attack power when attacked by the enemy.	550	0
+Dancer-11	Dancer	Reaction	Brave Up	This raises the character's Brave level when attacked by the enemy.	500	0
+Meliadoul-01	Meliadoul	Class	Shellbust Stab	Does HP damage and destroys target's armor.	200	0
+Meliadoul-02	Meliadoul	Class	Blaster Punch	Does HP damage and destroys target's helmet.	400	0
+Meliadoul-03	Meliadoul	Class	Hellcry Punch	Does HP damage and destroys target's weapon.	500	0
+Meliadoul-04	Meliadoul	Class	Icewolf Bite	Does HP damage and destroys target's accessory.	800	0
+Reis-01	Reis	Class	Ice Bracelet	Attack with arctic breath.	0	0
+Reis-02	Reis	Class	Fire Bracelet	Attack with fire breath.	0	0
+Reis-03	Reis	Class	Thunder Bracelet	Attack with lightning breath.	0	0
+Reis-04	Reis	Class	Dragon Tame	Charms enemy Dragon into joining party. Adds: Invitation	300	0
+Reis-05	Reis	Class	Dragon Care	Restores ally Dragon's HP and Status by offering own HP. Cancels: Darkness, Confusion, Silence, Oil, Berserk, Frog, Stop, Sleep, Don't Move, Don't Act	300	0
+Reis-06	Reis	Class	Dragon PowerUp	Raises ally Dragon's Brave, Speed, physical and magic attack power.	400	0
+Reis-07	Reis	Class	Dragon LevelUp	Raises ally Dragon's CT, allowing its attack to occur sooner.	400	0
+Reis-08	Reis	Class	Holy Bracelet	Holy breath randomly attacks targets within effect range.	900	0
+Mustadio-01	Mustadio	Class	Leg Aim	Prevents target from moving. Adds: Don't Move	200	0
+Mustadio-02	Mustadio	Class	Arm Aim	Prevents target from attacking. Adds: Don't Act	300	0
+Mustadio-03	Mustadio	Class	Seal Evil	Turns undead targets into stone. Adds: Petrify	200	0
+Geomancer-01	Geomancer	Class	Pitfall	Effective on Natural Surface, Wasteland, Road. Adds: Don't Move	150	0
+Geomancer-02	Geomancer	Class	Water Ball	Water Elemental attack effective on Waterway, River, Lake, Sea, Waterfall. Adds: Frog	150	0
+Geomancer-03	Geomancer	Class	Hell Ivy	Effective on Grassland, Thicket, Water Plant, Ivy. Adds: Stop	150	0
+Geomancer-04	Geomancer	Class	Carve Model	Effective on Gravel, Stone Floor, Stone Wall, Mud Wall, Tombstone. Adds: Petrify	150	0
+Geomancer-05	Geomancer	Class	Local Quake	Earth Elemental attack effective on Rocky Cliff, Lava Rocks. Adds: Confusion	150	0
+Geomancer-06	Geomancer	Class	Kamaitachi	Wind Elemental attack effective on Book, Tree, Brick, Bridge, Furniture, Iron Plate, Moss, Coffin. Adds: Don't Act	150	0
+Geomancer-07	Geomancer	Class	Demon Fire	Fire Elemental attack effective on Wooden Floor, Rug, Box, Stairs, Deck. Adds: Sleep	150	0
+Geomancer-08	Geomancer	Class	Quicksand	Water Elemental attack effective on Swamp, Marsh, Poisoned Marsh. Adds: Darkness	150	0
+Geomancer-09	Geomancer	Class	Sand Storm	Wind Elemental attack effective on Sand Area, Stalactite, Salt. Adds: Darkness	150	0
+Geomancer-10	Geomancer	Class	Blizzard	Ice Elemental attack effective on Snow, Ice. Adds: Silence	150	0
+Geomancer-11	Geomancer	Class	Gusty Wind	Wind Elemental attack effective on Roof, Sky, Chimney. Adds: Slow	150	0
+Geomancer-12	Geomancer	Class	Lava Ball	Fire Elemental attack effective on Lava, Machinery. Adds: Dead	150	0
+Geomancer-13	Geomancer	Movement	Any Ground	Character can walk easily over watery terrain such as rivers.	220	0
+Geomancer-14	Geomancer	Movement	Move on Lava	Allows the character to move and walk over volcanic terrain.	150	0
+Geomancer-15	Geomancer	Reaction	Counter Flood	Character counters a physical attack by invoking the appropriate geomancy effect.	300	0
+Geomancer-16	Geomancer	Support	Attack Up	Increases damage a character's physical attacks cause.	400	0
+Malak-01	Malak	Class	Heaven Bolt Back	Lightning magic randomly attacks targets within effect range.	0	0
+Malak-02	Malak	Class	Asura Back	Fire magic randomly attacks targets within effect range.	200	0
+Malak-03	Malak	Class	Diamond Sword Back	Wind Magic randomly attacks targets within effect range.	300	0
+Malak-04	Malak	Class	Dragon Pit Back	Water magic randomly attacks targets within effect range.	400	0
+Malak-05	Malak	Class	Space Storage Back	Magic randomly attacks targets within effect range causing various abnormal statuses. Adds: Darkness, Confusion, Silence, Frog, Poison, Slow, Sleep	500	0
+Malak-06	Malak	Class	Sky Demon Back	Earth magic randomly attacks targets within effect range.	600	0
+Rafa-01	Rafa	Class	Heaven Bolt	Lightning magic randomly attacks targets within effect range.	0	0
+Rafa-02	Rafa	Class	Asura	Fire magic randomly attacks targets within effect range.	200	0
+Rafa-03	Rafa	Class	Diamond Sword	Wind Magic randomly attacks targets within effect range.	300	0
+Rafa-04	Rafa	Class	Dragon Pit	Water magic randomly attacks targets within effect range.	400	0
+Rafa-05	Rafa	Class	Space Storage	Magic randomly attacks targets within effect range causing various abnormal statuses. Adds: Darkness, Confusion, Silence, Frog, Poison, Slow, Sleep	500	0
+Rafa-06	Rafa	Class	Sky Demon	Earth magic randomly attacks targets within effect range.	600	0
+Agrias-01	Agrias	Class	Stasis Sword	Basic Holy Elemental Sword attack. Adds: Stop	100	0
+Agrias-02	Agrias	Class	Split Punch	Holy Elemental Sword attack. Adds: Death Sentence	400	0
+Agrias-03	Agrias	Class	Crush Punch	Holy Elemental Sword attack. Adds: Dead	500	0
+Agrias-04	Agrias	Class	Lightning Stab	Powerful Lightning Elemental Sword attack. Adds: Silence	700	0
+Agrias-05	Agrias	Class	Holy Explosion	Powerful Holy Elemental Sword attack with a long effect radius. Adds: Confusion	800	0
+Orlandu-01	Orlandu	Class	Stasis Sword	Basic Holy Elemental attack. Adds: Stop	100	0
+Orlandu-02	Orlandu	Class	Split Punch	Holy Elemental Sword attack. Adds: Death Sentence	400	0
+Orlandu-03	Orlandu	Class	Crush Punch	Holy Elemental Sword attack. Adds: Dead	500	0
+Orlandu-04	Orlandu	Class	Lightning Stab	Powerful Lightning Elemental Sword attack. Adds: Silence	700	0
+Orlandu-05	Orlandu	Class	Holy Explosion	Powerful Holy Elemental Sword attack with a long effect radius. Adds: Conclusion	800	0
+Orlandu-06	Orlandu	Class	Shellbust Stab	Does HP damage and destroys target's armor.	200	0
+Orlandu-07	Orlandu	Class	Blaster Punch	Does HP damage and destroys target's helmet.	400	0
+Orlandu-08	Orlandu	Class	Hellcry Punch	Does HP damage and destroys target's weapon.	500	0
+Orlandu-09	Orlandu	Class	Icewolf Bite	Does HP damage and destroys target's accessory.	800	0
+Orlandu-10	Orlandu	Class	Dark Sword	Darkness Elemental Sword spell that absorbs target's MP.	500	0
+Orlandu-11	Orlandu	Class	Night Sword	Darkness Elemental Sword spell that absorbs target's HP.	100	0
+Knight-01	Knight	Class	Head Break	Destroys target's equipped hat or helmet, decreasing protection and HP.	300	0
+Knight-02	Knight	Class	Armor Break	Destroys target's equipped armor, clothes, or robe, decreasing his/her protection and HP.	400	0
+Knight-03	Knight	Class	Shield Break	Destroys target's equipped shield.	300	0
+Knight-04	Knight	Class	Weapon Break	Destroys target's equipped weapon, reducing his/her attack power greatly.	400	0
+Knight-05	Knight	Class	Magic Break	Reduces target's MP by half.	250	0
+Knight-06	Knight	Class	Speed Break	Diminishes target's Speed level, two points at a time.	250	0
+Knight-07	Knight	Class	Power Break	Reduces target's physical attack power, two points at a time.	250	0
+Knight-08	Knight	Class	Mind Break	Reduces target's magic attack power, two points at a time.	250	0
+Knight-09	Knight	Reaction	Weapon Guard	Allows character to evade an attack with an equipped weapon (not always successful).	200	0
+Knight-10	Knight	Support	Equip Armor	Allows the character to equip heavy armor, regardless of Job Class.	500	0
+Knight-11	Knight	Support	Equip Shield	Allows the character to equip a shield, regardless of Job Class.	250	0
+Knight-12	Knight	Support	Equip Sword	Allows the character to equip a sword, regardless of Job Class.	400	0
+Lancer-01	Lancer	Class	Horizontal Jump 2	Allows the character to jump two panels horizontally.	150	0
+Lancer-02	Lancer	Class	Horizontal Jump 3	Allows the character to jump three panels horizontally.	300	0
+Lancer-03	Lancer	Class	Horizontal Jump 4	Allows the character to jump four panels horizontally.	450	0
+Lancer-04	Lancer	Class	Horizontal Jump 5	Allows the character to jump five panels horizontally.	600	0
+Lancer-05	Lancer	Class	Horizontal Jump 8	Allows the character to jump eight panels horizontally.	900	0
+Lancer-06	Lancer	Class	Vertical Jump 2	Allows the character to jump two panels vertically.	100	0
+Lancer-07	Lancer	Class	Vertical Jump 3	Allows the character to jump three panels vertically.	200	0
+Lancer-08	Lancer	Class	Vertical Jump 4	Allows the character to jump four panels vertically.	300	0
+Lancer-09	Lancer	Class	Vertical Jump 5	Allows the character to jump five panels vertically	400	0
+Lancer-10	Lancer	Class	Vertical Jump 6	Allows the character to jump six panels vertically.	500	0
+Lancer-11	Lancer	Class	Vertical Jump 7	Allows the character to jump seven panels vertically.	600	0
+Lancer-12	Lancer	Class	Vertical Jump 8	Allows the character to jump eight panels vertically.	900	0
+Lancer-13	Lancer	Movement	Ignore Height	Allows the character to jump to any height, regardless of jumping ability.	150	0
+Lancer-14	Lancer	Reaction	Dragon Spirit	When a character receives HP damage, that character casts the Reraise status.	560	0
+Lancer-15	Lancer	Support	Equip Spear	Allows the character to equip a spear regardless of job.	400	0
+Mediator-01	Mediator	Class	Invitation	Turns an enemy into an ally. Adds: Invitation	100	0
+Mediator-02	Mediator	Class	Persuade	Resets an enemy's CT count.	100	0
+Mediator-03	Mediator	Class	Praise	Raises target's Brave level by 4 points.	200	0
+Mediator-04	Mediator	Class	Threaten	Lowers target's Brave level by 20 points.	200	0
+Mediator-05	Mediator	Class	Preach	Raises target's Faith level by 4 points.	200	0
+Mediator-06	Mediator	Class	Solution	Lowers target's Faith level by 20 points.	200	0
+Mediator-07	Mediator	Class	Death Sentence	Sentences target to death. Adds: Death Sentence	500	0
+Mediator-08	Mediator	Class	Negotiate	Receive Gil from enemy as tribute.	100	0
+Mediator-09	Mediator	Class	Insult	Character emerges enemy target, causing it to attack wildly, lowering its success rate. Adds: Berserk	300	0
+Mediator-10	Mediator	Class	Mimic Daravon	Droning on like Professor Daravon puts the target to sleep. Adds: Sleep	300	0
+Mediator-11	Mediator	Reaction	Finger Guard	Character plugs his or her ears to dodge Talk Skill (word based) attacks.	300	0
+Mediator-12	Mediator	Support	Equip Gun	Allows the character to equip a gun regardless of Job Class.	750	0
+Mediator-13	Mediator	Support	Train	When an enemy reaches terminal status, the character can persuade it to become an ally.	450	0
+Mediator-14	Mediator	Support	Monster Talk	Allows a character to speak with monsters, even if he or she's not a Mediator.	100	0
+Mediator-15	Monk	Class	Spin Fist	Character attacks surrounding enemies with his/her fists as he/she spins around.	150	0
+Monk-01	Monk	Class	Repeating Fist	Character punches the target repeatedly with his/her fist.	300	0
+Monk-02	Monk	Class	Wave Fist	Character can attack an enemy from afar with a surge of energy.	300	0
+Monk-03	Monk	Class	Earth Slash	A line of energy flowing through the ground causes damage to enemies standing in its path.	600	0
+Monk-04	Monk	Class	Secret Fist	Casts a Death Sentence on the enemy after attack. Do not use against undead enemies. Adds: Death Sentence	300	0
+Monk-05	Monk	Class	Stigma Magic	Use the spirit of Yang to nullify status anomalies. Cancels: Petrify, Darkness, Confusion, Silence, Berserk, Frog, Poison, Sleep, Don't Move, Don't Act	200	0
+Monk-06	Monk	Class	Chakra	A concentration of Ki restores both HP and MP to the caster and those surrounding him/her.	350	0
+Monk-07	Monk	Class	Revive	Resurrects a dead character, restoring his/her HP slightly. Cancels: Dead	500	0
+Monk-08	Monk	Movement	Move-HP Up	Allows the character to recover a small amount of HP as he or she moves around the battlefield.	300	0
+Monk-09	Monk	Reaction	HP Restore	Restores HP to the character when an attack brings him or her down to critical levels.	500	0
+Monk-10	Monk	Reaction	Counter	Character counters an enemy's physical attack with one of his or her own.	300	0
+Monk-11	Monk	Reaction	Hamedo	Gives the character a chance to attack before being attacked.	1200	0
+Monk-12	Monk	Support	Martial Arts	Character gains the bare-handed fighting strength of a Monk, regardless of Job Class.	200	0
+Ninja-01	Ninja	Class	Shuriken	Allows the character to throw Shuriken.	50	0
+Ninja-02	Ninja	Class	Ball	Allows the character to throw an Elemental Ball.	70	0
+Ninja-03	Ninja	Class	Knife	Allows the character to throw Knives.	100	0
+Ninja-04	Ninja	Class	Sword	Allows the character to throw Swords.	100	0
+Ninja-05	Ninja	Class	Hammer	Allows the character to throw Hammers.	100	0
+Ninja-06	Ninja	Class	Katana	Allows the character to throw Katanas.	100	0
+Ninja-07	Ninja	Class	Ninja Sword	Allows the character to throw Ninja Swords.	100	0
+Ninja-08	Ninja	Class	Axe	Allows the character to throw Axes.	100	0
+Ninja-09	Ninja	Class	Spear	Allows the character to throw Spears.	100	0
+Ninja-10	Ninja	Class	Stick	Allows the character to throw Sticks.	100	0
+Ninja-11	Ninja	Class	Knight Sword	Allows the character to throw Knight Swords.	100	0
+Ninja-12	Ninja	Class	Dictionary	Allows the character to throw a Dictionary.	100	0
+Ninja-13	Ninja	Movement	Move in Water	Character can move or stop on water.	420	0
+Ninja-14	Ninja	Reaction	Sunken State	Character hides and becomes Invisible once he or she receives HP damage. Adds: Invisible.	900	0
+Ninja-15	Ninja	Reaction	Abandon	Raises the character's evade percentage, allowing him or her to dodge attacks more easily.	400	0
+Ninja-16	Ninja	Support	Two Swords	The character can use a weapon in each hand, even if he/she's not a Ninja.	900	0
+Oracle-01	Oracle	Class	Blind	Blinding the enemy lowers its success rate at landing physical attacks. Adds: Darkness	100	1
+Oracle-02	Oracle	Class	Spell Absorb	Absorbs the target's MP and restores the character's own MP.	200	0
+Oracle-03	Oracle	Class	Life Drain	Absorbs target's HP and restores the character's own HP.	350	0
+Oracle-04	Oracle	Class	Pray Faith	Temporarily raises the target's Faith level to 100. Adds: Faith	400	1
+Oracle-05	Oracle	Class	Doubt Faith	Lowers Faith level to 0. Adds: Innocent	400	1
+Oracle-06	Oracle	Class	Zombie	Makes target undead and therefore unable to restore HP. Adds: Undead	300	1
+Oracle-07	Oracle	Class	Silence Song	Silences target, making it unable to cast spells. Adds: Silence	170	1
+Oracle-08	Oracle	Class	Blind Rage	Enrages target causing it to attack wildly and lowering its success rate. Adds: Berserk	400	1
+Oracle-09	Oracle	Class	Foxbird	Lowers Brave level by 10 points.	200	1
+Oracle-10	Oracle	Class	Confusion Song	Makes target act unpredictably. Adds: Confusion	400	1
+Oracle-11	Oracle	Class	Dispel Magic	Prevents positive status effects. Cancels: Float, Reraise, Transparent, Regen, Protect, Shell, Haste, Faith, Reflect	700	1
+Oracle-12	Oracle	Class	Paralyze	Prevents target from taking action. Adds: Don't Act	100	1
+Oracle-13	Oracle	Class	Sleep	Puts target to sleep. Adds: Sleep	350	1
+Oracle-14	Oracle	Class	Petrify	Turns enemy into stone. Adds: Petrify	600	1
+Oracle-15	Oracle	Movement	Any Weather	Allows the character to walk over swamps, marshes, poison marshes, regardless of climate.	200	0
+Oracle-16	Oracle	Movement	Move-MP Up	The character recovers MP as he or she moves.	350	0
+Oracle-17	Oracle	Reaction	Absorb Used MP	Restores character's MP by the same amount the enemy used to cast its spell.	250	0
+Oracle-18	Oracle	Support	Defense Up	Lessens damage incurred from physical attacks by half.	400	0
+Priest-01	Priest	Class	Cure	Restores a small amount of HP	50	1
+Priest-02	Priest	Class	Cure 2	Restores a medium amount of HP.	180	1
+Priest-03	Priest	Class	Cure 3	Restores more HP than Cure 2, but at a greater cost.	400	1
+Priest-04	Priest	Class	Cure 4	Restores a large amount of HP.	700	0
+Priest-05	Priest	Class	Raise	Revives dead units and restores half of their HP. Cancels: Dead	180	1
+Priest-06	Priest	Class	Raise 2	Revives dead units and restores the highest amount of HP. Cancels: Dead	500	1
+Priest-07	Priest	Class	Reraise	Automatically raises units from the dead. Adds: Reraise	800	1
+Priest-08	Priest	Class	Regen	Restores HP incrementally over a period of time. Adds: Regen	300	1
+Priest-09	Priest	Class	Protect	Decreases amount of physical attack damage sustained. Adds: Protect	70	1
+Priest-10	Priest	Class	Protect 2	Decreases amount of physical attack damage sustained. Has a higher success ratio than Protect. Adds: Protect	500	0
+Priest-11	Priest	Class	Shell	Decreases amount of magic attack damage sustained. Adds: Shell	70	1
+Priest-12	Priest	Class	Shell 2	Decreases amount of magic attack damage sustained. Has a higher success ratio than Shell. Adds: Shell	500	0
+Priest-13	Priest	Class	Wall	Protects units from both physical and magic attacks. Adds: Protect, Shell	380	1
+Priest-14	Priest	Class	Esuna	Cures the majority of abnormal statuses. Cancels: Petrify, Darkness, Confusion, Silence, Berserk, Frog, Poison, Sleep, Don't Move, Don't Act	280	1
+Priest-15	Priest	Class	Holy	Powerful Holy Elemental attack.	600	1
+Priest-16	Priest	Reaction	Regenerator	Apply Regen to the character when struck.	400	0
+Priest-17	Priest	Support	Magic Defend Up	Lessens damage caused by enemy magic attacks.	400	0
+Samurai-01	Samurai	Class	Asura	The slashing of an invisible blade causes damage to enemy units.	100	0
+Samurai-02	Samurai	Class	Koutesu	The wailing of a ghost causes damage to the enemy.	180	0
+Samurai-03	Samurai	Class	Bizen Boat	The whisper of the Katana's spirit causes MP damage to the enemy.	260	0
+Samurai-04	Samurai	Class	Murasame	The tears of the Katana's spirit restores HP of allied units.	340	0
+Samurai-05	Samurai	Class	Heaven's Cloud	Magic Katana attack causing damage to enemy units. Adds: Slow	420	0
+Samurai-06	Samurai	Class	Kiyomori	Spirit in the Katana protects allied units, reducing physical and magic damage. Adds: Protect, Shell	500	0
+Samurai-07	Samurai	Class	Muramasa	Ghosts from the Katana make the enemy act unpredictably and in some cases sentences them to death. Adds: Confusion, Death Sentence	580	0
+Samurai-08	Samurai	Class	Kikuichimoji	Vengeful spirit makes a beeline toward the enemy.	660	0
+Samurai-09	Samurai	Class	Masamune	Katana spirit gradually restores ally's HP and increases speed. Sword for attack must be stolen from Elmdor. Adds: Regen, Haste	740	0
+Samurai-10	Samurai	Class	Chirijiraden	Powerful Katana attack that causes a blue flame to attack enemy units. Sword for attack must be found in the Deep Dungeon.	820	0
+Samurai-11	Samurai	Movement	Walk on Water	Allows the character to walk or stop on the surface of water.	300	0
+Samurai-12	Samurai	Reaction	Meatbone Slash	When critical, allows the character to damage the target in the amount of his or her max HP.	200	0
+Samurai-13	Samurai	Reaction	Blade Grasp	Allows the character to evade physical attacks other than Bow/Crossbow attacks.	700	0
+Samurai-14	Samurai	Support	Equip Knife	Allows the character to equip a knife, regardless of job.	400	0
+Samurai-15	Samurai	Support	Two Hands	Allows the character to hold his/her weapon with both hands, increasing its attack power.	900	0
+Cloud-01	Cloud	Class	Braver	Samurai-style sword attack.	150	0
+Cloud-02	Cloud	Class	Cross-slash	Cuts enemies within effect radius four times.	200	0
+Cloud-03	Cloud	Class	Blade Beam	Similar to Shock!-the greater your damage, the more damage you can inflict.	250	0
+Cloud-04	Cloud	Class	Climhazzard	The greater the target's damage, the more damage you can inflict.	450	0
+Cloud-05	Cloud	Class	Meteorain	Attack causes a meteor to fall on targets.	560	0
+Cloud-06	Cloud	Class	Finishing Touch	Causes different status anomalies. Adds: Dead, Petrify, Stop	670	0
+Cloud-07	Cloud	Class	Omnislash	The ultimate limit skill.	900	0
+Cloud-08	Cloud	Class	Cherry Blossom	The most powerful limit skill.	1200	0
+Squire-01	Squire	Class	Accumulate	Raises the character's physical attack power.	300	0
+Squire-02	Squire	Class	Dash	Attacks the enemy with a body blow.	80	0
+Squire-03	Squire	Class	Throw Stone	Throws a stone at an enemy unit. This is one of the first long-range attacks your characters can learn.	90	0
+Squire-04	Squire	Class	Heal	Cures abnormal status effects such as Darkness, Silence, and Poison.	150	0
+Squire-05	Squire	Movement	Move +1	Increases the character's movement range by one panel.	200	0
+Squire-06	Squire	Reaction	Counter Tackle	Counters a physical attack with a Dash attack's body blow.	180	0
+Squire-07	Squire	Support	Equip Axe	Allows the character to equip an Axe, regardless of Job Classes.	170	0
+Squire-08	Squire	Support	Monster Skill	The character can target friendly monsters within a range of three panels, helping them acquire new abilities.	200	0
+Squire-09	Squire	Support	Defend	Character defends and prepares for an attack. Activated by choosing the command Defend on the Action menu.	50	0
+Squire-10	Squire	Support	Gained JP Up	Increases the amount of JP earned in battle. A must-have for the beginning and middle stages of a character's development!	250	0
+Ramza-01	Ramza	Class	Yell	Raises speed by 1 point.	200	0
+Ramza-02	Ramza	Class	Wish	Character offers his own HP to the target, doubling the target's HP.	0	0
+Ramza-03	Ramza	Class	Cheer Up	Raises Brave level by 5 points. Available in Chapter Two.	200	0
+Ramza-04	Ramza	Class	Scream	Raises character's own Brave level, Speed level, Physical and Magic attack powers. Available in Chapter Four.	500	0
+Ramza-05	Ramza	Class	Ultima	Powerful magic attack that must be learned from either the assassins, Celia and Lede, or an Ultima Demon when cast on the character. This is possible only during Chapter Four.	0	0
+Summoner-01	Summoner	Class	Moogle	Restores a small amount of HP to allies.	110	0
+Summoner-02	Summoner	Class	Shiva	Summons Ice Elemental to attack enemies.	200	0
+Summoner-03	Summoner	Class	Ramuh	Summons Lightning Elemental to attack enemies.	200	0
+Summoner-04	Summoner	Class	Ifrit	Summons Fire Elemental to attack enemies.	200	0
+Summoner-05	Summoner	Class	Titan	Summons Earth Elemental to attack enemies.	220	0
+Summoner-06	Summoner	Class	Golem	Golem shares ally's damage, allowing them to evade physical weapon damage.	500	0
+Summoner-07	Summoner	Class	Carbuncle	Summoned monster helps allies to reflect magic spells. Adds: Reflect	350	0
+Summoner-08	Summoner	Class	Bahamut	Summoned monsters enemy with a blast of hot breath.	1200	0
+Summoner-09	Summoner	Class	Odin	Summoned monster causes damage to enemies while riding its dragon-horse across the battlefield.	900	0
+Summoner-10	Summoner	Class	Leviathan	Water Elemental attacks enemies with tsunami.	850	0
+Summoner-11	Summoner	Class	Salamander	Summoned Fire Elemental burns battlefield with flaming breath.	820	0
+Summoner-12	Summoner	Class	Silf	Summoned monster silences enemies. Adds: Silence	400	0
+Summoner-13	Summoner	Class	Fairy	Summoned fairy restores HP to allies. Effect is more powerful than Moogle.	400	0
+Summoner-14	Summoner	Class	Lich	Summoned Darkness Elemental drains off 50% of the enemy's HP.	600	0
+Summoner-15	Summoner	Class	Cyclops	Summoned Holy Elemental causes damage to enemies by shaking up the battlefield.	1000	0
+Summoner-16	Summoner	Class	Zodiac	Summoned monster attacks enemies with a strong beam of star light. Must be learned from the Zodiac monster, Elidibs, on the 10th level of the Deep Dungeon.	0	0
+Summoner-17	Summoner	Reaction	MP Restore	Restores MP to the character when an attack brings them down to critical levels.	400	0
+Summoner-18	Summoner	Support	Half MP	Halves the MP used when casting a spell.	900	0
+Beowulf-01	Beowulf	Class	Blind	Lowers target's success rate with physical attacks. Adds: Darkness	50	0
+Beowulf-02	Beowulf	Class	Aspel	Absorbs target's MP and restores own.	100	0
+Beowulf-03	Beowulf	Class	Drain	Absorbs target's HP and restores own.	180	0
+Beowulf-04	Beowulf	Class	Faith	Temporarily raises Faith level to 100. Adds: Faith	200	0
+Beowulf-05	Beowulf	Class	Innocent	Lowers Faith level to 0. Adds: Innocent	200	0
+Beowulf-06	Beowulf	Class	Zombie	Prevents target from restoring HP. Adds: Undead	150	0
+Beowulf-07	Beowulf	Class	Silence	Prevents target from casting magic. Adds: Silence	90	0
+Beowulf-08	Beowulf	Class	Berserk	Causes target to attack wildly, lowering its success rate. Adds: Berserk	200	0
+Beowulf-09	Beowulf	Class	Chicken	Lowers Brave level by 50 points.	500	0
+Beowulf-10	Beowulf	Class	Confuse	Causes target to act unpredictably. Adds: Confusion	200	0
+Beowulf-11	Beowulf	Class	Despair	Cancels target's positive status effects. Cancels: Float, Reraise, Transparent, Regen, Protect, Shell, Haste, Faith, Reflect	300	0
+Beowulf-12	Beowulf	Class	Don't Act	Prevents target from attacking. Adds: Don't Act	50	0
+Beowulf-13	Beowulf	Class	Sleep	Causes target to be inactive. This is great for characters who are immune to Don't Act. Adds: Sleep	170	0
+Beowulf-14	Beowulf	Class	Break	Turns target into stone. Adds: Petrify	300	0
+Beowulf-15	Beowulf	Class	Shock!	The more damage you receive, the more damage you can inflict on the target.	600	0
+Thief-01	Thief	Class	Gil Taking	Character can steal gil from the enemy target.	10	0
+Thief-02	Thief	Class	Steal Heart	Charms enemy unit. Is revoked when unit takes damage. Adds: Charm	150	0
+Thief-03	Thief	Class	Steal Helmet	Steal enemy's equipped helmet.	350	0
+Thief-04	Thief	Class	Steal Armor	Steal enemy's equipped armor.	450	0
+Thief-05	Thief	Class	Steal Shield	Steal enemy's equipped shield.	350	0
+Thief-06	Thief	Class	Steal Weapon	Steal enemy's equipped weapon.	600	0
+Thief-07	Thief	Class	Steal Accessory	Steal enemy's equipped accessory.	500	0
+Thief-08	Thief	Class	Steal Experience	Steal enemy's experience.	250	0
+Thief-09	Thief	Movement	Move +2	Increases the character's movement range by two panels.	520	0
+Thief-10	Thief	Movement	Jump +2	Increases a character's jump elevation by two panels.	480	0
+Thief-11	Thief	Reaction	Caution	Receiving an enemy's attack causes the character to take up a defensive position that halves all damage.	200	0
+Thief-12	Thief	Reaction	Gilgame Heart	Character receives from the enemy the same amount of Gil as HP damage incurred.	200	0
+Thief-13	Thief	Reaction	Catch	Character can catch and keep items thrown across the battlefield.	200	0
+Thief-14	Thief	Support	Secret Hunt	This ability allows you obtain the pelts of monsters you've killed which can be traded for items.	200	0
+Time Mage-01	Time Mage	Class	Haste	Increases target's speed. Adds: Haste	100	1
+Time Mage-02	Time Mage	Class	Haste 2	Increases target's speed. Adds: Haste	550	0
+Time Mage-03	Time Mage	Class	Slow	Decreases target's speed. Adds: Slow	100	1
+Time Mage-04	Time Mage	Class	Slow 2	Decreases target's speed. Adds: Slow	520	0
+Time Mage-05	Time Mage	Class	Stop	Prevents target from moving or attacking. Adds: Stop	330	1
+Time Mage-06	Time Mage	Class	Don't Move	Prevents target from moving. Adds: Don't Move	100	1
+Time Mage-07	Time Mage	Class	Float	Allows target to float 1 panel above ground. Adds: Float	200	1
+Time Mage-08	Time Mage	Class	Reflect	Allows target to reflect magic spells. Adds: Reflect	300	1
+Time Mage-09	Time Mage	Class	Quick	Increases speed of AT.	800	0
+Time Mage-10	Time Mage	Class	Demi	Decreases target's max HP by 25%.	250	1
+Time Mage-11	Time Mage	Class	Demi 2	Decreases target's max HP by 50%.	550	1
+Time Mage-12	Time Mage	Class	Meteor	Causes a huge meteor to fall from the sky on top of the target.	1500	0
+Time Mage-13	Time Mage	Movement	Teleport	Allows the character to move to any space on the battlefield instantly. However, the farther the destination panel, the greater the chance of failure.	600	0
+Time Mage-14	Time Mage	Movement	Float	Allows the character to float 1 panel above the ground.	540	0
+Time Mage-15	Time Mage	Reaction	Critical Quick	The character's AT is elevated to next position when his or her HP totals fall within critical levels.	700	0
+Time Mage-16	Time Mage	Reaction	MP Switch	Character loses MP instead of HP when attacked.	400	0
+Time Mage-17	Time Mage	Support	Short Charge	Increases a character's CT speed, halving the time it takes him or her to cast spells.	800	0
+Wizard-01	Wizard	Class	Fire	Basic Fire Elemental attack.	50	1
+Wizard-02	Wizard	Class	Fire 2	Medium-level Fire Elemental attack.	200	1
+Wizard-03	Wizard	Class	Fire 3	High-level Fire Elemental attack.	480	1
+Wizard-04	Wizard	Class	Fire 4	Massive Fire Elemental attack.	850	0
+Wizard-05	Wizard	Class	Bolt	Basic Lightning Elemental attack.	50	1
+Wizard-06	Wizard	Class	Bolt 2	Medium-level Lightning Elemental attack.	200	1
+Wizard-07	Wizard	Class	Bolt 3	High-level Lightning Elemental attack.	480	1
+Wizard-08	Wizard	Class	Bolt 4	Massive Lightning Elemental attack.	850	0
+Wizard-09	Wizard	Class	Ice	Basic Ice Elemental attack.	50	1
+Wizard-10	Wizard	Class	Ice 2	Medium-level Ice Elemental attack.	200	1
+Wizard-11	Wizard	Class	Ice 3	High-level Ice Elemental attack.	480	1
+Wizard-12	Wizard	Class	Ice 4	Massive Ice Elemental attack.	850	0
+Wizard-13	Wizard	Class	Poison	Gradually lowers target's HP through poisoning. Adds: Poison	150	1
+Wizard-14	Wizard	Class	Frog	Turns target into a frog and vice versa. Adds: Frog	500	1
+Wizard-15	Wizard	Class	Death	Has a small chance to kill the target instantly. Adds: Dead	600	1
+Wizard-16	Wizard	Class	Flare	Large fireball falls from the sky causing a large amount of damage to the target.	900	1
+Wizard-17	Wizard	Reaction	Counter Magic	The character counters with the same magic attack he or she receives.	800	0
+Wizard-18	Wizard	Support	Magic Attack Up	Increases the damage a character's magic attacks will inflict.	400	0
+Byblos-01	Byblos	Class	Energy	Character recovers twice as much HP as its own.	0	0
+Byblos-02	Byblos	Class	Parasite	Surge of negative power causes a variety of status anomalies.  Adds: Petrify, Darkness, Confusion, Silence, Oil, Frog, Poison, Sleep	0	0
+Byblos-03	Byblos	Class	Shock	The more damage an enemy has sustained, the more powerful the attack.	0	0
+Byblos-04	Byblos	Class	Difference	The enemy's MP total becomes the amount of damage given to the enemy.	0	0
+Reis Dragon-01	Reis Dragon	Class	Ice Bracelet	Attack with arctic breath.	0	0
+Reis Dragon-02	Reis Dragon	Class	Fire Bracelet	Attack with fire breath.	0	0
+Reis Dragon-03	Reis Dragon	Class	Thunder Bracelet	Attack with lightning breath.	0	0
+Worker 8-01	Worker 8	Class	Destroy	Aims to destroy its target.	0	0
+Worker 8-02	Worker 8	Class	Compress	Aims to compress its target.  Adds: Dead	0	0
+Worker 8-03	Worker 8	Class	Dispose	Disposes of all enemies at once within effect range.	0	0
+Worker 8-04	Worker 8	Class	Crush	Aims to crush its target.	0	0

@@ -70,8 +70,8 @@ public class JobImporter {
 
 	private string[][] GetRawRecords(string source) {
 		string[] lines = source.Split('\n');
-		string[][] data = new string[lines.Length][];
-		for (int i = 0; i < lines.Length; i++) {
+		string[][] data = new string[lines.Length - 1][];	// Assumes empty newline at end of file
+		for (int i = 0; i < lines.Length - 1; i++) {
 			string[] values = lines[i].Split('\t');
 			values[values.Length - 1] = values[values.Length - 1].Trim();
 			if (values.Length != COLUMNS) {

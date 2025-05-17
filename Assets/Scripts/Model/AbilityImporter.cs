@@ -9,7 +9,8 @@ public class AbilityImporter {
 	private const int NAME = 3;
 	private const int DESCRIPTION = 4;
 	private const int COST = 5;
-	private const int COLUMNS = 6;
+	private const int CALC = 6;
+	private const int COLUMNS = 7;
 
 	private readonly Dictionary<string, Record> _records;
 
@@ -27,6 +28,10 @@ public class AbilityImporter {
 		Unload();
 		string[] lines = source.text.Split('\n');
 		foreach (string line in lines) {
+			if (string.IsNullOrWhiteSpace(line)) {
+				continue;
+			}
+
 			string[] entries = SplitLine(line);
 			var newRecord = new Record(entries, allJobs);
 			if (newRecord.Ability != null) {
@@ -68,6 +73,10 @@ public class AbilityImporter {
 		return abilities;
 	}
 
+	public List<Ability> FindAllCalculatorSpells() {
+		return FindAll((a, _) => a.IsCalculatorSpell);
+	}
+
 	private string[] SplitLine(string line) {
 		string[] entries = line.Split('\t');
 		if (entries.Length != COLUMNS) {
@@ -92,10 +101,13 @@ public class AbilityImporter {
 					Ability = new Ability();
 					Ability.Reference = entries[REFERENCE];
 					Ability.Name = entries[NAME];
+					Ability.Job = Job;
 					Ability.Description = entries[DESCRIPTION];
 					if (Enum.TryParse(entries[TYPE], out Ability.AbilityType type)) Ability.Type = type;
 					if (Int32.TryParse(entries[COST], out int cost)) Ability.Cost = cost;
+					if (Int32.TryParse(entries[CALC], out int calc)) Ability.IsCalculatorSpell = Convert.ToBoolean(calc);
 					Job.AddAbility(Ability);
+
 					return;
 				} else {
 					Debug.LogError($"Failed to find loaded Job with Reference: {entries[JOB]}.  Record will not be saved.");

@@ -17,6 +17,7 @@ public class Job : IEquatable<Job> {
 	public int NumSubjobs { get; set; }
 	public string UniqueCharacterName { get; set; }
 	public bool IsGeneric => string.IsNullOrEmpty(UniqueCharacterName);
+	public bool IsCalculator => Reference == "Calculator";
 
 	private List<IBuildStep> _unlockRequirements = new List<IBuildStep>();
 	private List<AbilitySet> _abilitySets = new List<AbilitySet>();
